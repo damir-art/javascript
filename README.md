@@ -1,4 +1,7 @@
 # JavaScript
+[Репозиторий](https://github.com/damir-art/javascript)
+
 Учебник конспект по JavaScript
 
-[Репозиторий](https://github.com/damir-art/javascript)
+## Массивы
+[Массивы](https://damir-art.github.io/javascript/array/)
