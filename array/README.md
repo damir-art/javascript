@@ -1,0 +1,3 @@
+# Массивы в JavaScript
+
+    var 
