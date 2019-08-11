@@ -4,8 +4,8 @@
 Учебник конспект по JavaScript
 
 ## Нативные объекты
-[Math](https://damir-art.github.io/javascript/math/) - работаем с объектом Math
-[JSON](https://damir-art.github.io/javascript/json/) - работаем с объектом JSON
+* [Math](https://damir-art.github.io/javascript/math/) - работаем с объектом Math
+* [JSON](https://damir-art.github.io/javascript/json/) - работаем с объектом JSON
 
 ## Массивы
-[Массивы](https://damir-art.github.io/javascript/array/) - работаем с массивами
+* [Массивы](https://damir-art.github.io/javascript/array/) - работаем с массивами
