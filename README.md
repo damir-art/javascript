@@ -15,4 +15,4 @@
 * [localStorage](https://damir-art.github.io/javascript/localstorage/) - работаем с объектом localStorage
 
 ## Для продолжающих
-* [Прототипы](https://damir-art.github.io/javascript/prototipy/) - работаем с прототипами
+* [Прототипы](https://damir-art.github.io/javascript/prototype/) - работаем с прототипами
