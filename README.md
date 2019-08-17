@@ -8,7 +8,7 @@
 ## Синтаксис
 
 ## DOM
-* [DOM](dom)
+* [DOM](https://damir-art.github.io/javascript/dom/)
 
 ### Массивы
 * [Массивы](https://damir-art.github.io/javascript/array/) - работаем с массивами
