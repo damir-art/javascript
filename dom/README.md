@@ -39,6 +39,9 @@ DOM &ndash; это API для JavaScript, чтобы иметь возможно
 * **remove('box--blue')** &ndash; удаляем класс у выбранного элемента
 * **contains('box--blue')** &ndash; проверяем, содержится ли класс у выбранного элемента
 
+## Создаём элементы
+* **document.createElement('tagName', 'куда вставлять')** - создаем элемент
+
 ## Работаем с документом
     // событие сработает при полной загрузке DOM-дерева, при этом событии необязательно помещать <script> в футер
     document.addEventListener('DOMContentLoaded', function(){
