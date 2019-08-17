@@ -5,6 +5,11 @@
 
 ## Для начинающих
 
+## Синтаксис
+
+## DOM
+* [DOM](dom)
+
 ### Массивы
 * [Массивы](https://damir-art.github.io/javascript/array/) - работаем с массивами
 
