@@ -21,3 +21,7 @@
 
 ## Для продолжающих
 * [Прототипы](https://damir-art.github.io/javascript/prototype/) - работаем с прототипами
+
+## How to do?
+* Плагины
+* [Игры](https://damir-art.github.io/javascript/games/)
