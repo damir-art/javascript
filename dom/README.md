@@ -1,5 +1,7 @@
 # DOM в JavaScript
 
+(Репозиторий)[https://github.com/damir-art/javascript/tree/master/dom]
+
 DOM &ndash; это API для JavaScript, чтобы иметь возможность взаимодействовать с HTML, CSS-кодом веб страницы.
 
 ## Доступ к элементам
