@@ -19,3 +19,9 @@
     console.log(car) // см __proto__
     car.name
     car['name']
+    
+    // проверяет свойство на наличие
+    car.hasOwnProperty('age') // false
+    car.hasOwnProperty('name') // true
+
+    hasOwnProperty() - это метод родительского объекта/класса?
