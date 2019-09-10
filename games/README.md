@@ -1,4 +1,4 @@
-#Как на JavaScript делать игры?
+# Как на JavaScript делать игры?
 
     class - для CSS
     id - для Javascript
