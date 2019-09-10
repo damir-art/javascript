@@ -23,7 +23,7 @@
     car.hasOwnProperty('age') // false
     car.hasOwnProperty('name') // true
 
-    hasOwnProperty() - это метод родительского объекта/класса?
+    hasOwnProperty() - это метод родительского объекта
 
     car.toString() // [object Object]
 
@@ -31,3 +31,7 @@
 JavaScript - прототипный язык программирования. Всё построено на прототипах определенных объектов.
 
     __proto__ // ссылка на прототип родителя
+
+Object - глобальный объект JavaScript
+    
+    
