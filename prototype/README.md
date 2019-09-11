@@ -44,9 +44,20 @@ Object.prototype - прототип общего класса Object (самый
 ### Как работает прототип в JavaScript
 Рассмотрим работу `new`. Объекты в JS можно создавать двумя способами, через `{ }` и через класс *(функцию-конструктор)*.
 
-    function Car() {
-        name = 'Ford'
-        year = 1999
+    // создание класса, this - ссылается на создаваемый объект
+    function Car(brand, model, year) {
+        this.brand = brand
+        this.model = model
+        this.year = year
     }
+
+    // new говорит о том что функция это класс
+    // new возвращает объект 'return this'
+    var ford = new Car('Ford', 'Focus', 2003)
+    var bmw = new Car('BMW', '320i', 1999)
+
+    console.log(ford)
+    console.log(bmw)
     
-    var ford = new Car()
+    // создаем методы для функции конструктора через прототип
+    // данный метод появится у всех объектов потомков
