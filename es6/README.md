@@ -20,7 +20,17 @@
     color = 5
     console.log(color) // покажет ошибку о недопустимости изменения
 
-## let
-Рассмотрим разницу между var и let.
+### let
+Рассмотрим разницу между var и let. У let каждый проход по циклу внутри скобок, находится в отдельной области видимости.
 
-    
+    for (var i= 0; i < 5; i++) {
+        setTimeout(function() {
+            console.log(i)
+        }, 1000) // 5
+    }
+
+    for (let i= 0; i < 5; i++) {
+        setTimeout(function() {
+            console.log(i)
+        }, 1000) // 0 1 2 3 4
+    }
