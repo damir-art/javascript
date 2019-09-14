@@ -17,3 +17,10 @@
     }
 
     console.log(getAge(1984)) // 35
+
+Если один параметр, то можно записывать без скобок
+
+    const getAge = year => {
+        const current = new Date().getFullYear()
+        return current - year
+    }
