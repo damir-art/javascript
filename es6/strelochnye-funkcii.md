@@ -34,3 +34,27 @@
     const logAge = year => console.log(new Date().getFullYear() - year)
 
 ## Стрелочные функции не создают своего контекста
+    person = {
+        age: 25,
+        firstName: 'Max',
+        logName: function() {
+            setTimeout(function() {
+                console.log(this.firstName)
+            }, 1000)
+        }, // undefined
+        logNameBind: function() {
+            setTimeout(function() {
+                console.log(this.firstName)
+            }.bind(this), 1000)
+        }, // Max
+        logNameArrow: function() {
+            setTimeout(() => {
+                console.log(this.firstName)
+            }, 1000)
+        }, // Max
+        logNameES6() {
+            setTimeout(() => {
+                console.log(this.firstName)
+            }, 1000)
+        } // Max    
+    }
