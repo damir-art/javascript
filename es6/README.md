@@ -23,7 +23,7 @@
 ### let
 Рассмотрим разницу между var и let.
 
-    for (var i= 0; i < 5; i++) {
+    for (var i = 0; i < 5; i++) {
         setTimeout(function() {
             console.log(i)
         }, 1000) // 5
@@ -31,8 +31,16 @@
 
 У let каждый проход по циклу внутри скобок, находится в отдельной области видимости.
 
-    for (let i= 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
         setTimeout(function() {
             console.log(i)
         }, 1000) // 0 1 2 3 4
+    }
+
+const не получится использовать в циклах, если её значение меняется
+
+    for (const i = 0; i < 5; i++) {
+        setTimeout(function() {
+            console.log(i)
+        }, 1000) // покажет ошибку о недопустимости изменения
     }
