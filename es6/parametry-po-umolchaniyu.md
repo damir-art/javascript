@@ -1,4 +1,5 @@
 # Параметры по-умолчанию
+Параметры по-умолчанию срабатывают в том случае, если мы их не передаём.
 
     const createPost = (title, text, date) => {
         return {
@@ -34,4 +35,11 @@
         }
     }
 
+    const post = createPost('Мерседес', 'Мерседес - отличный автомобиль!')
+
+Если ключ и значение совпадают, то их можно сократить до одного слова
+    
+    const createPost = (title, text, date = new Date().toLocaleDateString()) => {
+        return { title, text, date }
+    }
     const post = createPost('Мерседес', 'Мерседес - отличный автомобиль!')
