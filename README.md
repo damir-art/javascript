@@ -3,9 +3,7 @@
 
 Учебник конспект по JavaScript
 
-## Для начинающих
-
-## Синтаксис
+## Основы
 
 ## DOM
 * [DOM](https://damir-art.github.io/javascript/dom/)
