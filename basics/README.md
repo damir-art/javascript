@@ -9,7 +9,7 @@ Console в браузере - это инструмент обращения к 
     alert('hello')
     console.log('hello')
 
-Внедряем JavaScript в HTML страницу:
+Внедряем JavaScript в HTML страницу. Особенности внедрения в HEAD, BODY:
 
     <script>
         ... код
