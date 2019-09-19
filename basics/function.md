@@ -1,0 +1,1 @@
+# Функции в JavaScript
