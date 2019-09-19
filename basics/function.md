@@ -1,6 +1,6 @@
 # Функции в JavaScript
 
-    // Определение функции
+    // Объявление, определение функции
     function hello() {
         console.log('hello')
     }
