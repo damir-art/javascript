@@ -4,10 +4,13 @@
 
 DOM &ndash; это API для JavaScript, чтобы иметь возможность взаимодействовать с HTML, CSS-кодом веб страницы.
 
-Можно обращаться по id без создания переменной (интересно это правильно?):
+    div = document.getElementById('myID')
+    console.log(div.innerText)
 
-    <div id='out'></div>
-    out.style.color = 'green'
+Можно обращаться по id без создания переменной (в стандарте этого нет):
+
+    <div id='myID'></div>
+    myID.style.color = 'green'
 
 ## Доступ к элементам
 **var el = document...** &ndash; всё что получаем, записываем в переменные<br />
