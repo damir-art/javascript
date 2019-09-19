@@ -1,12 +1,18 @@
 # Функции в JavaScript
 
+    // Определение функции
     function hello() {
         console.log('hello')
     }
+    
+    // Вызов функции
     hello()
  
- ## Параметры функции
-    function hello(name, family) { // параметры
+ ## Параметры и аргументы функции
+    // Параметры
+    function hello(name, family) {
         console.log('Hello ' + name + ' ' + family)
     }
-    hello('John', 'Smith') // аргументы
+    
+    // Аргументы
+    hello('John', 'Smith') 
