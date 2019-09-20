@@ -7,12 +7,12 @@
     
     // Вызов функции
     hello()
- 
- ## Параметры и аргументы функции
+
+## Параметры и аргументы функции
     // Параметры
     function hello(name, family) {
         console.log('Hello ' + name + ' ' + family)
     }
     
     // Аргументы
-    hello('John', 'Smith') 
+    hello('John', 'Smith')
