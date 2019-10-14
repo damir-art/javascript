@@ -25,7 +25,7 @@ object, array, function - комплексные
     
 Проверяем свойства на наличие `hasOwnProperty()`:
 
-    car.hasOwnProperty('age') // false
+    car.hasOwnProperty('age')  // false
     car.hasOwnProperty('name') // true
 
 `car.hasOwnProperty()` и другие, например `car.toString()` - это методы родительского объекта в нашем случае `Object`.
