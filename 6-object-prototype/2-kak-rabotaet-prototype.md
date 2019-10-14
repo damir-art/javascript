@@ -46,5 +46,29 @@
 # Создание свойства класса
 Создание свойства через прототип. Зададим всем объектам, цвет по-умолчанию.
 
+    function Car(brand, model, year) {
+        this.brand = brand
+        this.model = model
+        this.year = year
+    }
 
+    Car.prototype.getAge = function() {
+        curentYear = new Date().getFullYear()
+        return curentYear - this.year + ' лет'
+    }
+
+    Car.prototype.color = 'green'
+
+    var ford = new Car('Ford', 'Focus', 2003)
+    var bmw = new Car('BMW', '320i', 1999)
+
+    ford.color = 'red' // переопределили значение по-умолчанию
+
+    console.log(ford)
+    console.log(ford.getAge())
+    console.log(ford.color)
+
+    console.log(bmw)
+    console.log(bmw.getAge())
+    console.log(bmw.color)
 
