@@ -22,8 +22,9 @@ object, array, function - комплексные
     // Доступ к свойствам
     car.name
     car['name']
-    
-Проверяем свойства на наличие `hasOwnProperty()`:
+
+## __proto__: Object
+Используем методы которые не задавали при создании объекта. Проверяем свойства на наличие, через метод `hasOwnProperty()`:
 
     car.hasOwnProperty('age')  // false
     car.hasOwnProperty('name') // true
