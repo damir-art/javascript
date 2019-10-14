@@ -24,6 +24,21 @@
 `new` говорит о том, что функция это класс. `new` возвращает объект, `return this`.
 
 ### Создание метода класса
-Создаем методы для для класса *(функции-конструктора)*, через прототип.
+Создаем методы для для класса *(функции-конструктора)*, через прототип. Записываем метод в прототип, данный метод теперь доступен каждому объекту.
 
     // данный метод появится у всех объектов потомков
+    function Car(brand, model, year) {
+        this.brand = brand
+        this.model = model
+        this.year = year
+    }
+
+    Car.prototype.getAge = function() {
+        curentYear = new Date().getFullYear()
+        return curentYear - this.year + ' лет'
+    }
+
+    var ford = new Car('Ford', 'Focus', 2003)
+
+    console.log(ford)
+    console.log(ford.getAge())
