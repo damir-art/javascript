@@ -6,4 +6,6 @@
 
 Пример:
 
-    
+## Ссылки
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/getownpropertydescriptor - value и остальные
+* writable - запрет на изменение значения свойств
