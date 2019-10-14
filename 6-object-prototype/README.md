@@ -23,7 +23,7 @@ object, array, function - комплексные
     car.name
     car['name']
 
-## __proto__: Object
+## `__proto__: Object`
 Используем методы которые не задавали при создании объекта. Проверяем свойства на наличие, через метод `hasOwnProperty()`:
 
     car.hasOwnProperty('age')  // false
