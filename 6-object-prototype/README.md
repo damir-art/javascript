@@ -23,10 +23,21 @@ object, array, function - комплексные
     car.name
     car['name']
 
-## `__proto__: Object`
+### `__proto__: Object`
 Используем методы которые не задавали при создании объекта. Проверяем свойства на наличие, через метод `hasOwnProperty()`:
 
     car.hasOwnProperty('age')  // false
     car.hasOwnProperty('name') // true
 
 `car.hasOwnProperty()` и другие, например `car.toString()` - это методы родительского объекта в нашем случае `Object`.
+
+### Создание методов
+
+    var car = {
+        name: 'Ford',
+        year: 1999,
+        
+        getAge: function() {
+        
+        }
+    }
