@@ -57,6 +57,9 @@
     console.log(ford.calculateDistancePerYear())
 
 ### get(), set()
+    
+    get() // возвращает значение свойства
+    set() // изменяет значение свойства
 
 ## Ссылки
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/getownpropertydescriptor - value и остальные
