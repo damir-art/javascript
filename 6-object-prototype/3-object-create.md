@@ -1,4 +1,5 @@
 # Object.create()
+## Гибкая и мощная кастомизация объектов
 
 Рассмотрим способ создания объекта через `Object.create()`. Object - самый глобальный класс в JavaScript. В методе create(), первый параметр это прототип объекта, второй параметр это свойства объекта.
 
@@ -127,6 +128,16 @@
 
     for (key in ford) {
         console.log(key)
+    }
+
+Цикл проходит по объекту:
+    
+    ford.calculateDistancePerYear()
+    
+    for (key in ford) {
+        if (ford.hasOwnProperty(key)) {
+            console.log(key, ford[key])
+        }
     }
 
 ## Ссылки
