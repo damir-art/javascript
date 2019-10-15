@@ -20,7 +20,7 @@
 
     console.log(ford)
 
-## getOwnPropertyDescriptor
+## getOwnPropertyDescriptor()
     var ford = Object.create(
     {
         calculateDistancePerYear: function() {
