@@ -19,4 +19,14 @@
     key       // получаем имя свойства
     ford[key] // получаем значение свойства
 
-##
+## Object.keys()
+**Рекомендуемый.** Получаем поля объекта, но не прототипа:
+
+    // возвращает массив ключей объекта
+    var keys = Object.keys(ford)
+    console.log(keys)
+
+    // обрабатываем каждый элемент массива
+    Object.keys(ford).forEach(function(key) { 
+        console.log(key + ': ' + ford[key])
+    })
