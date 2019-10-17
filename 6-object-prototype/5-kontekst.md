@@ -67,3 +67,17 @@ setTimeout() в объекте, данный пример не сработае�
     ford.getBrand(2000)
 
 ### Способ №2 `bind()`
+    var ford = {
+        brand: 'Ford',
+        model: 'Focus',
+        year: 2004,
+        getBrand: function(ms) {
+            setTimeout(function() {
+                console.log('Barnd:', this.brand)
+                console.log('Model:', this.model)
+                console.log('Year:', this.year)
+            }.bind(this), ms)
+        }
+    }
+
+    ford.getBrand(2000)
