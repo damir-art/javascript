@@ -44,7 +44,7 @@ setTimeout() в объекте, данный пример не сработае�
     console.log(this) // ford
     console.log(this) // window
 
-### Способ №1 `self`
+### Способ №1 `self, that, _this`
 
     var ford = {
         brand: 'Ford',
