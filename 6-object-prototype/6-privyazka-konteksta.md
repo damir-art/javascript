@@ -4,4 +4,4 @@
 Метод `bind()` возвращает новую функцию, с привязанным контекстом.
 
     var printFord = printObj.bind(ford)
-    printFord()   
+    printFord(ford)   
