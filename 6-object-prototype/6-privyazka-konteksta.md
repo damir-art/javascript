@@ -34,4 +34,4 @@
 ## apply()
 `apply()` то же что и call(), аргументы массивом.
 
-    printObj.call(ford, ['Ford'])
+    printObj.apply(ford, ['Ford'])
