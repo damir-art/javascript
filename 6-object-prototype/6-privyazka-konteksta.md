@@ -23,15 +23,10 @@
         }
     }
 
-    var bmw = {
-        brand: 'BMW',
-        model: '3',
-        year: 2006,
-        colors: ['green', 'black'],
-        getBrand: function() {
-            console.log('Brand:', this.brand)
-        }
-    }
-
     var printFord = printObj.bind(ford)
     printFord(ford)
+
+## call()
+`call()` то же что и bind(), плюс еще и вызывает эту функцию. Первый аргумент объект контекста, остальные аргументы это параметры функции, через запятую. 
+
+    printObj.call(ford, 'Ford')
