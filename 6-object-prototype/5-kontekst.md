@@ -44,5 +44,26 @@ setTimeout() в объекте, данный пример не сработае�
     console.log(this) // ford
     console.log(this) // window
 
-### Способ №1
+### Способ №1 `self`
 
+    var ford = {
+        brand: 'Ford',
+        model: 'Focus',
+        year: 2004,
+        getBrand: function(ms) {
+            // console.log(this)
+            var self = this
+
+            setTimeout(function() {
+                // debugger
+                // console.log(this)
+                console.log('Brand:', self.brand)
+                console.log('Model:', self.model)
+                console.log('Year:', self.year)
+            }, ms)
+        }
+    }
+
+    ford.getBrand(2000)
+
+### Способ №2 `bind()`
