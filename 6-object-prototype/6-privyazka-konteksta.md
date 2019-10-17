@@ -3,4 +3,5 @@
 
 Метод `bind()` возвращает новую функцию, с привязанным контекстом.
 
-    printObj.bind(ford)
+    var printFord = printObj.bind(ford)
+    printFord()   
