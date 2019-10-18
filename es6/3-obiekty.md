@@ -1,5 +1,6 @@
 # Объекты
 
+## Возвращаем объект
 Возвращаем объект:
 
     const createCar = (brand, model) => { 
@@ -11,9 +12,10 @@
 Объект в одну строку, оборачиваем в круглые скобки:
 
     const createCar = (brand, model) => ({ brand, model })
-    }
+    
     const ford = createCar('Форд', 'Фокус')
 
+## Динамические поля
 Динамические поля и удобные методы в объектах:
 
     const yearField = 'year'
@@ -32,6 +34,7 @@
     console.log(ford)
     ford.logFields()
 
+## Деструктуризация
 Деструктуризация, убираем this:
 
     const ford = {
