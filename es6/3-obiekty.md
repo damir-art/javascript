@@ -9,10 +9,9 @@
     const ford = createCar('Форд', 'Фокус')
     console.log(ford)
 
-Объект в одну строку, оборачиваем в круглые скобки:
+Сокращаем до одной строки. Объект оборачиваем в круглые скобки:
 
     const createCar = (brand, model) => ({ brand, model })
-    
     const ford = createCar('Форд', 'Фокус')
 
 ## Динамические поля
