@@ -19,28 +19,21 @@
 
     const ford = {
         brand: 'Ford',
-        ['model: ' + Math.floor(Math.random() * 1000)]: 'Focus',
+        ['model: ' + Math.floor(Math.random() * 1000)]: 'Focus'
     }
 
     console.log(ford)
     
-Пример:
+Задаём имена полей через значения переменных:
 
     const yearField = 'year'
 
     const ford = {
         brand: 'Ford',
-        // ['model' + Math.random()]: 'Focus ST', // RS
-        ['model']: 'Focus',
-        [yearField]: 2018,
-
-        logFields() {
-            console.log(this.brand, this.model, this.year)
-        }
+        [yearField]: 2018
     }
 
     console.log(ford)
-    ford.logFields()
 
 ## Деструктуризация
 Деструктуризация, убираем this:
