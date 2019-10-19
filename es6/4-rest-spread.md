@@ -73,6 +73,21 @@
 
 ## rest
 **rest** применяется когда мы незнаем сколько параметров попадет в функцию:
+
     ...
         saveForm(title, text, price)
     ...
+
+    function saveForm(...args) {
+        console.log('Args:', args) // массив
+
+        // производим деструктуризацию массива
+        const [title, text, price] = args
+
+        const formData = {
+            title, text, price,
+            date: new Date().toLocaleDateString()
+        }
+
+        console.log('Form data:', formData)
+    }
