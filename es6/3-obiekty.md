@@ -35,8 +35,25 @@
 
     console.log(ford)
 
+В методе, выводим имена всех полей, в том числе и динамических.
+
+    const yearField = 'year'
+
+    const ford = {
+        brand: 'Ford',
+        ['model']: 'Focus',
+        [yearField]: 2018,
+
+        logFields() {
+            console.log(this.brand, this.model, this.year)
+        }
+    }
+
+    console.log(ford)
+    ford.logFields()
+
 ## Деструктуризация
-Деструктуризация, убираем this:
+Убираем this:
 
     const ford = {
         brand: 'Ford',
