@@ -60,7 +60,7 @@
         console.log('Form data:', formData)
     }
 
-## spread (...objName), rest
+## spread (...objName)
 **spread (...objName)** - разворачивает объект, в независимости о того сколько свойств туда внесли.
 
     function saveForm(data) {
@@ -70,3 +70,9 @@
         }
         console.log('Form data:', formData)
     }
+
+## rest
+**rest** применяется когда мы незнаем сколько параметров попадет в функцию:
+    ...
+        saveForm(title, text, price)
+    ...
