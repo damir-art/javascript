@@ -15,13 +15,16 @@
     const ford = createCar('Форд', 'Фокус')
 
 ## Динамические поля
-Динамические поля в объектах.
+Появилась возможность динамически задавать имена ключей (полей) в объектах:
 
-Пример №1:
+    const ford = {
+        brand: 'Ford',
+        ['model: ' + Math.floor(Math.random() * 1000)]: 'Focus',
+    }
 
+    console.log(ford)
     
-
-Пример №2:
+Пример:
 
     const yearField = 'year'
 
