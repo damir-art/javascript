@@ -1,6 +1,6 @@
 # Строки
 ## Шаблонизация
-Рассмотрим удобную работу со троками, без кавычек, `шаблонизация`.
+Рассмотрим удобную работу со троками, без кавычек, `шаблонизация` *(обратные кавычки)*.
 
 Создадим список:
 
@@ -18,3 +18,19 @@
 
     ul.insertAdjacentHTML('afterbegin', google)
     ul.insertAdjacentHTML('afterbegin', yandex)
+
+Обратные кавычки, внутри обратных кавычек мы можем использовать `${переменная}`:
+
+    '<a target="_blank" href="' + path + '">' + name + '</a>'
+    `<a target="_blank" href="${path}">${name}</a>`
+    
+    '<li>' + createLink({path: 'https://google.ru', name: 'Гугл'}) + '</li>'
+    `<li>${createLink({path: 'https://google.ru', name: 'Гугл'})}</li>`
+
+Обратные кавычки, сохраняют форматирование:
+
+    const strFormat = `Hello
+    Hello
+        Hello`
+
+    console.log(strFormat)
