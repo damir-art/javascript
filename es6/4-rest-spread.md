@@ -1,4 +1,4 @@
-# Операторы rest и spread
+# Операторы spread (...objName), rest
 Чтобы изучить работу операторов rest и spread, создадим HTML-форму:
 
     <form>
@@ -60,4 +60,13 @@
         console.log('Form data:', formData)
     }
 
-## rest, spread
+## spread (...objName), rest
+**spread (...objName)** - разворачивает объект, в независимости о того сколько свойств туда внесли.
+
+    function saveForm(data) {
+        const formData = {    
+            ...data,
+            date: new Date().toLocaleDateString()
+        }
+        console.log('Form data:', formData)
+    }
