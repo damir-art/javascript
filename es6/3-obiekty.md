@@ -70,3 +70,10 @@
 
     console.log(ford)
     ford.logFields()
+
+Эти две записи идентичны:
+
+    // const year = ford.year
+    const {year} = ford
+
+    console.log(year) // 2018
