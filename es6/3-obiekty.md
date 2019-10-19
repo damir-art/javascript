@@ -55,10 +55,12 @@
 ## Деструктуризация
 Убираем this:
 
+    const yearField = 'year'
+
     const ford = {
         brand: 'Ford',
-        model: 'Focus',
-        year: 2018,
+        ['model']: 'Focus',
+        [yearField]: 2018,
 
         logFields() {
             const {brand, model, year} = this
