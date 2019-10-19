@@ -77,3 +77,5 @@
     const {year} = ford
 
     console.log(year) // 2018
+
+Деструктуризация часто применяется в JavaScript модулях: import, export.
