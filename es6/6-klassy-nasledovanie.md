@@ -35,3 +35,8 @@
     redBox.create()
 
 ## Полный скрипт
+В `index.html` записываем:
+
+    <div class="wrapper"></div>
+
+В `script.js` записываем:
