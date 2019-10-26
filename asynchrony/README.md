@@ -48,3 +48,6 @@
         }, 1000 * time)
     }
     interval(3, 2)
+
+## setTimeout() и setInterval() дновременно
+Остановить работу setInterval() после запуска setTimeout()
