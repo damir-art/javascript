@@ -24,3 +24,14 @@
     }
 
     timeout(3000)
+
+## setInterval()
+Постоянно выполнять код, через заданный интервал времени:
+
+    let count = 0;
+    setInterval(function () {
+        count = count + 1
+        console.log(count)
+    }, 1000)
+
+Остановить setInterval() через некоторое время:
