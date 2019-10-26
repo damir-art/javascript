@@ -38,10 +38,10 @@
 
     const interval = function (quantity, time) {
         let count = 0;
-        const stoppInterval = setInterval(function () {
+        const stopInterval = setInterval(function () {
             count = count + 1
             if (count == quantity) {
-                clearInterval(stoppInterval)
+                clearInterval(stopInterval)
             }
             console.log(count)
         }, 1000 * time)
