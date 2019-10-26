@@ -50,3 +50,14 @@
 
 ## setTimeout() и setInterval() одновременно
 Остановить работу setInterval() после запуска setTimeout()
+
+    let count = 0;
+
+    const interval = setInterval(function () {
+        count = count + 1
+        console.log(count)
+    }, 1000)
+
+    setTimeout(function() {
+        clearInterval(interval)
+    }, 5000)
