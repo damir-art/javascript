@@ -1,6 +1,6 @@
 # Асинхронность в JavaScript
 
-* Интервалы и таймеры
+* Интервалы и таймеры `setInterval(), setTimeout(), clearInterval()`
 * Промисы
 * Async/await
 
@@ -34,9 +34,8 @@
         console.log(count)
     }, 1000)
 
-Остановить setInterval() через некоторое время:
+Остановить setInterval() по счетчику, через некотрое время
 
-    // Остановить setInterval() по счетчику, через некотрое время
     const interval = function (quantity, time) {
         let count = 0;
         const stoppInterval = setInterval(function () {
@@ -49,5 +48,5 @@
     }
     interval(3, 2)
 
-## setTimeout() и setInterval() дновременно
+## setTimeout() и setInterval() одновременно
 Остановить работу setInterval() после запуска setTimeout()
