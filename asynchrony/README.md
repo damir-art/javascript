@@ -35,3 +35,16 @@
     }, 1000)
 
 Остановить setInterval() через некоторое время:
+
+    // Остановить setInterval() по счетчику, через некотрое время
+    const interval = function (quantity, time) {
+        let count = 0;
+        const stoppInterval = setInterval(function () {
+            count = count + 1
+            if (count == quantity) {
+                clearInterval(stoppInterval)
+            }
+            console.log(count)
+        }, 1000 * time)
+    }
+    interval(3, 2)
