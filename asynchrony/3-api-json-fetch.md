@@ -18,7 +18,15 @@ https://jsonplaceholder.typicode.com/ - тестирование клиент с
 
     function load_users() {
         const url = 'https://jsonplaceholder.typicode.com/users'
-        console.log(fetch(url))
+        console.log(fetch(url)) // promise
     }
 
 Console > Network > All или XHR > users > Preview или Response
+
+    function load_users() {
+        const url = 'https://jsonplaceholder.typicode.com/users'
+        fetch(url)
+            .then(function (response) {
+                console.log(response)
+            })
+    }
