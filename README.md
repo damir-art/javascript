@@ -3,22 +3,31 @@
 
 Учебник конспект по JavaScript
 
+## О JavaScript
+* [О JavaScript](https://damir-art.github.io/javascript/0-about-javascript/)
+
 ## Основы
-* [Основы синтаксиса](https://damir-art.github.io/javascript/10-osnovy/)
+* [Основы](https://damir-art.github.io/javascript/10-osnovy/) &ndash; основы синтаксиса
+
+## Функции
+* [Функции](https://damir-art.github.io/javascript/function/) &ndash; работаем с функциями
+
+## Массивы
+* [Массивы](https://damir-art.github.io/javascript/array/) &ndash; работаем с массивами
+
+## Объекты
+* [Объекты](https://damir-art.github.io/javascript/object/) &ndash; работаем с объектами
 
 ## DOM
-* [DOM](https://damir-art.github.io/javascript/dom/)
+* [DOM](https://damir-art.github.io/javascript/dom/) &ndash; работаем с DOM
 
-### Массивы
-* [Массивы](https://damir-art.github.io/javascript/array/) - работаем с массивами
-
-### Нативные объекты
+## Нативные объекты
 * [Date](https://damir-art.github.io/javascript/date/) - работаем с объектом Date
 * [Math](https://damir-art.github.io/javascript/math/) - работаем с объектом Math
 * [JSON](https://damir-art.github.io/javascript/json/) - работаем с объектом JSON
 * [localStorage](https://damir-art.github.io/javascript/localstorage/) - работаем с объектом localStorage
 
-## Для продолжающих
+## Прототипы
 * [Прототипы](https://damir-art.github.io/javascript/prototype/) - работаем с прототипами
 
 ## How to do?
