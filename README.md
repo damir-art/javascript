@@ -4,6 +4,7 @@
 Учебник конспект по JavaScript
 
 ## Основы
+* [Основы синтаксиса](https://damir-art.github.io/javascript/10-osnovy/)
 
 ## DOM
 * [DOM](https://damir-art.github.io/javascript/dom/)
