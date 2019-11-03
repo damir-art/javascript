@@ -7,6 +7,7 @@
         console.log('hello')
         console.log(3 + 5)
         console.log(window)
+        console.log('Всем \nПривет!') // перевод строки
     </script>
 
 При работе в консоли, регистр имеет значение.

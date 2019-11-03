@@ -1,2 +1,2 @@
-# О JavaScrip
+# О JavaScript
 ## Содержание раздела
