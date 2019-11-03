@@ -15,3 +15,11 @@
     <script src="custom.js">
         Текст для браузеров не поддерживающих JavaScript
     </script>
+
+## Способы загрузки кода
+**'use strict'** - режим строгого соответствия стандарту.
+
+    'use strict';
+    window.onload = function(e) {
+        console.log('Hello!');
+    }
