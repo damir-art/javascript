@@ -22,30 +22,21 @@
 <body>
     <div id="div">
         <button id="button">Кнопка</button>
-        <h3 id="h3">Заголовок</h3>
+        <h3 id="h3">Заголовок <span>И спан</span></h3>
     </div>
 
     <ul>
-        <li class="liClass item">111</li>
-        <li class="liClass item">222</li>
-        <li class="liClass item">333</li>
+        <li class="item">111</li>
+        <li class="item">222</li>
+        <li class="item">333</li>
     </ul>
 
     <script>
-        div = document.getElementById('div')
-        console.log(div)
+        div = document.getElementById('button')
+        console.log(div.value)
 
-        liClass = document.getElementsByClassName('liClass')
-        console.log(liClass)
-
-        li = document.getElementsByTagName('li')
-        console.log(li)
-
-        item = document.querySelector('.item')
-        console.log(item)
-
-        item = document.querySelectorAll('.item')
-        console.log(item)
+        // div = document.getElementById('div')
+        // div.textContent = '<b style="color: green;">Hello</b>'
 
     </script>
 </body>
