@@ -2,7 +2,9 @@
 
 [Репозиторий](https://github.com/damir-art/javascript/tree/master/dom)
 
-DOM &ndash; это API для JavaScript, чтобы иметь возможность взаимодействовать с HTML, CSS-кодом веб страницы.
+DOM &ndash; это API браузера, созданное для того чтобы JavaScript мог взаимодействовать с HTML и CSS-кодом веб страницы.
+
+Размещайте JavaScript-код строго перед закрывающим тегом `body`.
 
     div = document.getElementById('myID')
     console.log(div.innerText)
@@ -11,14 +13,6 @@ DOM &ndash; это API для JavaScript, чтобы иметь возможно
 
     <div id='myID'></div>
     myID.style.color = 'green'
-
-## Доступ к элементам
-**var el = document...** &ndash; всё что получаем, записываем в переменные<br />
-* **getElementById('id')** &ndash; получить доступ к элементу по его id, строка без `#`<br />
-* **getElementsByClassName('class')** &ndash; получить доступ к элементам по их классу, строка без `.`, получаем псевдомассив<br />
-* **getElementsByTagName('tag')** &ndash; получить элемент по названию его тега, строка без угловых скобок, получаем псевдомассив<br />
-* **querySelector('tag or .class or #id')** &ndash; современный метод получения первого элемента, строка с именем тега, точками для классов и хешами для идентификаторов (можно использовать селекторы CSS)<br />
-* **querySelectorAll('tag or .class or #id')** &ndash; современный метод получения элементов, строка с именем тега, точками для классов и хешами для идентификаторов (можно использовать селекторы CSS)<br />
 
 ## Доступ к содержимому элементов
 **el...**
