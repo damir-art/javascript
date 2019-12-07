@@ -23,6 +23,9 @@
     <div id="div">
         <button id="button">Кнопка</button>
         <h3 id="h3">Заголовок <span>И спан</span></h3>
+        <a id="a" href="/home" target="_blank" style="color: green">Домой</a>
+        <hr />
+        <input type="text" id="text" value="Hello" />
     </div>
 
     <ul>
@@ -32,12 +35,8 @@
     </ul>
 
     <script>
-        div = document.getElementById('button')
-        console.log(div.value)
-
-        // div = document.getElementById('div')
-        // div.textContent = '<b style="color: green;">Hello</b>'
-
+        var a = document.querySelector('a')
+        a.textContent = a.href;
     </script>
 </body>
 </html>

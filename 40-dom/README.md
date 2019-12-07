@@ -12,22 +12,6 @@ DOM &ndash; это API браузера, созданное для того чт
     <div id='myID'></div>
     myID.style.color = 'green'
 
-## Работаем с атрибутами
-**el...**
-* **getAttribute('href')** &ndash; получить значение атрибута `href`
-* **setAttribute('href', 'https://ya.ru')** &ndash; изменить значение атрибута
-* **attributes** &ndash; получить массив атрибутов элемента
-* **attributes[0].nodeValue** &ndash; получить значение первого атрибута в массиве
-
-Заменяем текст ссылки на адрес ссылки
-
-    var a = document.querySelector('a')
-    a.textContent = a.href;
-
-* **value** &ndash; получить значение атрибута value (например текстового поля)
-
-* **value='Hello'** &ndash; заменить значение атрибута value (например текстового поля)
-
 ## Работаем с CSS классами
 **el.classList...** - объект отвечающий за работу с классами CSS
 * **add('box--red')** &ndash; добавляем класс к выбранному элементу
