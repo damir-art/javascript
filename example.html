@@ -52,19 +52,13 @@
 
 <script>
 
-document.getElementById('wrapper').addEventListener('click', function () {
-    var tagName = event.target.tagName.toLowerCase()
-
-    // меняем цвет по имени тега
-    if(tagName === 'p') {
-        event.target.style.color = 'green'
-    }
-    console.log(tagName)
-
-    // меняем цвет по имени класса
-    if(event.target.classList.contains('class_name')) {
-        event.target.style.color = 'orange'
-    }
+window.addEventListener('keydown', function (e) {
+    var ekey = e.key
+    var ecode = e.code
+    console.log('Нажата клавиша: ' + ekey)
+    console.log('Код клавиши: ' + ecode)
+    console.log(e)
+    console.log(e.target)
 })
 
 </script>
