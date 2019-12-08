@@ -1,11 +1,10 @@
 # События в JavaScript
 
-Все события https://developer.mozilla.org/ru/docs/Web/Events<br />
-Все API https://developer.mozilla.org/ru/docs/Web/API<br />
-API Event https://developer.mozilla.org/ru/docs/Web/API/Event<br />
-События мыши https://developer.mozilla.org/ru/docs/Web/API/MouseEvent
+## addEventListener()
+Функция добавления событий:
 
-el.addEventListener('event', func) - добавляет событие
+    div = document.getElementById('div')
+    div.addEventListener('event', foo)
 
 ### При клике на кнопку, меняется надпись у заголовка
     var button = document.querySelector('button')
@@ -17,7 +16,6 @@ el.addEventListener('event', func) - добавляет событие
         } else {
             h1.textContent = 'Event in JavaScript'
         }
-
     }
     button.addEventListener('click', buttonClick)
 
@@ -126,3 +124,9 @@ el.addEventListener('event', func) - добавляет событие
             event.target.style.color = 'orange'
         }
     })
+
+## Ссылки
+* Все события https://developer.mozilla.org/ru/docs/Web/Events<br />
+* Все API https://developer.mozilla.org/ru/docs/Web/API<br />
+* API Event https://developer.mozilla.org/ru/docs/Web/API/Event<br />
+* События мыши https://developer.mozilla.org/ru/docs/Web/API/MouseEvent
