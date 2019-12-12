@@ -28,6 +28,7 @@
     console.log(c, typeof(c)); // true "boolean"
 
 ## Мягкое преобразование к числу
+Функции `parseInt()` и `parseFloat()`:
 
     var a = '35 apples',
     b = 'pears123',
