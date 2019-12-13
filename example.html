@@ -10,10 +10,21 @@
 <body>
     <script>
 
-    let moscow = 'Москва'
-    let text = `Мой город ${moscow} красив!`
+let x = 9;
 
-    console.log(text)
+switch (x) {
+    case 'значение': // равносильно if (x === 'значение')
+        console.log(5);
+    break;
+    case 6:          // равносильно if (x === 6)
+        console.log(6);
+    break;
+    case 7:          // равносильно if (x === 7)
+        console.log(7);
+    break;
+    default:         // ни одно из условий не верно
+        console.log(8);
+}
 
     </script>
     <script src="example.js"></script>
