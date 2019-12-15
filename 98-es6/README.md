@@ -81,4 +81,3 @@
     
     const OBJ = { name: 'damir' }
     OBJ = { name: 'denis' }
- 
