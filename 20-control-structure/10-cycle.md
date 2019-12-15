@@ -99,7 +99,7 @@ continue - прерывает выполнение текущей итераци
         console.log(i)
     }
 
-<h2>for...of ES6(2015)</h2>
+## for...of ES6(2015)
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/for...in
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/for...of
 
