@@ -10,11 +10,12 @@
 <body>
     <script>
 
-    const cities = ['Moscow', 'London', 'Berlin', 'Paris', 'Beijing']
-    const cities2 = cities.slice()
+var person = ['Юлий', 'Цезарь', 'Император', 'Рима']
+var [firstName, lastName, ...restElements] = person
 
-    console.log(cities)
-    console.log(cities2)
+console.log(firstName);    // Юлий
+console.log(lastName);     // Цезарь
+console.log(restElements); // ['Император', 'Рима']
 
     </script>
     <script src="example.js"></script>
