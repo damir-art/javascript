@@ -10,12 +10,17 @@
 <body>
     <script>
 
-var person = ['Юлий', 'Цезарь', 'Император', 'Рима']
-var [firstName, lastName, ...restElements] = person
+    function calc(a, b, op) {
+        console.log(op)
+        return op(a, b)
+    }
 
-console.log(firstName);    // Юлий
-console.log(lastName);     // Цезарь
-console.log(restElements); // ['Император', 'Рима']
+    var sum = function(a, b) {
+        return a + b
+    }
+
+    var result = calc(11, 31, sum)
+    console.log(result) // 42
 
     </script>
     <script src="example.js"></script>
