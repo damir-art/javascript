@@ -7,3 +7,10 @@
     let a = 'Привет' // 'string' - строка
     let b = 5        // 'number' - целое число
     let c = 5.3      // 'float'  - число с плавающей точкой
+
+## Какие типы данных существуют
+Типы данных в JavaScript делятся на два вида: примитивные и комплексные.
+
+**Примитивы:** number, string, boolean, null, undefined.
+
+**Комплексные:** object, array, function.

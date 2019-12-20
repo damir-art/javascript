@@ -10,17 +10,18 @@
 <body>
     <script>
 
-    function calc(a, b, op) {
-        console.log(op)
-        return op(a, b)
+    const car = {
+        brand: 'BMW',
+        model: '325i',
+        year:  2002,
+        color: 'green',
+
+        getYear: function() {
+            return this.year        
+        }
     }
 
-    var sum = function(a, b) {
-        return a + b
-    }
-
-    var result = calc(11, 31, sum)
-    console.log(result) // 42
+    console.log(car.getYear()) // 2002
 
     </script>
     <script src="example.js"></script>
