@@ -1,35 +1,26 @@
 # JavaScript
 [Репозиторий](https://github.com/damir-art/javascript)
 
-Учебник конспект по JavaScript
+Учебник по обучению основам программирования на примере языка JavaScript.
 
-## О JavaScript
-* [О JavaScript](https://damir-art.github.io/javascript/0-about-javascript/)
+Программирование - это управление данными: ввод, обработка, вывод.
 
-## Основы
-* [Основы](https://damir-art.github.io/javascript/10-osnovy/) &ndash; основы синтаксиса
+## Содержание
 
-## Функции
-* [Функции](https://damir-art.github.io/javascript/function/) &ndash; работаем с функциями
+- Внедрение JavaScript в HTML
+- console.log() и консоль - вывод данных
+- Переменные (let, const)
+- Работаем с формами
+- Работаем о стилями
+- Типы данных (typeof)
+- Операторы и операции
+- Управляющие структуры
+    - ветвления
+    - циклы
+- Массивы
 
-## Массивы
-* [Массивы](https://damir-art.github.io/javascript/array/) &ndash; работаем с массивами
+### Дополнительно
+- Visual Studio Code
 
-## Объекты
-* [Объекты](https://damir-art.github.io/javascript/object/) &ndash; работаем с объектами
-
-## DOM
-* [DOM](https://damir-art.github.io/javascript/dom/) &ndash; работаем с DOM
-
-## Нативные объекты
-* [Date](https://damir-art.github.io/javascript/date/) - работаем с объектом Date
-* [Math](https://damir-art.github.io/javascript/math/) - работаем с объектом Math
-* [JSON](https://damir-art.github.io/javascript/json/) - работаем с объектом JSON
-* [localStorage](https://damir-art.github.io/javascript/localstorage/) - работаем с объектом localStorage
-
-## Прототипы
-* [Прототипы](https://damir-art.github.io/javascript/prototype/) - работаем с прототипами
-
-## How to do?
-* Плагины
-* [Игры](https://damir-art.github.io/javascript/games/)
+## Рекомендуемые ссылки
+- https://developer.mozilla.org/ru/docs/Web/JavaScript
