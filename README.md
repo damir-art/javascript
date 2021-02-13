@@ -1,14 +1,11 @@
 # JavaScript
-[Репозиторий](https://github.com/damir-art/javascript)
-
-Учебник по обучению основам программирования на примере языка JavaScript.
+Учебник по основам программирования на примере языка JavaScript.
 
 Программирование - это управление данными: ввод, обработка, вывод.
 
 ## Содержание
-
 - Внедрение JavaScript в HTML
-- console.log() и консоль - вывод данных
+- console.log() и консоль бразуера
 - Переменные (let, const)
 - Работаем с формами
 - Работаем о стилями
@@ -24,3 +21,4 @@
 
 ## Рекомендуемые ссылки
 - https://developer.mozilla.org/ru/docs/Web/JavaScript
+- https://learn.javascript.ru

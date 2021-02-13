@@ -100,18 +100,3 @@ continue - прерывает выполнение текущей итераци
     }
 ## for...key
 ## for...in
-## for...of ES6(2015)
-https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/for...in
-https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/for...of
-
-Цикл перебора итерируемых объектов (объекты, массивы, строки и т.д.), на каждом шаге, переменной присваивается значение нового элемента массива.
-
-    for (переменная of object) {
-        инструкции
-    }
-
-    const cities = ['Moscow', 'London', 'Berlin', 'Paris', 'Beijing']
-
-    for (const city of cities) {
-        console.log(city)
-    }

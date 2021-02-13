@@ -1,13 +1,20 @@
 # Методы массивов
+Array.prototype.method(). При работе с большими массивами, для производительности, лучше не изменять элементы внутри основного массива, а создавать новый массив с нужными элементами.
 
-## array.push(значение(я))
-Добавить элемент(ы) в конец массива, возвращает количество элементов в массиве.
-
-Пример: 
-
-    const cities = ['Moscow', 'London', 'Berlin', 'Paris', 'Beijing']
-    let push = cities.push('Rome', 'Vein')
-    console.log(cities, push)
+- pop()
+- push()
+- delete (оператор)
+- splice()
+- shift()
+- unshift()
+- slice()
+- indexOf()
+- lastIndexOf()
+- map()
+- filters()
+- split()
+- join()
+- forEach()
 
 ## array.pop()
 Удалить последний элемент массива, возвращает удаленный элемент.
@@ -15,19 +22,58 @@
 Пример:
 
     const cities = ['Moscow', 'London', 'Berlin']
-    let pop = cities.pop()
+    const pop = cities.pop()
     console.log(pop)
     console.log(cities)
 
-## array.unshift()
-Добавить элемент(ы) в начало массива возвращает количество элементов в массиве, после добавления новых.
+## array.push(значение(я))
+Добавить элемент(ы) в конец массива, возвращает количество элементов в массиве.
 
-Пример:
+Пример: 
 
-    const cities = ['Moscow', 'London', 'Berlin']
-    const unshift = cities.unshift('Rome', 'Vein')
+    const cities = ['Moscow', 'London', 'Berlin', 'Paris', 'Beijing']
+    console.log(cities.push()) // 6
+
+    let push = cities.push('Rome', 'Vein')
+    console.log(cities, push) // arr, 8
+
+## delete
+Удалить значение элемента внутри массива:
+    
+    const cities = ['Москва', 'Пекин', 'Лондон', 'Берлин', 'Вашингтон', 'Париж'];
+
     console.log(cities)
-    console.log(unshift)
+    delete cities[2]
+    console.log(cities)
+    console.log(cities.length)
+
+Элемент под индексом 2 не удалится, он станет пустым `<1 empty slot>`. Длина массива останется прежней.
+
+
+## array.splice()
+Вырезать элменты, весь массив, заменить добавить элементы. Может принимать 1-n аргументов.
+* splice() - ничего не вырезать, вернуть пустой массив
+* splice(0) - вырезать весь массив, вернуть весь массив
+* splice(2) - вырезать всё начиная со второго индекса, вернуть получившийся массив
+* splice(2, 4) - вырезать четыре элемента, начиная со второго индекса, вернуть получившийся массив
+* splice(1, 4, 'yes', 'no') - вырезать четыре элемента, начиная со первого индекса, добавить два элемента взамен вырезанных вернуть получившийся массив
+* splice(1, 2, 3, 4, 5) - вырезать два элемента, начиная с первого индекса, вернуть получившийся массив, `3, 4, 5` заменяет вырезанные элементы
+
+Пример №1
+
+    const cities = ['Moscow', 'London', 'Berlin', 'Paris', 'Beijing']
+    const cities2 = cities.splice(2)
+
+    console.log(cities)
+    console.log(cities2)
+
+Пример №2
+
+    const cities = ['Moscow', 'London', 'Berlin', 'Paris', 'Beijing', 'Rome', 'Vein']
+    const cities2 = cities.splice(1, 2, 'Лондон', 'Берлин', 'Бонн')
+
+    console.log(cities)
+    console.log(cities2)
 
 ## array.shift()
 Удалить первый элемент массива, возвращает удаленный элемент.
@@ -38,6 +84,16 @@
     const shift = cities.shift()
     console.log(cities)
     console.log(shift)
+
+## array.unshift()
+Добавить элемент(ы) в начало массива возвращает количество элементов в массиве, после добавления новых.
+
+Пример:
+
+    const cities = ['Moscow', 'London', 'Berlin']
+    const unshift = cities.unshift('Rome', 'Vein')
+    console.log(cities)
+    console.log(unshift)
 
 ## array.slice()
 Копировать массив целиком, не по ссылке. Может принимать один или два аргумента.
@@ -65,30 +121,6 @@
     console.log(cities)
     console.log(cities2)
 
-## array.splice()
-Вырезать элменты, весь массив, заменить добавить элементы. Может принимать 1-n аргументов.
-* splice() - ничего не вырезать, вернуть пустой массив
-* splice(0) - вырезать весь массив, вернуть весь массив
-* splice(2) - вырезать всё начиная со второго индекса, вернуть вырезанный массив
-* splice(2, 4) - вырезать четыре элемента, начиная со второго индекса, вернуть вырезанный массив
-* splice(1, 2, 3, 4, 5) - вырезать два элемента, начиная с первого индекса, вернуть вырезанный массив, `3, 4, 5` заменяет вырезанные элементы
-
-Пример №1
-
-    const cities = ['Moscow', 'London', 'Berlin', 'Paris', 'Beijing']
-    const cities2 = cities.splice(2)
-
-    console.log(cities)
-    console.log(cities2)
-
-Пример №2
-
-    const cities = ['Moscow', 'London', 'Berlin', 'Paris', 'Beijing', 'Rome', 'Vein']
-    const cities2 = cities.splice(1, 2, 'Лондон', 'Берлин', 'Бонн')
-
-    console.log(cities)
-    console.log(cities2)
-
 ## array.indexOf(значение)
 Вернет индекс элемента, при совпадении значения:
 
@@ -110,7 +142,7 @@
 ## array.lastIndexOf()
 Вернет индекс элемента, при совпадении значения. Ищет с конца.
 
-### join()
+## join()
 Создаёт из элементов массива строку и возвращает его. Изначальный массив не изменяется.
 
 * join() - строка из массива

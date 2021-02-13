@@ -1,5 +1,4 @@
 # onclick
-
 Задаём событие через `onclick` (Elements > Properties > Первая строка > onclick):
 
     let btn = document.getElementById('btn')
