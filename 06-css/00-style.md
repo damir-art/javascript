@@ -1,11 +1,12 @@
 # Работаем со style
-style - объект, свойство HTML-элемента, который храит в себе CSS-свойства.
+style - объект, свойство HTML-элемента, который хранит в себе CSS-свойства.
 
-    const formBtn = document.querySelector('.form-btn');
-    const out     = document.getElementById('out');
+    const out = document.querySelector('.out')
+    const btn = document.querySelector('.btn')
 
-    formBtn.addEventListener('click', () => {
-        out.style.color = 'green';
+    btn.addEventListener('click', function () {
+        out.style.color = 'green'
+        console.log(out.style.color) // выводим стиль color
         console.log(out.style) // выводим все стили
     })
 

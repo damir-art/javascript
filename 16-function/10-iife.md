@@ -1,6 +1,4 @@
 # IIFE
-https://learn.javascript.ru/closure#iife
-
 Immediately-invoked function expressions - функция запускаемая сразу после объявления (не современный подход).
 
 Есть четыре способа создания IIFE-функций, вот два наиболее популярных:

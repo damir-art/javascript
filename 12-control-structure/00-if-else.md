@@ -2,13 +2,15 @@
 Если условие `true` то остальные условия не выполняются.
 
 ## if
-    if (condition) statement
 
     if (условие) {
         действие
     }
 
+    if (условие) действие // сокращённая запись
+
 ## if, else
+
     if (condition) {
         statement 1
     } else {
@@ -16,6 +18,7 @@
     }
 
 ## if, else if, else
+
     if (condition) {
         statement 1
     } else if (condition) {

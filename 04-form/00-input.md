@@ -1,15 +1,17 @@
 # input
+Примеры с элементами формы.
 
 ## Range
+Двигаем ползунок и числовая позиция ползунка отображается в заголовке.
 
     <input class="range" type="range" min="0" max="100" value="35" />
 
-    const formRange = document.querySelector('.form-input-range');
+    const h1 = document.querySelector('h1')
+    const range = document.querySelector('.range')
 
-    formRange.addEventListener('input', (e) => {
-        out.innerHTML = `Range: <b>${formRange.value}</b>`;
-        console.log(formRange.value);
-    });
+    range.addEventListener('input', function () {
+        h1.textContent = range.value;
+    })
 
 ## Checkbox
 
@@ -21,9 +23,15 @@
 ## Radio
 Через цикл определяем какая радиокнопка выбрана.
 
-    <label for="apple"><input class="radio" id="apple" type="radio" name="fruit" value="apple" checked /> Яблоко</label>
-    <label for="pineapple"><input class="radio" id="pineapple" type="radio" name="fruit" value="pineapple" /> Ананас</label>
-    <label for="peach"><input class="radio" id="peach" type="radio" name="fruit" value="peach" /> Персик</label>
+    <label for="apple">
+        <input class="radio" id="apple" type="radio" name="fruit" value="apple" checked /> Яблоко
+    </label>
+    <label for="pineapple">
+        <input class="radio" id="pineapple" type="radio" name="fruit" value="pineapple" /> Ананас
+    </label>
+    <label for="peach">
+        <input class="radio" id="peach" type="radio" name="fruit" value="peach" /> Персик
+    </label>
 
     const radio   = document.querySelectorAll('.radio');
     const formBtn = document.querySelector('.form-btn');

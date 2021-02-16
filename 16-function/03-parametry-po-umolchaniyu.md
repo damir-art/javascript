@@ -12,7 +12,7 @@
     const post = createPost('Мерседес', 'Мерседес - отличный автомобиль!', '20.09.2019')
     console.log(post)
     
-По дефолту до ES6:
+До ES6:
 
     const createPost = (title, text, date) => {
         date = date || new Date().toLocaleDateString()
@@ -25,7 +25,7 @@
 
     const post = createPost('Мерседес', 'Мерседес - отличный автомобиль!')
 
-По дефолту в ES6:
+В ES6:
 
     const createPost = (title, text, date = new Date().toLocaleDateString()) => {
         return {

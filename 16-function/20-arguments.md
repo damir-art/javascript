@@ -1,5 +1,5 @@
 # arguments
-**arguments** &ndash; это объект переданных в функцию параметров.
+**arguments** &ndash; псевдомассив переданных в функцию параметров.
 
 Пишем внутри функции `console.log(arguments)` или `console.log(...arguments)`
 

@@ -1,18 +1,19 @@
 # Циклы
 
-    инкремент ++
-    декремент --
-
+    for
     while
     do while
-    for
-    break
-    continue
+
+    for in
+    for of (ES6 - 2015)
+
+    nested
+
+    инкремент ++
+    декремент --
 
     постфикс i++
     префикс ++i
 
-    for of ES6(2015)
-
-- циклы
-- вложенные циклы
+    break
+    continue

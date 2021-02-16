@@ -3,6 +3,7 @@
 
 - min/max element
 - sum elements
+- array event for
 
 ## min/max element
 Находим минимальный или максимальный элементы массива:
@@ -29,3 +30,14 @@
     }
 
     console.log(sum)
+
+# array, event, for
+Присваиваем событие элементам массива, через цикл for
+
+    for ( ... ) {
+        div[i].onclick = foo
+    }
+
+    function foo () {
+        ...
+    }

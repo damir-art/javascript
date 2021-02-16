@@ -15,9 +15,13 @@
     });
 
 ## input (событие)
-Событие возникает при изменении элемента формы:
+Событие возникает при изменении элемента формы.
 
-    formRange.addEventListener('input', (e) => {
-        // out.innerHTML = `Login: <b>${formName.value}</b>, Date: ${formRange.value} `;
-        console.log(formRange.value);
-    });
+Двигаем ползунок. Позиция ползунка (число) вставляется в заголовок.
+
+    const h1 = document.querySelector('h1')
+    const range = document.querySelector('.range')
+
+    range.addEventListener('input', function () {
+        h1.textContent = range.value;
+    })

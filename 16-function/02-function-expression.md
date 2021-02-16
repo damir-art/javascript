@@ -12,6 +12,7 @@
     console.log(getSum)
 
     const x = getSum     // присвоение по ссылке
+    console.log(x)
     console.log(x(3, 5)) // 8
 
 ## Анонимная функция
@@ -21,6 +22,10 @@
         return a + b
     }
     console.log(getSum(3, 5)) // 8
+
+    btn.addEventListener('click', function () {
+
+    })
 
 ## Стрелочная анонимная функция
 Стрелочная функция не замена анонимных функций, а один из способо её написания.

@@ -1,7 +1,8 @@
 # Преобразование типов данных
-Преобразование *(приведение)* типов в JavaScript бывает явным и неявным. Преобразовывать можно к числовому, строковому, логическому типу.
+Преобразование *(приведение)* типов данных в JavaScript бывает явным и неявным. Преобразовывать можно к числовому, строковому, логическому типу.
 
 ## Неявное преобразование
+
 ### string
 Если к строке прибавить (конкатенация) что-либо, то получим строку:
 
@@ -12,20 +13,33 @@
     console.log(typeof a); // 'string'
 
 ### boolean
-    if (a) или a && b
+Появляется в операция сравнения и логических:
+
+    let a = 3
+    let b = 5
+    let c = a < b
+    console.log(a > b)    // false
+    console.log(typeof c) // boolean
+
+    let a = 3
+    let b = 5
+    let c = (a > b) || (a < b)
+    console.log((a > b) || (a < b)) // true
+    console.log(typeof c)           // boolean
 
 ## Явное преобразование
+
 ### String()
     let a = String('строка');
     console.log(a, typeof(a)); // строка string
 
 ### Number()
     let b = Number('строка');
-    console.log(b, typeof(b)); // NaN "number"
+    console.log(b, typeof(b)); // NaN number
 
 ### Boolean()
     let c = Boolean('строка');
-    console.log(c, typeof(c)); // true "boolean"
+    console.log(c, typeof(c)); // true boolean
 
 ## Мягкое преобразование к числу
 Функции `parseInt()` и `parseFloat()`:
@@ -41,4 +55,4 @@
     console.log(parseFloat(d)); // 0.5
 
 ## Разное
-- поставить `+` перед строкой в виде числа `'5'` строка преобразуется в число `5`
+- поставить `+` перед строкой в виде числа `'5'` строка преобразуется в число `5`, обычно применяют при получении данных из форм

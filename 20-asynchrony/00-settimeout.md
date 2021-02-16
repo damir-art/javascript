@@ -1,10 +1,5 @@
-# Асинхронность в JavaScript
-
-* Интервалы и таймеры `setInterval(), setTimeout(), clearInterval()`
-* Промисы
-* Async/await
-
-Асинхронность &ndash; одна из мощных возможностей в JavaScript.
+# setTimeout()
+Таймеры и интервалы `setTimeout()`, `setInterval(), clearInterval()`
 
 ## setTimeout()
 Выполнить код через некоторое время:

@@ -5,17 +5,17 @@
     let x = 10;
 
     switch (x) {
-        case 'значение': // равносильно if (x === 'значение')
-            console.log(5);
+        case 'значение':    // равносильно if (x === 'значение')
+            console.log('значение');
             break;
-        case 6:          // равносильно if (x === 6)
+        case 6:             // равносильно if (x === 6)
             console.log(6);
             break;
-        case 7:          // равносильно if (x === 7)
+        case 7:             // равносильно if (x === 7)
             console.log(7);
             break;
-        default:         // ни одно из условий не верно
-            console.log(8);
+        default:            // ни одно из условий не верно
+            console.log('Не верно');
     }
 
     break - выход из конструкции
