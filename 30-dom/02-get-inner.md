@@ -4,13 +4,13 @@
 
 Получить всё, что находится между тегами элемента, дочерние элементы и текст:
 
-    div = document.getElementById('id')
+    elem = document.getElementById('id')
     console.log(div.innerHTML)
 
 Внедрить что либо между тегами элемента, дочерние элементы и текст (заменит всё что было внутри):
 
-    div = document.getElementById('id')
-    div.innerHTML = '<b style="color: green;">Hello</b>'
+    elem = document.getElementById('id')
+    elem.innerHTML = '<b style="color: green;">Hello</b>'
 
 ## textContent (рекомендуется)
 Получить весь текст между тегами, теги не показываются:

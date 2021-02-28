@@ -1,16 +1,20 @@
 # События в JavaScript
 События и обработчики событий (функции).
 
-## addEventListener()
-Функция добавления событий:
+- события: `click`, `input`, `mouseenter`, `mouseleave`
+- обработчик события: полльзовательская функция которая сработает после события
+- addEventListener() - функция слушатель события
 
-    div = document.getElementById('div')
-    div.addEventListener('event', foo)
+## addEventListener()
+Функция слушатель события:
+
+    const btn = document.querySelector('.btn')
+    btn.addEventListener('событие', foo)
 
 Кликнем по кнопке, надпись у заголовка изменится:
 
-    var button = document.getElementById('button')
-    var header = document.getElementById('header')
+    const button = document.getElementById('button')
+    const header = document.getElementById('header')
 
     button.addEventListener('click', function () {
         header.textContent = 'Нажали по кнопке'
@@ -20,8 +24,8 @@
 ### Кликнем по кнопке, надпись у заголовка изменится по условию
 Вместо анонимной функции, используем имя функции:
 
-    var button = document.getElementById('button')
-    var header = document.getElementById('header')
+    const button = document.getElementById('button')
+    const header = document.getElementById('header')
 
     button.addEventListener('click', buttonClick)
 
@@ -59,8 +63,21 @@
         this.style.backgroundColor = "#eee"
     })
 
+# onclick
+Задаём событие через `onclick` (Elements > Properties > Первая строка > onclick):
+
+    let btn = document.getElementById('btn')
+    btn.onclick = by
+
+    function by() {
+        console.log('by')
+        root.innerHTML = 'by <b>btn</b>!'
+        this.className = 'button'
+        this.hidden = true
+    }
+
 ## Ссылки
-* Все события https://developer.mozilla.org/ru/docs/Web/Events<br />
-* Все API https://developer.mozilla.org/ru/docs/Web/API<br />
-* API Event https://developer.mozilla.org/ru/docs/Web/API/Event<br />
-* События мыши https://developer.mozilla.org/ru/docs/Web/API/MouseEvent
+- Все события https://developer.mozilla.org/ru/docs/Web/Events
+- Все API https://developer.mozilla.org/ru/docs/Web/API
+- API Event https://developer.mozilla.org/ru/docs/Web/API/Event
+- События мыши https://developer.mozilla.org/ru/docs/Web/API/MouseEvent

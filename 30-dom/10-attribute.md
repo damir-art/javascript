@@ -15,7 +15,7 @@
     a.setAttribute('data-n', 3)
 
 ## attributes
-Получить массив атрибутов элемента
+Получить массив `NamedNodeMap` атрибутов элемента
 
     a = document.getElementById('a')
     console.log(a.attributes)
@@ -25,6 +25,12 @@
 
     a = document.getElementById('a')
     console.log(a.attributes[0])
+
+## attributes['id']
+Получить имя атрибуа и его значение, по имени атрибута
+
+    a = document.getElementById('a')
+    console.log(a.attributes['id'])
 
 ## attributes[0].nodeValue
 Получить значение первого атрибута в массиве
