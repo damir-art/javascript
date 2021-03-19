@@ -59,3 +59,9 @@
 ## Пример с циклом
 Перебираем все родительские элементы снизу вверх от дочернего.
 
+    const myLink = document.querySelector('#myLink')
+    let cursor = myLink // содержимое этой переменной должно меняться
+
+    while (cursor = cursor.parentNode) {
+        console.log(cursor)
+    }
