@@ -1,6 +1,6 @@
-const myLink = document.querySelector('#myLink')
-let cursor = myLink // содержимое этой переменной должно меняться
+const a = [ 1, 2, 3 ]
 
-while (cursor = cursor.parentNode) {
-    console.log(cursor)
-}
+const b = Object.keys(a)
+
+console.log(a) // 
+console.log(b) // [ "0", "1", "2" ]

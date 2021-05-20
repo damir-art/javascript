@@ -1,0 +1,16 @@
+# lastIndexOf()
+- находит индекс последнего вхождения элемента в строке/массиве
+
+Пример (строка):
+
+    const a = 'молоко'
+    const b = a.lastIndexOf('о')
+
+    console.log(b) // 5
+
+Пример (массив):
+
+    const a = [2, 4, 6, 4, 8, 10, 12, 14]
+    const b = a.lastIndexOf(4)
+
+    console.log(b) // 3
