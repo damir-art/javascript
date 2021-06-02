@@ -1,4 +1,4 @@
-# Объекты
+# Объекты в ES6
 
 ## Возвращаем объект
 Возвращаем объект:
@@ -7,7 +7,8 @@
         return { brand, model }
     }
     const ford = createCar('Форд', 'Фокус')
-    console.log(ford)
+
+    console.log(ford) // Object { brand: "Форд", model: "Фокус" }
 
 Сокращаем до одной строки. Объект оборачиваем в круглые скобки:
 
@@ -19,11 +20,11 @@
 
     const ford = {
         brand: 'Ford',
-        ['model: ' + Math.floor(Math.random() * 1000)]: 'Focus'
+        ['model ' + Math.floor(Math.random() * 1000)]: 'Focus'
     }
 
     console.log(ford)
-    
+
 Задаём имена полей через значения переменных:
 
     const yearField = 'year'
@@ -53,6 +54,8 @@
     ford.logFields()
 
 ## Деструктуризация
+Деструктуризация часто применяется в JavaScript модулях: import, export.
+
 Убираем this:
 
     const yearField = 'year'
@@ -77,5 +80,3 @@
     const {year} = ford
 
     console.log(year) // 2018
-
-Деструктуризация часто применяется в JavaScript модулях: import, export.

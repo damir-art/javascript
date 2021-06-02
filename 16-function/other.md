@@ -1,4 +1,4 @@
-# Разное
+# Разное о функциях
 ## Функция как элемент массива
 
     var operations=[]
@@ -56,3 +56,13 @@
     })
 
     console.log(result) // 42
+
+## Функция как свойство объекта window
+Если мы создаем функцию в глобальной области видимости, то она принадлежит объекту `window`:
+
+    function hello() {
+        return 'Hi'
+    }
+
+    console.log(window.hello)   // ƒ hello() { return 'Hi' }
+    console.log(window.hello()) // Hi

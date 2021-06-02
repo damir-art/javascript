@@ -6,7 +6,7 @@
     var ford = {
         brand: 'Ford',
         model: 'Focus',
-        year: 1999
+        year:   1999
     }
 
 ## for in
@@ -24,7 +24,7 @@
 
     // возвращает массив ключей объекта
     var keys = Object.keys(ford)
-    console.log(keys)
+    console.log(keys) // [ "brand", "model", "year" ]
 
     // обрабатываем каждый элемент массива
     Object.keys(ford).forEach(function(key) { 

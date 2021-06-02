@@ -8,7 +8,7 @@
         Boolean()
         ...
 
-В JavaScript - всё это объект.
+В JavaScript - всё является объектом.
 
 ## Boolean
     Boolean.prototype.toString()
