@@ -4,14 +4,158 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
     <title>JavaScript</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <button class="btn">Отправить</button>
-    <button class="btn2">Отправить 2</button>
-    <script src="script.js"></script>
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+<form class="form-window mb-3">
+    <fieldset>
+        <legend>Вычислить стоимость окон:</legend>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-3">
+<div class="form-check">
+    <p>
+        Количество створок:
+    </p>
+    <input class="form-check-input form-window-stvorka" type="radio" name="window-stvorka" id="stvorka-1" checked>
+    <label class="form-check-label" for="stvorka-1">
+        Одностворчатое окно
+    </label>
+</div>
+<div class="form-check">
+    <input class="form-check-input form-window-stvorka" type="radio" name="window-stvorka" id="stvorka-2">
+    <label class="form-check-label" for="stvorka-2">
+        Двухстворчатое окно
+    </label>
+</div>
+<div class="form-check mb-3">
+    <input class="form-check-input form-window-stvorka" type="radio" name="window-stvorka" id="stvorka-3">
+    <label class="form-check-label" for="stvorka-3">
+        Трёхстворчатое окно
+    </label>
+</div>
+        </div> <!-- col -->
+
+        <div class="col-md-3">
+<div class="form-check">
+    <p>
+        Количество камер:
+    </p>
+    <input class="form-check-input form-window-kamera" type="radio" name="window-kamera" id="kamera-1" checked>
+    <label class="form-check-label" for="kamera-1">
+        Однокамерное
+    </label>
+</div>
+<div class="form-check">
+    <input class="form-check-input form-window-kamera" type="radio" name="window-kamera" id="kamera-2">
+    <label class="form-check-label" for="kamera-2">
+        Двухкамерное
+    </label>
+</div>
+<div class="form-check mb-3">
+    <input class="form-check-input form-window-kamera" type="radio" name="window-kamera" id="kamera-3">
+    <label class="form-check-label" for="kamera-3">
+        Трёхкамерное
+    </label>
+</div>
+            </div> <!-- col -->
+
+            <div class="col-md-3">
+<div class="form-check">
+    <p>
+        Профиль:
+    </p>
+    <input class="form-check-input form-window-profil" type="radio" name="window-profil" id="profil-1" checked>
+    <label class="form-check-label" for="profil-1">
+        Grain
+    </label>
+</div>
+<div class="form-check">
+    <input class="form-check-input form-window-profil" type="radio" name="window-profil" id="profil-2">
+    <label class="form-check-label" for="profil-2">
+        Siplast 76
+    </label>
+</div>
+<div class="form-check">
+    <input class="form-check-input form-window-profil" type="radio" name="window-profil" id="profil-3">
+    <label class="form-check-label" for="profil-3">
+        Salamander 76
+    </label>
+</div>
+<div class="form-check">
+    <input class="form-check-input form-window-profil" type="radio" name="window-profil" id="profil-4">
+    <label class="form-check-label" for="profil-4">
+        Citylux
+    </label>
+</div>
+<div class="form-check mb-3">
+    <input class="form-check-input form-window-profil" type="radio" name="window-profil" id="profil-5">
+    <label class="form-check-label" for="profil-5">
+        Nordprof
+    </label>
+</div>
+            </div> <!-- col -->
+
+            <div class="col-md-3">
+    <div class="form-check">
+        <p>
+            Фурнитура:
+        </p>
+        <input class="form-check-input form-window-furnitura" type="radio" name="window-furnitura" id="furnitura-1" checked>
+        <label class="form-check-label" for="furnitura-1">
+            Vorne
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input form-window-furnitura" type="radio" name="window-furnitura" id="furnitura-2">
+        <label class="form-check-label" for="furnitura-2">
+            Internica
+        </label>
+    </div>
+    <div class="form-check mb-3">
+        <input class="form-check-input form-window-furnitura" type="radio" name="window-furnitura" id="furnitura-3">
+        <label class="form-check-label" for="furnitura-3">
+            Maco
+        </label>
+    </div>
+            </div> <!-- col -->
+
+    </div> <!-- row -->
+</div> <!-- container -->
+
+        <button type="button" class="form-window__btn btn btn-primary">Отправить</button>
+    </fieldset>
+</form>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+    </symbol>
+</svg>
+  
+<div class="alert alert-success d-flex align-items-center" role="alert">
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+        <use xlink:href="#check-circle-fill" />
+    </svg>
+    <div>
+        <b>Цена:</b> <span class="window-price"></span>
+    </div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+    <script src="calc-window.js"></script>
 
 </body>
 </html>

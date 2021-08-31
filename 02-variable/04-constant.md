@@ -8,3 +8,33 @@
 При объявлении массива или объекта с помощью `const`, мы можем менять их элементы но не сами массивы/объекты.
 
 Также как и `let`, `const` имеет блочную `{ }` область видимости.
+
+## const &ndash; константа
+В ES6 появились константы, чьё значение нельзя менять.
+
+До ES6:
+
+    var HEX = '#333'
+    HEX = '#ccc'
+    console.log(HEX) // #ccc
+
+Начиная с ES6:
+
+    const HEX = '#333'
+    HEX = '#ccc'
+    console.log(HEX) // покажет ошибку о недопустимости изменения
+
+У массивов и объектов объявленных через `const` можно изменять/удалять/добавлять элементы через свойства, методы `Object.` и `Array.`:
+
+    const OBJ = { name: 'damir' }
+    OBJ.name = 'denis'
+    console.log(OBJ) // { name: 'denis' }
+
+    const ARR = [1, 2, 3]
+    ARR.unshift(5)
+    console.log(ARR) // [5, 1, 2, 3]
+ 
+ Но не так:
+    
+    const OBJ = { name: 'damir' }
+    OBJ = { name: 'denis' }
