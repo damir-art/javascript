@@ -1,5 +1,16 @@
 # Работаем с атрибутами
 
+Обычно названия атрибутов HTML-тега и названия свойств HTML-объекта совпадают, но не всегда, например:
+
+    h1.getAttribute('class') // .head
+    h1.className             // .head , class - зарезервированное слово
+
+    tabindex
+    tabIndex // camelCase
+
+    for     // например у тега label
+    htmlFor
+
 ## getAttribute()
 Получить значение атрибута:
 

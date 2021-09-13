@@ -1,4 +1,5 @@
 # События в JavaScript
+
 События и обработчики событий (функции).
 
 - события: `click`, `input`, `mouseenter`, `mouseleave`
@@ -10,6 +11,8 @@
 
     const btn = document.querySelector('.btn')
     btn.addEventListener('событие', foo)
+
+foo - колбэк, функция обратного вызова, её можно вынести отдельно.
 
 Кликнем по кнопке, надпись у заголовка изменится:
 

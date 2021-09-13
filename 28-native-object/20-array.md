@@ -1,4 +1,34 @@
-# Массивы в JavaScript
+# Array
+
+Массив пустой но его длина равна 4.
+
+    const arr = new Array(4)  // создать массив
+    console.log( arr.length ) // 4
+
+    const arr = new Array(4)  // создать массив
+    console.log( arr )        // [ <4 empty slots> ]
+    console.log( arr.length ) // 4
+
+    arr.fill(null)            // заполнить массив
+    console.log( arr )        // [ null, null, null, null ]
+
+Заполняем массив объектами:
+
+    const createPeople = () => {
+        return {
+            name: 'Петя',
+            lastname: 'Петров',
+            age: 27,
+            programmer: true,
+
+        }
+    }
+
+    const arr = new Array(4).fill(null).map(() => createPeople()) // [ {…}, {…}, {…}, {…} ]
+
+    console.log( arr )
+
+## Разное
 
     // создаём массив
     var array = [ 1, 2, 3 ]
