@@ -16,6 +16,6 @@ typeof - оператор, который показывает какой тип
 ## Какие типы данных существуют
 Типы данных в JavaScript делятся на два вида: примитивные и сложные (комплексные).
 
-**Примитивы:** number, string, boolean, null, undefined
+**Примитивы:** number, string, boolean, служебные (null, undefined)
 
-**Комплексные:** object, array, function
+**Комплексные (сложные):** object, array, function

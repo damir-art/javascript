@@ -1,7 +1,2 @@
-const btn = document.querySelector('.btn')
-
-const onButtonClick = (username) => {
-    console.log(`Hello, ${username}`)
-}
-
-btn.addEventListener('click', onButtonClick.bind('null', 'Ivan'))
+let flt = 0.3 - 0.2
+console.log(flt) // 0.09999999999999998

@@ -14,7 +14,7 @@
 
     <h1 data-price="100" data-brand="grain">Пластиковые окна 1</h1>
 
-    const h1 = document.querySelector('h1').dataset.window
+    const h1 = document.querySelector('h1').dataset.price
     console.log(h1)
 
 ## Старая запись
