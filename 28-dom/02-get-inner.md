@@ -33,3 +33,6 @@
 
     div = document.getElementById('id')
     div.innerText = '<b style="color: green;">Hello</b>'
+
+## Разное
+Текст еще можно получить через `elem.childNodes`

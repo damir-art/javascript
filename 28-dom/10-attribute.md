@@ -65,3 +65,6 @@
 
     var a = document.querySelector('a')
     a.textContent = a.href;
+
+## Разное
+Обычно названия атрибутов совпадают с названием свойств объектов, кроме тех что зарезервированы в JavaScript, например `class - className`, `for - htmlFor`.

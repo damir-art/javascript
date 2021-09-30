@@ -65,3 +65,12 @@
     while (cursor = cursor.parentNode) {
         console.log(cursor)
     }
+
+## Управление элементами
+
+    elem.removeChild(elem)  - удалить дочерний элемент
+    elem.appendChild(elem)  - добавить/переместить дочерний элемент
+    elem.insertBefore(elem3, elem) - вставить дочерний перед
+    elem.replaceChild(elem3, elem) - заменить дочерний элемент, возвращает заменённый элемент
+    elem.appendChild(elem.cloneNode()) - копировать элемент, без дочерних
+    elem.appendChild(elem.cloneNode(true)) - копировать элемент, с дочерними

@@ -6,18 +6,23 @@
 - array event for
 
 ## min/max element
-Находим минимальный или максимальный элементы массива:
+Находим минимальное или максимальное значение элемента массива:
 
-    let numArr = [2, 0, 4, 12, 7, 9]
-    let max = numArr[0]
+    const arr = [2, 0, 4, 12, 7, 9]
 
-    for(let i = 0; i < numArr.length; i++) {
-        if ( max < numArr[i] ) { // max > numArr[i] для минимального
-            max = numArr[i]
+    const getMaxElem = function (arr) {
+        let maxElement = arr[0]
+        for(let i = 0; i < arr.length; i++) {
+            if ( arr[i] > maxElement ) {
+                maxElement = arr[i]
+            }
         }
+        return maxElement
     }
 
-    console.log(max)
+    console.log(getMaxElem(arr))
+
+Знак больше: наибольшее значение, знак меньше: наименьшее значение.
 
 ## sum elements
 Вычисляем сумму элементов:

@@ -39,3 +39,5 @@
 
     getElement
     get_element
+
+`()` - оператор вызова функции.
