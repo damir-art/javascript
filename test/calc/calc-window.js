@@ -3,34 +3,64 @@ function calcWindow() {
     let formWindowKamera     = document.querySelectorAll('.form-window-kamera')
     let formWindowProfil     = document.querySelectorAll('.form-window-profil')
     let formWindowFurnitura  = document.querySelectorAll('.form-window-furnitura')
-    let formWindowWidth      = document.querySelector('.form-window-width')
-    let formWindowHeight     = document.querySelector('.form-window-height')
+    let inputWidth      = document.querySelector('.input-width')
+    let inputHeight     = document.querySelector('.input-height')
     let formWindowBtn        = document.querySelector('.form-window__btn')
     let windowPrice          = document.querySelector('.window-price')
 
+    // formWindowBtn.addEventListener('click', function() {
+    //     windowPrice.textContent = ''
+    //     for (let i = 0; i < formWindowStvorka.length; i++) {
+    //         if (formWindowStvorka[i].checked) {
+    //             windowPrice.textContent += formWindowStvorka[i].dataset.stvorka
+    //         }
+    //     }
+    //     for (let i = 0; i < formWindowKamera.length; i++) {
+    //         if (formWindowKamera[i].checked) {
+    //             windowPrice.textContent += formWindowKamera[i].dataset.paket
+    //         }
+    //     }
+    //     for (let i = 0; i < formWindowProfil.length; i++) {
+    //         if (formWindowProfil[i].checked) {
+    //             windowPrice.textContent += formWindowProfil[i].dataset.profil
+    //         }
+    //     }
+    //     for (let i = 0; i < formWindowFurnitura.length; i++) {
+    //         if (formWindowFurnitura[i].checked) {
+    //             windowPrice.textContent += formWindowFurnitura[i].dataset.furnitura
+    //         }
+    //     }
+    //     windowPrice.textContent += inputWidth.value
+    //     windowPrice.textContent += inputHeight.value
+    // })
+
     formWindowBtn.addEventListener('click', function() {
-        windowPrice.innerText = ''
+        windowPrice.textContent = ''
+        let price = 0
         for (let i = 0; i < formWindowStvorka.length; i++) {
             if (formWindowStvorka[i].checked) {
-                windowPrice.innerText += formWindowStvorka[i].id
-                console.log(formWindowStvorka[i].dataset.stvorka)
+                price += +formWindowStvorka[i].dataset.stvorka
             }
         }
         for (let i = 0; i < formWindowKamera.length; i++) {
             if (formWindowKamera[i].checked) {
-                windowPrice.innerText += formWindowKamera[i].id
+                price += +formWindowKamera[i].dataset.paket
             }
         }
         for (let i = 0; i < formWindowProfil.length; i++) {
             if (formWindowProfil[i].checked) {
-                windowPrice.innerText += formWindowProfil[i].id
+                price += +formWindowProfil[i].dataset.profil
             }
         }
         for (let i = 0; i < formWindowFurnitura.length; i++) {
             if (formWindowFurnitura[i].checked) {
-                windowPrice.innerText += formWindowFurnitura[i].id
+                price += +formWindowFurnitura[i].dataset.furnitura
             }
         }
+        price += +inputWidth.value
+        price += +inputHeight.value
+
+        windowPrice.textContent = price
     })
 }
 

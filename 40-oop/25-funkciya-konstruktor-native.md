@@ -1,4 +1,4 @@
-# Функция-конструктор
+# Функция-конструктор (нативная)
 ## Обёртки для примитивов
 
     Object()
@@ -10,10 +10,10 @@
 
 В JavaScript - всё является объектом.
 
-## Boolean
+### Boolean
     Boolean.prototype.toString()
 
-## Number
+### Number
     Number.prototype.toExponential()
 
 ## String

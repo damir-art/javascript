@@ -40,3 +40,8 @@ JavaScript в браузере, это:
 - Visual Studio Code
 - ESLint - плагин VSC, показывает ошибки автоматически
 - npm: esLint (esLint-config-htmlacademy, javascript-airbnb)
+
+## select
+- https://www.youtube.com/watch?v=H-UPHVjunOs
+- https://qna.habr.com/q/240483
+- вебкадеми - модули

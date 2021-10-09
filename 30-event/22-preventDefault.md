@@ -1,4 +1,4 @@
-# preventDefault()
+# preventDefault() 
 - `prevent` предотвратить
 - `default` по-умолчанию
 
