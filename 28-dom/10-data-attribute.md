@@ -17,6 +17,12 @@
     const h1 = document.querySelector('h1').dataset.price
     console.log(h1)
 
+## Разное
+- используются для передачи пользовательских данных из HTML в JavaScript
+- помимо `data-` атрибутов, можно создавать пользовательские с любым именем и значением
+- `data-price-new` обращаемся как `el.dataset.priceNew`
+- `data-` атрибуты это валидный, безопасный способ передачи пользовательских данных
+
 ## Старая запись
 
     <div data-slider="left"> </div>

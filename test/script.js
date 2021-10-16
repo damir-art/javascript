@@ -1,5 +1,8 @@
-for (const i = 0; i < 5; i++) {
-    setTimeout(function() {
-        console.log(i) // ссылка на 5
-    }, 1000) // 5, 5, 5, 5, 5
+const link = document.querySelector('.link')
+
+for (let att of link.attributes) {
+    console.log( `${att.name} = "${att.value}"` );
 }
+
+console.log(link.attributes)
+console.log(link.dataset)
