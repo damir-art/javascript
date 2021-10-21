@@ -1,10 +1,32 @@
-# Работаем с classList
+# className/classList - изменяем класс элемента
+
+- className
+- classList
+- classList.add()
+- classList.remove()
+- classList.contains()
+- classList.toggle()
+
+Есть два способа задания стилей, через файл стилей и через атрибут `style`. Рекомендуется менять стили у улементов через файл стилей. Менять стили через атрибут `style` рекомендуется в некоторых случаях, например при измерении координат, динамически.
+
+    el.className - равен атрибуту `class`
+
+При изменении класса через `className` он затирает все текущие классы элемента. Чтобы удалить или добавить один класс не затрагивая других, используйте `classList`
 
 ## classList
 Объект отвечающий за работу с CSS-классами, возвращает массив классов одного элемента:
 
     const out = document.querySelector('.out')
     console.log(out.classList)
+
+Методы `classList`:
+
+    el.classList.add('class)       - добавить класс
+    el.classList.remove('class')   - удалить класс
+    el.classList.toggle('class')   - добавить класс, если его нет, удалить если он есть
+    el.classList.contains('class') - проверка наличия класса, возвращает true/false
+
+classList - итерируемый объект, можно перебрать все классы элемента через `for ... of`.
 
 ## classList.add()
 Добавляем класс(ы) к выбранному элементу:
@@ -67,7 +89,5 @@
     const btn = document.querySelector('.btn')
 
     btn.addEventListener('click', function () {
-
         out.classList.toggle('out-2');
-
     })

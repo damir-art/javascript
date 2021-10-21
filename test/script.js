@@ -1,8 +1,16 @@
-const link = document.querySelector('.link')
+const wrapper = document.querySelector('.wrapper')
 
-for (let att of link.attributes) {
-    console.log( `${att.name} = "${att.value}"` );
-}
+wrapper.addEventListener('click', function (evt) {
+    const tagName = evt.target.tagName.toLowerCase()
+    console.log(tagName)
 
-console.log(link.attributes)
-console.log(link.dataset)
+    // Меняем цвет по имени тега
+    if(tagName === 'p') {
+        evt.target.style.color = 'green'
+    }
+
+    // Меняем цвет по имени класса
+    if(evt.target.classList.contains('descr')) {
+        evt.target.style.color = 'orange'
+    }
+})

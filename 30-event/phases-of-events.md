@@ -1,7 +1,10 @@
-# Цикл жизни событий
-Фазы событий:
-- погружение - Netscape
-- всплытие (bubbling) - IE
+# Фазы событий
+Цикл жизни события.
+
+Стандарт описывает три фазы жизни события:
+- Фаза погружения (capturing, перехват), сверху вниз, `Netscape`
+- Фаза цели, событие достигло целевого элемента: `target`
+- Фаза всплытия (bubbling), снизу вверх, `IE`
 
 Код, разберем пример клика по кнопке:
 
@@ -15,14 +18,14 @@
 
 **Всплытие** - событие сначала происходит на нижнем элементе DOM-дерева, а потом поднимается по родителям (при условии что нельзя сказать однозначно, где произошло событие).
 
-Некоторые события не всплывают, например: focus, blur, invalid.
+Некоторые события не всплывают, например: `focus`, `blur`, `invalid`.
 
 **Погружение** (захват) - события спускаются к элементу на котором происходят начиная с самого старшего предка. У Netscape захватываются (погружаются) все события.
 
 ## Современность
 В настоящее время при разработке единого стандарта для всех браузеров. Эти фазы событий `погружение/всплытие` объединили:
 
-- Погружение (захват) - событе срабатывает на каждом предке
+- Погружение (захват) - событие срабатывает на каждом предке
 - Событие
 - Всплытие (если возможно) - событе срабатывает на каждом предке
 
@@ -30,19 +33,28 @@
 
 ## Примеры
 
-    // При клике на id=2, клик по id=1 тоже сработает (погружение)
-    <div class="box-1" id="1">
-        <div class="box-2" id="2"></div>
+    <div id="div" class="bc">
+        <button id="btn" class="bc" type="button">Кнопка</button>
     </div>
-    
-    var divs = document.querySelectorAll('div')
-    for(var i = 0; i < divs.length; i++ ) {
-        divs[i].addEventListener('click', function(){
-            console.log(this.getAttribute('id')) // 2, 1
+
+    // всплытие
+    const bc_s = document.querySelectorAll('.bc')
+    for (bc of bc_s) {
+        bc.addEventListener('click', function () {
+            console.log(this.getAttribute('id')) // btn, div
         })
     }
-    
-    // меняем порядок с 2, 1 на 1, 2 (всплытие)
-    divs[i].addEventListener('click', function(){
-        console.log(this.getAttribute('id')) // 2, 1, третий параметр true у addEventListener
-    }, true)
+
+    // захват
+    for (bc of bc_s) {
+        bc.addEventListener('click', function () {
+            console.log(this.getAttribute('id')) // div, btn
+        }, true)
+    }
+
+    // evt.target
+    for (bc of bc_s) {
+        bc.addEventListener('click', function (evt) {
+            console.log(evt.target.getAttribute('id')) // btn, btn - при клике по кнопке
+        })
+    }
