@@ -19,3 +19,16 @@ typeof - оператор, который показывает какой тип
 **Простые (примитивные)** - это number, string, boolean, служебные (null, undefined).
 
 **Сложные (комплексные)** - это object, array, function.
+
+## Разное
+В JavaScript имеется 8 основных типов данных:
+- number - целые, вещественные
+- bigint - большие числа
+- string
+- boolean
+- null
+- undefined
+- object
+- symbol
+
+JavaScript - динамически типизированный язык программирования

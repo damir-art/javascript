@@ -3,7 +3,7 @@
 
 - console.log(myForm.elements) `HTMLFormControlsCollection` получаем объект со свойствами, имена которых совпадают со значениями атрибутов `name` у элементов, получаем доступ к нужным нам полям
 - `myForm.elements` хранилище полей формы
-- `myForm.elements.lastName` (myForm.lastName) получаем доступ к элементам формы можно через атрибут `name`
+- `myForm.elements.lastName` (myForm.lastName) получаем доступ к элементу формы можно через атрибут `name`
 - `myForm.elements.lastName.value` получаем значение которое ввели в текстовое поле
 
 ## Пример формы

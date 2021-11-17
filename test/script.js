@@ -1,16 +1,13 @@
-const wrapper = document.querySelector('.wrapper')
-
-wrapper.addEventListener('click', function (evt) {
-    const tagName = evt.target.tagName.toLowerCase()
-    console.log(tagName)
-
-    // Меняем цвет по имени тега
-    if(tagName === 'p') {
-        evt.target.style.color = 'green'
+function createUser (name, age, car) {
+    return {
+        name,
+        age,
+        car
     }
+}
 
-    // Меняем цвет по имени класса
-    if(evt.target.classList.contains('descr')) {
-        evt.target.style.color = 'orange'
-    }
-})
+const user = createUser('Иван', 27, true)
+
+for (let key in user) {
+    console.log(user[key])
+}

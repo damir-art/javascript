@@ -1,5 +1,4 @@
 # Циклы
-
 Чтобы вызвать код повторно можно воспользоваться рекурсией или циклом.
 
 ## Операторы циклов
@@ -28,7 +27,7 @@
     const x = function (item) {
         item--
         console.log(item)
-        if (x > 0) {
+        if (item > 0) {
             x(item)
         }
         // return item
