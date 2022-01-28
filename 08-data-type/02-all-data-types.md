@@ -2,7 +2,7 @@
 Рассмотрим все типы данных существующие в JavaScript.
 
 ## Простые типы данных
-Простые (примитивные) типы данных: string, number, float, boolean, undefined, null
+Простые (примитивные) типы данных: string, number, bigint, boolean, symbol, undefined, null
 
 ### string
 Строка - любой символ(ы) обрамленный кавычками (одинарными, двойными или обратными).

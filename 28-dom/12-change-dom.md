@@ -3,13 +3,13 @@
 
 - `createElement('tagName')` - создание элемента
 - `append(el)` - вставка элемента
-- `insertAdjacentHTML('куда', 'html')` - вставка куска кода
+- `el.insertAdjacentHTML('куда', 'html')` - вставка куска кода
 - `el.remove()` - удаление элемента
 - `el.cloneNode(true)` - клонирование элемента
 - `new DocumentFragment()` - оборачивает и передает список узлов (в основном используется с `template`)
 - вместо `DocumentFragment` обычно передают массив узлов
 
-## Создание элемента
+## createElement() - создание элемента
 
     createElement('tagName') - создание элемента по имени его тега
     createTextNode('text') - создание текстового узла по его тексту
@@ -20,7 +20,7 @@
     myDiv.className = 'myDiv // навешиваем CSS-класс
     myDiv.textContent = 'Создали элемент, добавили содержимое' // создали элемент, добавили содержимое
 
-## Вставка элемента
+## append() - вставка элемента
 
     append()      - добавить элемент или строку в конец
     prepend()     - добавить в начало
@@ -38,25 +38,27 @@
 
     descr.after(myDiv) // вставляем созданный элемент после элемента descr
 
-## insertAdjacentHTML/Text/Element
-Вставляем кусок кода:
+## insertAdjacentHTML() - вставка HTML-кода
+Вставляем HTML-код `insertAdjacentHTML()`:
 
-    insertAdjacentHTML('куда вставляем', 'html-код')
+    el.insertAdjacentHTML('куда вставляем', 'html-код')
 
     'beforebegin' - вставить html-код перед элементом
     'afterbegin' - вставить в начало
     'beforeend' - вставить в конец
     'afterend' - вставить после
 
-Вставляет текст (используется редко):
+Вставляем текст `insertAdjacentText()` (используется редко):
 
     el.insertAdjacentText('where', 'text')
 
-Вставляет элемент (используется редко):
+Вставляем элемент `insertAdjacentElement()` (используется редко):
 
     el.insertAdjacentElement('where', elem)
 
-## Удаление элемента
+Если `innerHTML` вставляет код обновляя его, то `insertAdjacentElement()` обновляет точечно, см. `create-element-1.md`
+
+## el.remove() - удаление элемента
 Удаляем элемент через 3 секунды после вставки:
 
     // удаляем элемент через 3 секунды
@@ -70,7 +72,7 @@
         descr.before(myDiv)
     }, 3000)
 
-## Клонирование элементов
+## cloneNode() - клонирование элементов
 
     cloneNode(true)  - клонировать со всеми атрибутами и дочерними элементами
     cloneNode(false) - клонировать без дочерних элементов
@@ -82,15 +84,10 @@
     myDivClone.textContent = 'Склонированный элемент' // меняем текст у клонированного элемента
     myDiv.after(myDivClone) // вставляем клон после myDiv
 
-## DocumentFragment
-Служит оберткой для передачи нескольких элементов. При вствки его куда либо, он исчезает, а его содержимое вставляется.
-
-Вместо `DocumentFragment` обычно используют массив элементов. А сам `DocumentFragment` обычно используют вместе с `template`.
-
 ## Разное
 
 Устаревшие методы:
-- `appendChild()`    - вставка элемента
+- `appendChild()`    - вставка элемента в конец родительского
 - `insertBefore()`   - вставка элемента
 - `replaceChild()`   - замена элемента
 - `removeChild()`    - удаление элемента

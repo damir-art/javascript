@@ -1,11 +1,14 @@
 # Модификация DOM
 
-    elem.removeChild(elem)  - удалить дочерний элемент
-    elem.appendChild(elem)  - добавить/переместить дочерний элемент
-    elem.insertBefore(elem3, elem) - вставить дочерний перед
-    elem.replaceChild(elem3, elem) - заменить дочерний элемент, возвращает заменённый элемент
-    elem.appendChild(elem.cloneNode()) - копировать элемент, без дочерних
-    elem.appendChild(elem.cloneNode(true)) - копировать элемент, с дочерними
+    removeChild(elem)  - удалить дочерний элемент
+    appendChild(elem)  - добавить/переместить дочерний элемент
+    insertBefore(elem3, elem) - вставить дочерний перед
+    replaceChild(elem3, elem) - заменить дочерний элемент, возвращает заменённый элемент
+    appendChild(elem.cloneNode()) - копировать элемент, без дочерних
+    appendChild(elem.cloneNode(true)) - копировать элемент, с дочерними
+    cloneNode()
+    contains()
+    children
 
 ## removeChild()
 Удаляет дочерний элемент из DOM.
@@ -78,7 +81,7 @@
         child.parentElement.removeChild(child) // удалились не все элементы иза замещения индексов
     }
 
-Чтобы удалить все элементы, циклы должен считать с конца:
+Чтобы удалить все элементы, цикл должен считать с конца:
 
     for (let i = pools[0].children.length - 1; i >= 0; i--) {
         const child = pools[0].children[i]
