@@ -44,7 +44,7 @@
 
 ## Явное преобразование
 
-### String()
+### String(), .toString()
     let a = String('строка')
     console.log(a, typeof(a)) // строка string
 

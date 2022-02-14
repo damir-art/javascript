@@ -2,54 +2,35 @@
 Обходим массивы и объекты циклом.
 
 ## for
-Классический вариант:
+Классический вариант, наиболее быстрый:
 
-    const btn = document.querySelector('.btn');
-    const out = document.querySelector('.out');
+    const cities = ['Москва', 'Пекин', 'Лондон', 'Берлин', 'Вашингтон', 'Париж']
 
-    console.log(out);
-
-    const cities = ['Москва', 'Пекин', 'Лондон', 'Берлин', 'Вашингтон', 'Париж'];
-
-    btn.addEventListener('click', function () {
-        out2 = ''; // переменную вместо элемента, используем для производительности
-
-        for (let i = 0; i < cities.length; i++) {
-            out2 += `${cities[i]}, `;
-        }
-
-        out.innerHTML = ''; // очищаем тег о внутреннего содержимого, если оно есть
-        out.innerHTML = out2; // присваиваем значение переменной элементу
-    })
+    for (let i = 0; i < cities.length; i++) {
+        console.log(cities[i])
+    }
 
 Может работать с HTML-коллекцией (HTMLCollection, полученный от getElementsByTagName()).
 Может работать со списком узлов (NodeList, полученный от querySelectorAll()).
 
 ## for in
+key - выводит индексы, имена ключей:
 
-    key - выводит индексы, названия ключей
+    const cities = ['Москва', 'Пекин', 'Лондон', 'Берлин', 'Вашингтон', 'Париж'];
 
-    btn.addEventListener('click', function () {
-        out2 = ''; // переменную вместо элемента, используем для производительности
-
-        for (let key in cities) {
-            out2 += `${+key + 1}: ${cities[key]} <br /> `;
-        }
-
-        console.log(out2);
-        out.innerHTML = '';   // очищаем тег о внутреннего содержимого, если оно есть
-        out.innerHTML = out2; // присваиваем значение переменной элементу
-    })
+    for (let key in cities) {
+        console.log(+key + 1 + ': ' + cities[key])
+    }
 
 Не может работать с HTML-коллекцией (HTMLCollection, полученный от getElementsByTagName()).
 Не может работать со списком узлов (NodeList, полученный от querySelectorAll()).
+Не рекомендуется для массивов, медленный.
 
 ## for of
-
-    item - выводит значения
+item - выводит значения (нет доступа к индексам), наиболее популярный и удобный цикл.
 
     for (let item of cities) {
-        out2 += `${item} `;
+        console.log(item)
     }
 
 Может работать с HTML-коллекцией (HTMLCollection, полученный от getElementsByTagName()).
