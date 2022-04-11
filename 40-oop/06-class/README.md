@@ -1,5 +1,7 @@
 # Классы
-- класс *( синтаксический сахар ES2015 (ES6) )*
+**Класс** - в ООП это расширяемый шаблон кода для создания объектов. Класс устанавливает в объектах начальные значения (свойства) и реализацию поведения методов.
+
+- класс
 - конструктор
 - объект
 - свойства
@@ -10,11 +12,29 @@
 
 В объекте в качестве `__proto__` будет указана ссылка на класс.
 
+- На практике часто приходится создавать объекты одного вида: посты, комментарии, статьи, товары и т.п.
+- Объекты можно создавать через функцию-конструктор, с помощью оператора `new`, но в современном JavaScript объекты создают через `class`
 - Каждый класс нужно помещать в отдельный файл, имя файла называть также как и класс и тоже с большой буквы.
 - Файл должен содержать только описание класса и комментарий к нему
 - Объекты и код пишут в другом файле, например `app.js`
 
 ## class
+
+Схема:
+
+    class ChangeElement {
+        // Конструктор класса
+        constructor() {
+
+        }
+        // Методы класса
+        changeColor() {
+
+        }
+    }
+
+    const elem = new ChangeElement()
+
 Пользователь вводит логин, пароль и на основе класса `User` создаётся объект с данными (логин, пароль) пользователя.
 
     class User {
@@ -22,16 +42,17 @@
     }
 
 - Логин, пароль собирается с формы, с помощью JavaScript.
-- класс - это функция конструктор
+- класс - это функция-конструктор
 - console.log(typeof User) // function
 
 ## constructor
 Когда на основе класса создаётся объект, запускается функция-конструктор.
 
     class User {
-        constructor (username, password) {
-            this.username = username
-            this.password = password
+        // Конструктор класса
+        constructor(userName, age) {
+            this.userName = userName
+            this.age      = age
         }
     }
 
@@ -39,53 +60,56 @@
 - конструктор нужен для того чтобы при создании объекта на основе класса, присвоить свойствам значения
 - конструктор - это метод (функция)
 
-## объект и свойства
+## Свойства класса
 
-    // Создаем класс
     class User {
-        constructor (username, password) {
-            this.username = username
-            this.password = password
+        constructor(userName, age) {
+            // Свойства класса
+            this.userName = userName
+            this.age      = age
         }
     }
 
-    // Создаем данные, получаемые от формы
-    let a = 'Ivan'
-    let b = '111'
+    const peter = new User('Peter', 27)
 
-    // Создаем объект класса User, заполняем данными
-    const user = new User(a, b)
-
-    console.log(user)          // Object { username: "Ivan", password: "111" }
-    console.log(user.username) // Ivan
-    console.log(user.password) // 111
+    console.log(peter)          // Object { userName: "Peter", age: 27 }
+    console.log(peter.userName) // Peter
+    console.log(peter.age)      // 27
 
 - имя объекта может быть любым
 - `this` - это обращение к текущему объекту.
 
 Можно создавать сколько угодно объектов на основе класса `User`.
 
-## метод
+## Методы класса
 
     class User {
-        constructor (username, password) {
-            this.username = username
-            this.password = password
+        constructor(userName, age) {
+            this.userName = userName
+            this.age      = age
         }
-        validatePassword() {
-            // Если длина пароля > 6, то возвращаем true
-            if ( this.password.length > 6 ) {
-                return true
-            } else {
-                return false
-            }
+
+        // Методы класса
+        getName() {
+            console.log(this.userName)
         }
     }
 
-    console.log(user.validatePassword()) // false
+    const peter = new User('Peter', 27)
+    peter.getName() // Peter
+
+- методы в классе не разделяются запятой
 
 ## Класс без конструктора
 - Класс может быть без конструктора, содержащий только методы.
 - При создании объекта на основе данного класса, передавать ничего не нужно.
 - При созданни класса наследника, на основе данного класса конструктор тоже не создается.
 - Но если в классе наследнике создать конструктор, то нужно будет также создать и метод `super()`, без передачи параметров родителю
+
+## Разное
+- в JavaScript класс это разновидность функции
+- код этой функции хранится в `constructor`
+- методы функции хранятся в `ClassName.prototype`
+- `User.prototype.constructor` ссылается на класс User
+- методы класса неперечислимы `enumerable`
+- весь код внутри класса `use strict`
