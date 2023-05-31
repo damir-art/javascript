@@ -8,11 +8,15 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="wrapper">
-        <h1>Заголовок</h1>
-        <p class="js-click-me">Параграф 1, кликни на меня.</p>
-        <p class="js-click-me">Параграф 2, кликни на меня.</p>
-    </div>
-    <script src="script.js"></script>
+  <div class="wrapper">
+    <h1 id="head">Заголовок</h1>
+    <p class="js-click-me">Параграф 1, кликни на меня.</p>
+    <p class="js-click-me">Параграф 2, кликни на меня.</p>
+  </div>
+  <!-- <script src="script.js"></script> -->
+  <script>
+    let head = document.getElementById( "head" );
+    console.log( head );
+  </script>
 </body>
 </html>

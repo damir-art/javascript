@@ -1,17 +1,17 @@
 # Консоль
-## Работаем с `console.log()` в JavaScript
+Работаем с `console.log()` в JavaScript
 
-При создании скриптов на JavaScript, постоянно приходится работать с консолью браузера и командой `console.log()`, чтобы выявлять ошибки и проверять данные. Поэтому сразу изучим их.
+При создании скриптов на JavaScript, постоянно приходится работать с консолью браузера и командой `console.log()`, чтобы проверять и данные выявлять ошибки. Поэтому сразу изучим их.
 
-    console.log( 'hello' )              // hello
-    console.log( 3 + 5 )                // 8
-    console.log( window )               // или просто window, в консоли
-    console.log( 'Всем \nПривет!' )     // перевод строки
-    console.log( `Привет ${username}` ) // косые кавычки, бэктики
-    console.log( var1, var2 )           // несколько аргументов через запятую
-    console.log(+key + 1 + ': ' + arr[key]) // вывод в цикле for in
+    console.log( 'hello' )                    // hello
+    console.log( 3 + 5 )                      // 8
+    console.log( window )                     // или просто window, в консоли
+    console.log( 'Всем \nПривет!' )           // перевод строки
+    console.log( `Привет ${username}` )       // косые кавычки, бэктики
+    console.log( var1, var2 )                 // несколько аргументов через запятую
+    console.log( +key + 1 + ': ' + arr[key] ) // вывод в цикле for in
 
-- Чтобы очистить консоль, нужно нажать по кнопке **Очистить вывод веб-консоли**.
+Чтобы очистить консоль, нужно нажать по кнопке `Очистить вывод веб-консоли`.
 
 ## console.table();
 С помощью `console.table(arr)` удобно выводить табличные данные, например массивы.
@@ -28,5 +28,5 @@
 
 Также можно посмотреть свойства элемента, поместив его в console.log(elem) или console.dir(elem).
 
-    const elem = document.querySelector('#elem')
-    console.log(elem)
+    let head = document.getElementById( "head" );
+    console.dir( head );
