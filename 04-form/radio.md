@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+# radio
+По клику по кнопке, через цикл определяем какая радиокнопка выбрана.
 
-  <div class="wrapper">
-    <h1 id="head">Заголовок</h1>
     <label for="apple">
       <input class="radio" id="apple" type="radio" name="fruit" value="apple" checked /> Яблоко
     </label>
@@ -21,10 +11,7 @@
       <input class="radio" id="peach" type="radio" name="fruit" value="peach" /> Персик
     </label>
     <button id="button">Кнопка</button>
-  </div>
 
-  <!-- <script src="script.js"></script> -->
-  <script>
     let radios = document.querySelectorAll( ".radio" );
     let button = document.getElementById( "button" );
 
@@ -36,6 +23,15 @@
         }
       }
     });
-  </script>
-</body>
-</html>
+
+Вешаем обработчик на каждый элемент radio, выводим информацию о радиокнопке:
+
+    const radios  = document.querySelectorAll('.radio');
+
+    for ( let i = 0; i < radios.length; i++ ) {
+      radios[i].addEventListener( "input", function() {
+        console.log(this.checked);
+        console.log(this.value);
+        console.log(this.parentNode.textContent);
+      });
+    }
