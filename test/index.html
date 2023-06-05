@@ -9,23 +9,17 @@
 </head>
 <body>
 
+  <!-- head--main -->
   <div class="wrapper">
-    <h1 id="head">Заголовок</h1>
-    <form class="form" method="get" action="#">
-      <input  id="text"   type="text" name="text" />
-      <input  id="email"  type="email" name="email" />
-      <button id="button" type="submit">Отправить</button>
-    </form>
+    <h1 class="head head--main">Заголовок</h1>
   </div>
 
   <!-- <script src="script.js"></script> -->
   <script>
-    var form = document.querySelector( "form" );
-    var data = new FormData( form );
-    console.log( data );
-    var req = new XMLHttpRequest();
-    req.open('POST', 'http://example.com');
-    req.send(data);
+    let head = document.querySelector(".head");
+    head.className = "";
+    console.log(head.className); // head
   </script>
+
 </body>
 </html>

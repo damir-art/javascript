@@ -1,5 +1,5 @@
 # CSS в JavaScript
-Работаем с CSS-стилями в JavaScript.
+Работаем с CSS в JavaScript.
 
 - className
 - classList
