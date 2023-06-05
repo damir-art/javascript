@@ -1,44 +1,24 @@
-# className/classList - изменяем класс элемента
+# classList 
+Изменение CSS-класса у элемента.
 
-- className
 - classList
 - classList.add()
 - classList.remove()
 - classList.contains()
 - classList.toggle()
 
-Есть два способа задания стилей, через атрибут `class` и через атрибут `style`. Рекомендуется менять стили у улементов через атрибут `class`. Менять стили через атрибут `style` рекомендуется в некоторых случаях (динамически), например при измерении координат.
+Есть два способа задания стилей, через атрибут `class` и через атрибут `style`. В основном меняют стили у элементов через атрибут `class`. Менять стили через атрибут `style` рекомендуется в некоторых случаях, например при измерении координат (динамически).
 
-## className
-`className` - свойство элемента: 
+**classList** - объект отвечающий за работу с CSS-классами, возвращает массив `DOMTokenList` CSS-классов одного элемента:
 
     <h1 class="head">Заголовок</h1>
-
-    let head = document.querySelector(".head");
-    console.log(head.className); // head
-
-Если несколько классов:
-
     <h1 class="head head--main">Заголовок</h1>
 
     let head = document.querySelector(".head");
-    console.log(head.className); // head head--main
+    console.log(head.classList); // DOMTokenList [ "head" ]
+    console.log(head.classList); // DOMTokenList [ "head", "head--main" ]
 
-При изменении класса через `className` он затирает все текущие классы элемента.
-
-    head.className = "";
-    head.className = "header";
-    head.className = "header header--main";
-
-Чтобы удалить или добавить один класс не затрагивая других, используйте `classList`.
-
-## classList
-Объект отвечающий за работу с CSS-классами, возвращает массив классов одного элемента:
-
-    const out = document.querySelector('.out')
-    console.log(out.classList)
-
-Методы `classList`:
+Методы объекта `classList`:
 
     el.classList.add('class)       - добавить класс
     el.classList.remove('class')   - удалить класс
@@ -50,28 +30,29 @@ classList - итерируемый объект, можно перебрать �
 ## classList.add()
 Добавляем класс(ы) к выбранному элементу:
 
-    const out = document.querySelector('.out')
-    const btn = document.querySelector('.btn')
+    let button = document.querySelector(".button");
+    let head = document.querySelector(".head");
 
-    btn.addEventListener('click', function () {
-        out.classList.add('out-2')          // добавляем дополнительный CSS-класс
-        console.log(out.classList)          // получаем массив
-        out.classList.add('out-2', 'out-3') // добавляем два и более CSS-классов сразу
-        console.log(out.classList)          // получаем массив
-    })
+    button.addEventListener("click", function(e) {
+      head.classList.add("head--main"); // добавляем один CSS-класс
+      console.log(head.classList);
+
+      head.classList.add("head--main", "head--main-2"); // добавляем два и более CSS-класса
+      console.log(head.classList);
+    });
 
 ## classList.remove()
-Удаляем класс(ы) у выбранного элемента
+Удаляем класс(ы) у выбранного элемента:
 
-    const out = document.querySelector('.out')
-    const btn = document.querySelector('.btn')
+    let button_delete = document.querySelector(".button--delete");
 
-    btn.addEventListener('click', function () {
-        console.log(out.classList)
-        out.classList.remove('out')          // удаляем CSS-класс
-        console.log(out.classList)
-        out.classList.remove('out', 'out-2') // удаляем два и более CSS-классов
-    })
+    button_delete.addEventListener("click", function(e) {
+      head.classList.remove("head--main"); // удаляем один CSS-класс
+      console.log(head.classList);
+
+      head.classList.remove("head--main", "head--main-2"); // удаляем два и более CSS-класса
+      console.log(head.classList);
+    });
 
 ## classList.contains()
 Проверяем, содержится ли класс у выбранного элемента, вернёт `true` или `false`:
@@ -82,6 +63,7 @@ classList - итерируемый объект, можно перебрать �
     btn.addEventListener('click', function () {
         console.log(out.classList)
         console.log(out.classList.contains('out')) // проверяем, есть ли CSS-класс в элементе
+        
         out.classList.remove('out')
         console.log(out.classList)
         console.log(out.classList.contains('out'))
@@ -102,11 +84,11 @@ classList - итерируемый объект, можно перебрать �
     })
 
 ## classList.toggle()
-Добавляем убираем класс.
+Добавляем убираем класс:
 
-    const out = document.querySelector('.out')
-    const btn = document.querySelector('.btn')
+    let button_toggle = document.querySelector(".button--toggle");
+    let head = document.querySelector(".head");
 
-    btn.addEventListener('click', function () {
-        out.classList.toggle('out-2');
-    })
+    button_toggle.addEventListener("click", function(e) {
+      head.classList.toggle("head--main");
+    });
