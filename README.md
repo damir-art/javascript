@@ -22,6 +22,7 @@
   - checkbox,
   - range,
   - radio,
+  - send form
 - Работаем со стилями
 - Типы данных (typeof)
 - Операторы и операции

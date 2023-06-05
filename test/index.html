@@ -11,31 +11,21 @@
 
   <div class="wrapper">
     <h1 id="head">Заголовок</h1>
-    <label for="apple">
-      <input class="radio" id="apple" type="radio" name="fruit" value="apple" checked /> Яблоко
-    </label>
-    <label for="pineapple">
-      <input class="radio" id="pineapple" type="radio" name="fruit" value="pineapple" /> Ананас
-    </label>
-    <label for="peach">
-      <input class="radio" id="peach" type="radio" name="fruit" value="peach" /> Персик
-    </label>
-    <button id="button">Кнопка</button>
+    <form class="form" method="get" action="#">
+      <input  id="text"   type="text" name="text" />
+      <input  id="email"  type="email" name="email" />
+      <button id="button" type="submit">Отправить</button>
+    </form>
   </div>
 
   <!-- <script src="script.js"></script> -->
   <script>
-    let radios = document.querySelectorAll( ".radio" );
-    let button = document.getElementById( "button" );
-
-    button.addEventListener('click', function() {
-      for ( let i = 0; i < radios.length; i++ ) {
-        if ( radios[i].checked ) {
-          console.log( radios[i].value );
-          console.log( radios[i].parentNode.textContent );
-        }
-      }
-    });
+    var form = document.querySelector( "form" );
+    var data = new FormData( form );
+    console.log( data );
+    var req = new XMLHttpRequest();
+    req.open('POST', 'http://example.com');
+    req.send(data);
   </script>
 </body>
 </html>

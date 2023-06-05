@@ -9,8 +9,12 @@
 - XMLHttpRequest
 - setTimeOut
 - alert/confirm/prompt
+- localStorage
+- cookie
 
 # Объект localStorage
+- https://www.youtube.com/watch?v=b_Ph0Yzatk4
+- https://www.youtube.com/watch?v=3-bZ7gLVSzo
 
 Пользовательские данные раньше хранили в куки, теперь можно хранить в специальном хранилище localStorage. В браузере Firefox, данные хранимые в localStorage, можно посмотреть в `Инспектор > Хранилище > Локальное хранилище > http...`
 
@@ -57,3 +61,8 @@
         }
 
     })
+
+## cookie
+https://www.youtube.com/watch?v=pmd8D_YZ0BE - Cookie, LocalStorage, SessionStorage
+
+## SessionStorage, IndexedDB, WebSQL
