@@ -4,6 +4,7 @@
 - https://www.youtube.com/@stackdev/videos
 - https://www.youtube.com/@DeveloperInUS
 - https://www.youtube.com/@AVISTV/videos - ui компоненты
+- https://www.youtube.com/@dcode-software/playlists
 
 ## Учебники
 - https://www.w3schools.com/js/default.asp
