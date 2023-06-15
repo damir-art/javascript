@@ -8,16 +8,18 @@
 
     b = 2
 
-    console.log(a) // 1
+    // значение переменной "a" не меняется
+    console.log(a) // 1 
 
 Пример передачи по ссылке:
 
-    const objectA = { a: 1 }
+    const objectA = { val: 1 }
     const objectB = objectA
 
-    objectB.a = 2
+    objectB.val = 2
 
-    console.log(objectA.a) // 2
+    // свойство val у objectA изменилось  
+    console.log(objectA.val) // 2
 
 Сложные типы данных в JavaScript передаются по ссылке, чтобы не нагружать компьютер пользователя. Здесь objectA и objectB ссылаются на один и тот же объект в памяти.
 
@@ -25,5 +27,5 @@
 
 Пример неравенства двух `одинаковых` объектов (ссылаются на разные объекты в памяти), сравниваются ссылки:
 
-    console.log(1 === 1)   // true
-    console.log({} === {}) // false
+    console.log( 1 === 1 )   // true
+    console.log( {} === {} ) // false

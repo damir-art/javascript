@@ -7,10 +7,10 @@
 Если к строке прибавить (конкатенация) что-либо, то получим строку:
 
     let a = 'Привет' + 35
-    console.log(typeof a); // 'string'
+    console.log(typeof a) // 'string'
 
     let a = 'Привет' + {}
-    console.log(typeof a); // 'string'
+    console.log(typeof a) // 'string'
 
 - Здесь плюс `+` это оператор конкатенации.
 - alert() приводит значения к строке
@@ -22,7 +22,9 @@
 
 Любая математическая операция (кроме конкатенации со строками), внутри которых будут числа, преобразует значения к числу:
 
-    '6' * '3' // получим 18, это называется динамическое приведение типов
+    '6' * '3' // получим 18
+
+Это называется динамическое приведение типов.
 
 ### boolean
 Появляется в операциях сравнения и логических:
@@ -39,8 +41,10 @@
     console.log((a > b) || (a < b)) // true
     console.log(typeof c)           // boolean
 
-    !!0 === false
-    !!1 === true
+    0 == false    // true
+    0 === false   // false
+    !0 === true   // true
+    !!0 === false // true
 
 ## Явное преобразование
 
@@ -53,7 +57,11 @@
     console.log(typeof String(num))    // string
     console.log(typeof num.toString()) // string
 
-    5..toString() // чтобы значение (число), а не переменную, нужно использовать две точки
+    5..toString()  // при использовании значения (числа), а не переменной, нужно использовать две точки
+    (5).toString() // вместо двух точек число можно обрамить скобками
+
+    console.log( typeof (5).toString() ); // string
+    console.log( typeof 5 );              // number
 
 ### Number()
     let b = Number('строка');
@@ -74,11 +82,11 @@
 Функции `parseInt()` и `parseFloat()`:
 
     let a = '35 apples',
-    b = 'pears123',
-    c = '20px',
-    d = '0.5%';
+        b = 'pears123',
+        c = '20px',
+        d = '0.5%';
 
-    console.log(parseInt(a));   // 35
-    console.log(parseInt(b));   // NaN
-    console.log(parseInt(c));   // 20
-    console.log(parseFloat(d)); // 0.5
+    console.log( parseInt(a) );   // 35
+    console.log( parseInt(b) );   // NaN
+    console.log( parseInt(c) );   // 20
+    console.log( parseFloat(d) ); // 0.5
