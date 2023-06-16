@@ -1,16 +1,16 @@
 # Вложенные циклы
 Вложенные циклы - это циклы вложенные друг в друга.
 
-    let a = ''
+    let a = '';
     btn.addEventListener('click', function () {
 
-        for (let i = 0; i < 5; i++) {
-            for (let j = 0; j < 3; j++) {
-                a += j + ' '
-            }
-            console.log(`${i}: ${a}`)
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 3; j++) {
+          a += j + ' ';
         }
-        a = ''
+        console.log(`${i}: ${a}`);
+      }
+      a = '';
 
     });
 
