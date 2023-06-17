@@ -6,21 +6,5 @@ body {
 .wrapper {
   width: 800px;
   margin: 0 auto;
-}
-img {
-  display: block;
-  margin-bottom: 16px;
-}
-.button {
-  margin-bottom: 16px;
-  padding: 4px 8px;
-}
-.head {
-  color: #fff;
-  margin: 0;
-  padding: 8px 16px;
-  background-color: green;
-}
-.head--main {
-  background-color: red;
+  padding: 16px;
 }

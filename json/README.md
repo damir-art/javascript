@@ -1,4 +1,6 @@
 # JSON
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+
 Работаем с JSON.
 
 Преобразовываем сложные объекты в строку и переправляем их по сети или выводим для логирования.
