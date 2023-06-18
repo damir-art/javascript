@@ -9,3 +9,9 @@
     console.log(firstName)    // Юлий
     console.log(lastName)     // Цезарь
     console.log(restElements) // ['Император', 'Рима']
+
+Ещё пример:
+
+    const person = ['Юлий', 'Цезарь', 'Император', 'Рима']
+    const [...restElements] = person
+    console.log(person) // Array(4) [ "Юлий", "Цезарь", "Император", "Рима" ]

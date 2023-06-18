@@ -49,14 +49,17 @@
 <!-- <script src="script.js"></script> -->
 <script>
 
-const a = [ 'russia', 'usa' ]
+const male = {
+      "age": 56,
+      "height": 187,
+      "weight": 80,
+      "nationality": "rus",
+    }
 
-const b = a.reduce( (aItem, current) => {
-    return aItem + ' ' + current
-})
+for (const key in male) {
 
-console.log(a)
-console.log(b)        // russia usa
+  console.log( male.key ); // Значение массива
+}
 
 </script>
 

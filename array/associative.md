@@ -2,10 +2,27 @@
 Ассоциативные массивы до ES6 это объект, после можно делать через Map. В обычном массиве, индексом выступает число, а в ассоциативном - строка.
 
     const male = {
-        'age': 56,
-        'height': 187 + 'sm',
-        weight: 80 + 'kg',
-        'nationality': 'rus'
+      "age": 56,
+      "height": 187,
+      "weight": 80,
+      "nationality": "rus",
+    }
+
+    for (const key in male) {
+      console.log( key );         // Имя ключа
+      console.log( male[key] );   // Значение массива
+      console.log( [key] );       // Массив с одним элементом
+      console.log( male.key );    // undefined
+      console.log( male["key"] ); // undefined
+    }
+
+Другой пример:
+
+    const male = {
+      'age': 56,
+      'height': 187 + 'sm',
+      weight: 80 + 'kg',
+      'nationality': 'rus'
     }
 
     male.age     // 56
@@ -28,12 +45,12 @@
 
     let t = ''
     for (let key in male) {
-        t += key + ' '
+      t += key + ' '
     }
     console.log(t) // имена ключей
 
     let t = ''
     for (let key in male) {
-        t += male[key] + ' '
+      t += male[key] + ' '
     }
     console.log(t) // значения ключей
