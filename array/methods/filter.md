@@ -4,17 +4,17 @@
 Схема:
 
     let res = arr.filter( function(item, index, array) {
-        // true - элемент добавляется в массив, перебор продолжается
-        // false - возвращает пустой массив, если элементы не найдены
+      // true - элемент добавляется в массив, перебор продолжается
+      // false - возвращает пустой массив, если элементы не найдены
     })
 
 Пример:
 
     const users = [
-        { id: 0, name: 'Ivan' },
-        { id: 1, name: 'Petr' },
-        { id: 2, name: 'Ivan' },
-        { id: 3, name: 'Kent' },
+      { id: 0, name: 'Ivan' },
+      { id: 1, name: 'Petr' },
+      { id: 2, name: 'Sidor' },
+      { id: 3, name: 'Kent' }
     ]
 
     let filter = users.filter(item => item.id >= 2)

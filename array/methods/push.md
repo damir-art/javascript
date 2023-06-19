@@ -16,11 +16,11 @@
 
 Пример: 
 
-    const cities = ['Moscow', 'London', 'Berlin', 'Paris', 'Beijing']
-    console.log(cities.push('Vein')) // 6
-    console.log(cities)
+    const cities = [ 'Moscow', 'London', 'Berlin', 'Paris', 'Beijing' ];
+    console.log( cities.push('Vein') ); // 6
+    console.log( cities );
 
     // добавляем несколько городов
-    console.log(cities.push('Rome', 'Vein'))
+    console.log( cities.push('Rome', 'Vein') );
 
 `arr.push(el)` аналогичен `arr[arr.length] = el`
