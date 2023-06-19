@@ -11,6 +11,7 @@
 
 ## Статьи
 - Лучшие практики - https://www.w3schools.com/jS/js_best_practices.asp
+- https://www.freecodecamp.org/news/tag/javascript/
 
 ## Select
 - https://www.youtube.com/watch?v=H-UPHVjunOs
