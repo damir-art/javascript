@@ -7,7 +7,7 @@
     const admin = { name: 'Админ' }
 
     function getName () {
-        console.log( this.name )
+      console.log( this.name )
     }
 
     getName()           // Пусто
@@ -23,8 +23,8 @@
 `apply` - тоже самое что и call но аргументы передаёт в виде массива.
 
     function getName (...args) {
-        let [a, b] = args
-        console.log( `${this.name} ${a} ${b}` )
+      let [a, b] = args
+      console.log( `${this.name} ${a} ${b}` )
     }
 
     getName.apply(user, ['Привилегия', 3])  // Юзер Привилегия 3
@@ -35,10 +35,10 @@
 `this` теряется как только метод передаётся отдельно от объекта. `bind` позволяет зафиксировать `this`.
 
     const user = { 
-        name: 'Юзер',
-        getName () {
-            console.log( this.name )
-        }
+      name: 'Юзер',
+      getName () {
+        console.log( this.name )
+      }
     }
 
     setTimeout(user.getName, 1000) // пусто
@@ -48,16 +48,16 @@
 Решение:
 
     setTimeout(function () {
-        user.getName() // анонимная функция, скобки
+      user.getName() // анонимная функция, скобки
     }, 1000)
 
 Более надежное решение, через `bind`:
 
     const user = { 
-        name: 'Юзер'
+      name: 'Юзер'
     }
     function getName () {
-        console.log(this.name)
+      console.log(this.name)
     }
     let bindGetName = getName.bind(user)
     bindGetName()
@@ -65,11 +65,11 @@
 `bind` с аргументами:
 
     const user = { 
-        name: 'Юзер',
+      name: 'Юзер',
     }
 
     function getName (a) {
-        console.log(`${this.name} ${a}`)
+      console.log(`${this.name} ${a}`)
     }
     let bindGetName = getName.bind(user)
     bindGetName('hello')
@@ -77,10 +77,10 @@
 `bind` с методом объекта и `setTimeout()`:
 
     const user = { 
-        name: 'Юзер',
-        getName () {
-            console.log( 'Привет: ' + this.name )
-        }
+      name: 'Юзер',
+      getName () {
+        console.log( 'Привет: ' + this.name )
+      }
     }
 
     let bindGetName = user.getName.bind(user)
@@ -92,14 +92,12 @@
 `bind` с методом объекта и `setTimeout()` с аргументами:
 
     const user = { 
-        name: 'Юзер',
-        getName (a) {
-            console.log( a + ' ' + this.name )
-        }
+      name: 'Юзер',
+      getName (a) {
+        console.log( a + ' ' + this.name )
+      }
     }
 
     let bindGetName = user.getName.bind(user)
-
     bindGetName('Привет') // сразу
-
     setTimeout( bindGetName, 1000, 'Привет') // через 1 сек

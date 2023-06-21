@@ -49,10 +49,9 @@
 <!-- <script src="script.js"></script> -->
 <script>
 
-const cities = [ 'Москва', 'Пекин', 'Лондон', 'Берлин', 'Вашингтон', 'Париж' ];
-const citiesDelete = cities.splice(1, 2)
-console.log(citiesDelete) // ["Пекин", "Лондон"]
-console.log(cities)
+const person = ['Юлий', 'Цезарь', 'Император', 'Рима']
+const [...restElements] = person
+console.log(restElements) // Array(4) [ "Юлий", "Цезарь", "Император", "Рима" ]
 
 </script>
 
