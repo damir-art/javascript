@@ -1,24 +1,28 @@
 # Геттеры и сеттеры
+https://learn.javascript.ru/property-accessors
+
 У объектов есть два типа свойств:
 - обычные - свойства данные
 - аксессоры - геттеры и сеттеры
 
-Аксессоры - это функции используемык для присвоения и получения значения. Геттер - читать данные. Сеттер - записывать данные.
+Аксессоры - это функции используемые для присвоения и получения значения:
+- Геттер - читает данные,
+- Сеттер - записывает данные.
 
-Пример:
+Пример (ниже понятнее):
 
     const user = {
-        name: 'Ivan',
-        surname: 'Petrov',
+      name: 'Ivan',
+      surname: 'Petrov',
 
-        get fullName() {
-            // геттер, сработает если вы прочитаете user.name
-            return 'hello'
-        },
+      get fullName() {
+        // геттер, сработает если вы прочитаете user.fullName
+        return 'hello'
+      },
 
-        set fullName(value) {
-            // сеттер, сработает если вы запишите user.name = value
-        }
+      set fullName(value) {
+        // сеттер, сработает если вы запишите user.fullName = value
+      }
     }
 
     console.log(user.fullName)         // hello
@@ -30,34 +34,33 @@
 Продолжение примера:
 
     const user = {
-        name: 'Ivan',
-        surname: 'Petrov',
+      name: 'Ivan',
+      surname: 'Petrov',
 
-        get fullName() {
-            // геттер, сработает если вы прочитаете user.name
-            return `${this.name} ${this.surname}`
-        },
+      get fullName() {
+        // геттер, сработает если вы прочитаете user.fullName
+        return `${this.name} ${this.surname}`
+      },
 
-        set fullName(value) {
-            // сеттер, сработает если вы запишите user.name = value
-            this.name = value
-        }
+      set fullName(value) {
+        // сеттер, сработает если вы запишите user.fullName = value
+        this.name = value
+      }
     }
 
     console.log(user.fullName)          // Ivan Petrov
     console.log(user.fullName = 'Petr') // Petr
     console.log(user)                   // { name: "Petr", surname: "Petrov", fullName: Getter & Setter }
 
-Геттеры (свойства) нужны для того чтобы манипулировать имеющимися данными и не дублировать их.
-В примере выше у нас есть свойство `fullName` он и геттер и сеттер, его можно читать и изменять.
+Геттеры (свойства) нужны для того чтобы манипулировать имеющимися данными и не дублировать их. В примере выше у нас есть свойство `fullName` он и геттер и сеттер, его можно читать и изменять.
 
 Сеттер принимает один аргумент, его значением выступает присваиваемое значение.
 
 Деструктуризация в `set fullName(value)`:
 
     set fullName(value) {
-        // сеттер, сработает если вы запишите user.name = value
-        [this.name, this.surname] = value.split(' ')
+      // сеттер, сработает если вы запишите user.fullName = value
+      [this.name, this.surname] = value.split(' ')
     }
 
     user.fullName = 'Petr Ivanov'

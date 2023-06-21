@@ -11,47 +11,22 @@
 
 <!-- head--main -->
 <div class="wrapper">
-  <style>
-    .card {
-      max-width: 300px;
-      background-color: #eee;
-      border: 3px solid #bbb;
-      border-radius: 8px;
-      box-sizing: border-box;
-    }
-  </style>
-
-  <div class="card">
-    <div class="card__images">
-      <div class="card__image"><img src="" alt="Изображение 1"></div>
-      <div class="card__image"><img src="" alt="Изображение 2"></div>
-      <div class="card__image"><img src="" alt="Изображение 3"></div>
-    </div>
-    <ul class="card__pagination">
-      <li class="card__pagination-item"></li>
-    </ul>
-    <h3 class="card__title">Товар</h3>
-    <div class="card__description">Описание товара</div>
-    <div class="card__props">
-      <div class="card__rating">Иконка 4.5</div>
-      <div class="card__testimonials">8 отзывов</div>
-    </div>
-    <div class="card__info">
-      <div class="card__term">Артикул: 7788</div>
-      <div class="card__available">В наличии: 8 шт.</div>
-    </div>
-    <div class="card__price">500 руб.</div>
-    <div class="card__button">Добавить в корзину</div>
-  </div>
-
+  <h1>Заголовок</h1>
 </div>
 
 <!-- <script src="script.js"></script> -->
 <script>
 
-const person = ['Юлий', 'Цезарь', 'Император', 'Рима']
-const [...restElements] = person
-console.log(restElements) // Array(4) [ "Юлий", "Цезарь", "Император", "Рима" ]
+const user = { 
+  name: 'Ivan',
+  age: 21
+}
+
+Object.defineProperty(user, 'name', {
+  // enumerable: false
+})
+
+console.log(Object.keys(user)) // Array [ "age" ]
 
 </script>
 

@@ -20,11 +20,8 @@
 Если элементов у массива много то можно воспользоваться оператором - остаточные параметры `...`.
 
     const cities = ['Москва', 'Пекин', 'Лондон', 'Берлин', 'Вашингтон', 'Париж']
-
     let [ a, b, c, ...rest ] = cities
-
-    console.log(a)
-    console.log(rest[0]
+    console.log(rest) //  [ "Берлин", "Вашингтон", "Париж" ]
 
 `rest` - это массив, вместо rest можно использовать любое другое слово.
 
@@ -41,8 +38,8 @@
 Переменные по именам должны совпадать с именами свойств объекта.
 
     const man = {
-        name: 'Peter',
-        surname: 'Smith'
+      name: 'Peter',
+      surname: 'Smith'
     }
 
     let { name, surname } = man
@@ -50,14 +47,14 @@
     console.log(name)    // Peter
     console.log(surname) // Smith
 
-Порядок не имеет значения `{ surname, name }`.
+При этом, порядок не имеет значения `{ surname, name }`.
 
-### Изменяем названия переменных `:`
+### Изменяем названия переменных :
 Присваиваем переменным с другим названием:
 
     const man = {
-        name: 'Peter',
-        surname: 'Smith'
+      name: 'Peter',
+      surname: 'Smith'
     }
 
     let { name: n, surname: u } = man
@@ -65,10 +62,10 @@
     console.log(n) // Peter
     console.log(u) // Smith
 
-### Переменные по умолчанию `=`
+### Переменные по умолчанию =
 
     const man = {
-        name: 'Peter'
+      name: 'Peter'
     }
 
     let { name, surname = "Смит", job = "Водитель" } = man
@@ -79,10 +76,10 @@
 
 По умолчанию сработает, если свойство отсутствует.
 
-### Совмещаем `:` и `=`
+### Совмещаем : и =
 
     const man = {
-        name: 'Peter'
+      name: 'Peter'
     }
 
     let { name: n, surname: s = "Смит", job: j = "Водитель" } = man
@@ -95,16 +92,17 @@
 Остаток объекта
 
     const man = {
-        name:    'Peter',
-        surname: 'Smith',
-        job:     'Voditel'
+      name:    'Peter',
+      surname: 'Smith',
+      job:     'Voditel'
     }
 
     let { name, ...rest } = man
 
     console.log(name)         // Peter
     console.log(rest.surname) // Smith
-    console.log(rest.job)     // Smith
+    console.log(rest.job)     // Voditel
+    console.log( rest );      // { surname: "Smith", job: "Voditel" }
 
 ### Деструктуризация параметров функций
 Если параметров у функции много то можно передать в неё объект.
@@ -119,22 +117,28 @@
 ## Деструктуризация строк
 Деструктуризация строк с помощью метода возврашщающего массив:
 
+    const str = 'hello'
+    const [one, two] = str
+    console.log(one) // h
+
+Пример со `split()`:
+
     let str = "Всем привет!"
     let arr = str.split(' ') // Array [ "Всем", "привет!" ]
     let [ a, b ] = arr
 
-    console.log(a)
-    console.log(b)
+    console.log(a); // Всем
+    console.log(b); // привет!
 
 ## Старая запись
 ### Деструктуризация объектов
 Деструктуризация свойств объекта:
 
     const people = {
-        name: 'Петя',
-        lastname: 'Петров',
-        age: 27,
-        programmer: true,
+      name: 'Петя',
+      lastname: 'Петров',
+      age: 27,
+      programmer: true,
     }
 
     // const name = people.name
@@ -159,28 +163,21 @@
 Деструктуризация объекта, который является параметром функции:
 
     function f (obj) {
-        const { a, b } = obj
-        // return obj.a + obj.b
-        return a + b
+      const { a, b } = obj
+      // return obj.a + obj.b
+      return a + b
     }
+
+    const ob = { a: 3, b: 5 }
+    console.log( f(ob) ); // 8
 
     или
 
-    function f ({ a, b }) {
-        return a + b
+    function f (obj) {
+      const { a, b } = obj
+      return a + b
     }
 
+    console.log( f({ a: 3, b: 5 }) ); // 8
+
 Обычно деструктуризацию используют чтобы деструктурировать параметр, который является объектом или массивом.
-
-### Деструктуризация массивов
-Порядок ключей важен.
-
-    const arr = ['moskva', 'piter']
-    const [one, two] = arr
-    console.log(one) // moskva
-
-### Деструктуризация строк
-
-    const str = 'hello'
-    const [one, two] = str
-    console.log(one) // h
