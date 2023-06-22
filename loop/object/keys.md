@@ -4,16 +4,16 @@
 Создаём объект:
 
     var ford = {
-        brand: 'Ford',
-        model: 'Focus',
-        year:   1999
+      brand: 'Ford',
+      model: 'Focus',
+      year:   1999
     }
 
 ## for in
 Получаем поля объекта и его прототипа:
 
     for (var key in ford) {
-        console.log(key + ': ' + ford[key])
+      console.log(key + ': ' + ford[key])
     }
 
     key       // получаем имя свойства
@@ -28,5 +28,5 @@
 
     // обрабатываем каждый элемент массива
     Object.keys(ford).forEach(function(key) { 
-        console.log(key + ': ' + ford[key])
+      console.log(key + ': ' + ford[key])
     })

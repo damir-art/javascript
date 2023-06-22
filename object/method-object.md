@@ -1,4 +1,5 @@
 # Методы и свойства объектов
+Методы и свойства объектов и Object.
 
 ## in
 Проверяем свойство на существование:
@@ -13,34 +14,33 @@
 Выводит ключи объекта.
 
     const a = {
-        name: 'Иван',
-        lastname: 'Иванов',
-        age: 27,
-        programmer: true
+      name: 'Иван',
+      lastname: 'Иванов',
+      age: 27,
+      programmer: true
     }
 
     for (let item in a) {
-        console.log(item) // вывод имен ключей
+      console.log(item) // вывод имен ключей
     }
 
 ## hasOwnProperty()
 Проверка ключей `hasOwnProperty()` на то принадлежат ли они объекту, это нужно если вдруг цикл `for in` будет выводить ключи прототипов, созданные программистами (например библиотекой).
 
     for (let item in a) {
-        if (a.hasOwnProperty(item)) {
-            console.log(item) // вывод имен ключей, принадлежащих объекту
-        }
+      if (a.hasOwnProperty(item)) {
+        console.log(item) // вывод имен ключей, принадлежащих объекту
+      }
     }
 
 ## Встроенные методы объекта Object
-
 ### Object.keys()
 
     const a = {
-        name: 'Иван',
-        lastname: 'Иванов',
-        age: 27,
-        programmer: true
+      name: 'Иван',
+      lastname: 'Иванов',
+      age: 27,
+      programmer: true
     }
 
     console.log(Object.keys(a))            // создаёт массив из ключей объекта
@@ -57,33 +57,33 @@
 
     // избавляемся от вложенности с помощью map
     console.log(
-        Object.entries(a)
-            .map(([key, value]) => key + ': ' + value) // превращаем в одномерный массив
-            .join(', ') // строка
+      Object.entries(a)
+        .map(([key, value]) => key + ': ' + value) // превращаем в одномерный массив
+        .join(', ') // строка
     )
 
 Это `[key, value]` деструктуризация, можно заменить на:
 
         .map((entry) => {
-            return entry[0] + ' ' + entry[1]
+          return entry[0] + ' ' + entry[1]
         })
 
 ### Object.assign()
 Клонирование и объединение объектов. Склейка объектов, перенос в результирующий.
 
     const a = {
-        name: 'Иван',
-        lastname: 'Иванов',
-        age: 27,
-        programmer: true
+      name: 'Иван',
+      lastname: 'Иванов',
+      age: 27,
+      programmer: true
     }
 
     // имена ключей не должны совпадать
     const b = {
-        name1: 'Петр',
-        lastname1: 'Петров',
-        age1: 23,
-        programmer1: false
+      name1: 'Петр',
+      lastname1: 'Петров',
+      age1: 23,
+      programmer1: false
     }
 
     console.log(Object.assign({}, a, b)) // создаётся один объект
@@ -106,7 +106,7 @@
 - Object.keys/values/entries - игнорирует символьные свойства (ключи)
 - Object.getOwnPropertySymbols - возвращает массив символьных ключей
 - Reflect.ownKeys(obj) - возвращает все ключи
-- простые объекты можно преобразовать в массив, применить методы массива и преобразовать обратно в  объект, уже с преобразованными данными:
-    - Object.entries(obj)
-    - метод массива
-    - Object.fromEntries(obj)
+- простые объекты можно преобразовать в массив, применить методы массива и преобразовать обратно в объект, уже с преобразованными данными:
+  - Object.entries(obj)
+  - метод массива
+  - Object.fromEntries(obj)

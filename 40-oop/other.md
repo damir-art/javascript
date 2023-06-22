@@ -1,22 +1,19 @@
-# Функция-конструктор (нативная)
+# Разное
+
 ## Обёртки для примитивов
-
-    Object()
-        String()
-        Number()
-        Array()
-        Boolean()
-        ...
-
 В JavaScript - всё является объектом.
 
-### Boolean
+    Object()
+      String()
+      Number()
+      Array()
+      Boolean()
+      ...
+
     Boolean.prototype.toString()
 
-### Number
     Number.prototype.toExponential()
 
-## String
     String.prototype.slice()
     String.prototype.indexOf()
     String.prototype.replace()

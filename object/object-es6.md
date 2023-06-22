@@ -4,7 +4,7 @@
 Возвращаем объект:
 
     const createCar = (brand, model) => { 
-        return { brand, model }
+      return { brand, model }
     }
     const ford = createCar('Форд', 'Фокус')
 
@@ -16,11 +16,11 @@
     const ford = createCar('Форд', 'Фокус')
 
 ## Динамические поля
-Появилась возможность динамически задавать имена ключей (полей) в объектах:
+Появилась возможность динамически задавать имена ключей (полей) и выражений в объектах:
 
     const ford = {
-        brand: 'Ford',
-        ['model ' + Math.floor(Math.random() * 1000)]: 'Focus'
+      brand: 'Ford',
+      ['model ' + Math.floor(Math.random() * 1000)]: 'Focus'
     }
 
     console.log(ford)
@@ -30,24 +30,26 @@
     const yearField = 'year'
 
     const ford = {
-        brand: 'Ford',
-        [yearField]: 2018
+      brand: 'Ford',
+      [yearField]: 2018
     }
 
-    console.log(ford)
+    console.log(ford);           // { brand: "Ford", year: 2018 }
+    console.log(ford.year);      // 2018
+    console.log(ford.yearField); // undefined
 
 В методе, выводим имена всех полей, в том числе и динамических.
 
     const yearField = 'year'
 
     const ford = {
-        brand: 'Ford',
-        ['model']: 'Focus',
-        [yearField]: 2018,
+      brand: 'Ford',
+      ['model']: 'Focus',
+      [yearField]: 2018,
 
-        logFields() {
-            console.log(this.brand, this.model, this.year)
-        }
+      logFields() {
+        console.log(this.brand, this.model, this.year)
+      }
     }
 
     console.log(ford)
@@ -56,19 +58,19 @@
 ## Деструктуризация
 Деструктуризация часто применяется в JavaScript модулях: import, export.
 
-Убираем this:
+Убираем this из доступа к свойствам (this - это объект):
 
     const yearField = 'year'
 
     const ford = {
-        brand: 'Ford',
-        ['model']: 'Focus',
-        [yearField]: 2018,
+      brand: 'Ford',
+      ['model']: 'Focus',
+      [yearField]: 2018,
 
-        logFields() {
-            const {brand, model, year} = this
-            console.log(brand, model, year)
-        }
+      logFields() {
+        const {brand, model, year} = this
+        console.log(brand, model, year)
+      }
     }
 
     console.log(ford)

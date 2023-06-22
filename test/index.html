@@ -17,16 +17,14 @@
 <!-- <script src="script.js"></script> -->
 <script>
 
-const user = { 
-  name: 'Ivan',
-  age: 21
-}
+const yearField = 'year';
 
-Object.defineProperty(user, 'name', {
-  // enumerable: false
-})
+const ford = {
+      brand: 'Ford',
+      ['model ' + Math.floor(Math.random() * 1000)]: 'Focus'
+    }
 
-console.log(Object.keys(user)) // Array [ "age" ]
+    console.log(ford)
 
 </script>
 

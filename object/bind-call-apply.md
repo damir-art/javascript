@@ -1,27 +1,28 @@
 # Привязка контекста
-Статью и примеры переписать!
-Еще три способа управления контекстом. Создадим функцию которая будет печатать объект и его свойства.
+Еще три способа управления контекстом.
 
 ## bind()
 Метод `bind()` возвращает новую функцию, с привязанным контекстом.
 
+Создадим функцию которая будет печатать объект и его свойства:
+
     function printObj(objName) {
-        console.log(objName)
-        for (const key in this) {
-            if (this.hasOwnProperty(key)) {
-                console.log(key, this[key])
-            }
+      console.log(objName)
+      for (const key in this) {
+        if (this.hasOwnProperty(key)) {
+          console.log(key, this[key])
         }
+      }
     }
 
     var ford = {
-        brand: 'Ford',
-        model: 'Focus',
-        year: 2004,
-        colors: ['green', 'red', 'blue'],
-        getBrand: function() {
-            console.log('Brand:', this.brand)
-        }
+      brand: 'Ford',
+      model: 'Focus',
+      year: 2004,
+      colors: ['green', 'red', 'blue'],
+      getBrand: function() {
+        console.log('Brand:', this.brand)
+      }
     }
 
     var printFord = printObj.bind(ford)
