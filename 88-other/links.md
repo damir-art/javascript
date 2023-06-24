@@ -1,6 +1,7 @@
 # Ссылки
 
 ## Ютуб
+- https://www.youtube.com/@my.methed/streams
 - https://www.youtube.com/@stackdev/videos
 - https://www.youtube.com/@DeveloperInUS
 - https://www.youtube.com/@AVISTV/videos - ui компоненты

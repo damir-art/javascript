@@ -17,14 +17,14 @@
 <!-- <script src="script.js"></script> -->
 <script>
 
-const yearField = 'year';
+// this - ссылается на создаваемый объект
+function Car(brand, model, year) {
+  this.brand = brand
+  this.model = model
+  this.year = year
+}
 
-const ford = {
-      brand: 'Ford',
-      ['model ' + Math.floor(Math.random() * 1000)]: 'Focus'
-    }
-
-    console.log(ford)
+console.log( Car.prototype )
 
 </script>
 
