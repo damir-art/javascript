@@ -1,18 +1,18 @@
 # Статические методы
 Статические методы (и свойства) - это методы которые прописаны в классе как и обычные методы, но вызвать их можно без создания объекта.
 
-- статические методы создают тогда, когда для их использования не нужно создавать объект
-- статические методы доступны в классах наследниках
+- статические методы создают тогда, когда для их использования не нужно создавать объект,
+- статические методы доступны в классах наследниках.
 
 Чтобы создать статический метод, нужно перед его именем вписать слово `static`.
 
     class User {
-        constructor(userName) {
-            this.userName = userName
-        }
-        static getRole() {
-            return 'guest'
-        }
+      constructor(userName) {
+        this.userName = userName
+      }
+      static getRole() {
+        return 'guest'
+      }
     }
 
     console.log(User.getRole()) // guest
@@ -27,10 +27,10 @@
 Перед именем статического свойства тоже нужно ставить `static`:
 
     class User {
-        constructor(userName) {
-            this.userName = userName
-        }
-        static staticProperties = false
+      constructor(userName) {
+        this.userName = userName
+      }
+      static staticProperties = false
     }
 
     console.log(User.staticProperties) // false

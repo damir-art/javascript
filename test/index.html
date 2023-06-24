@@ -11,20 +11,17 @@
 
 <!-- head--main -->
 <div class="wrapper">
-  <h1>Заголовок</h1>
+  <h1 class="btn">Заголовок</h1>
 </div>
 
 <!-- <script src="script.js"></script> -->
 <script>
 
-// this - ссылается на создаваемый объект
-function Car(brand, model, year) {
-  this.brand = brand
-  this.model = model
-  this.year = year
-}
+const btn = document.querySelector('.btn')
 
-console.log( Car.prototype )
+    btn.addEventListener('click', () => {
+      console.log(this) // Window
+    })
 
 </script>
 

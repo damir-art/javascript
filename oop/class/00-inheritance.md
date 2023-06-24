@@ -10,37 +10,36 @@
 На основе класса `User`:
 
     class User {
-        constructor (username, password) {
-            this.username = username
-            this.password = password
+      constructor (username, password) {
+        this.username = username
+        this.password = password
+      }
+      validatePassword() {
+        // Если длина пароля > 6, то возвращаем true
+        if ( this.password.length > 6 ) {
+          return true
+        } else {
+          return false
         }
-        validatePassword() {
-            // Если длина пароля > 6, то возвращаем true
-            if ( this.password.length > 6 ) {
-                return true
-            } else {
-                return false
-            }
-        }
+      }
     }
 
 ## Создаём класс наследник
-Создаём класс наследник `Client`, расширяем класс `User`.
-
+Создаём класс наследник `Client`, расширяем класс `User`.  
 Создаем класс `Client`. Класс `Client` будет содержать свойство `phone`. Класс `Client` расширяет класс `User`:
 
     class Client extends User {
-        constructor (username, password, phone) {
-            super(username, password)
-            this.phone = phone
-        }
+      constructor (username, password, phone) {
+        super(username, password)
+        this.phone = phone
+      }
     }
 
-- внутри класса есть конструктор, который запускается при создании объекта.
-- `username`, `password` должны быть отправлены родительскому классу, это его свойства и они будут отданы конструктору родителя
-- для того чтобы обратиться к родительскому классу изнутри дочернего нужно воспользоваться методом `super()` и отправить ему его параметры
-- `super()` нужно указывать в классах наследниках
-- `this.phone = phone` создаём новое свойство для класс `Client`
+- внутри класса есть конструктор, который запускается при создании объекта,
+- `username`, `password` должны быть отправлены родительскому классу, это его свойства и они будут отданы конструктору родителя,
+- для того чтобы обратиться к родительскому классу изнутри дочернего нужно воспользоваться методом `super()` и отправить ему его параметры,
+- `super()` нужно указывать в классах наследниках,
+- `this.phone = phone` создаём новое свойство для класс `Client`.
 
 В файле `app.js` прописываем:
 
@@ -61,13 +60,13 @@
 ## Добавляем метод
 
     class Client extends User {
-        constructor (username, password, phone) {
-            super(username, password)
-            this.phone = phone
-        }
-        getClientPhone() {
-            return this.phone
-        }
+      constructor (username, password, phone) {
+        super(username, password)
+        this.phone = phone
+      }
+      getClientPhone() {
+        return this.phone
+      }
     }
 
     ...
@@ -75,14 +74,14 @@
     console.log(client.getClientPhone()) // Используем метод
 
 ## Разное
-- при наследовании классов, свойства и методы можно перезаписывать
+- при наследовании классов, свойства и методы можно перезаписывать,
 - например в классе `Client`, можно создать метод с именем `validatePassword()` со своим функционалом
 
 Чтобы обратиться к родительскому классу из дочернего, нужно использовать ключевое слово `super`:
 
     getClientPhone() {
-        super.validatePassword()
-        return this.phone
+      super.validatePassword()
+      return this.phone
     }
 
 - `super` это обращение к прототипу

@@ -4,14 +4,13 @@
     console.log(this) // Window
 
 ## this в функциях
-
 ### this в обработчике события
 Указывает на тот элемент на котором произошло событие.
 
     const btn = document.querySelector('.btn')
 
     btn.addEventListener('click', function() {
-        console.log(this) // <button class="btn">
+      console.log(this) // <button class="btn">
     })
 
 ### this в стрелочной функции
@@ -20,17 +19,17 @@
     const btn = document.querySelector('.btn')
 
     btn.addEventListener('click', () => {
-        console.log(this) // Window
+      console.log(this) // Window
     })
 
 ## this в ООП
-- в рамках класса `this` указывает на объект, созданный с помощью оператора `new`, на основе данного класса
+- в рамках класса `this` указывает на объект, созданный с помощью оператора `new`, на основе данного класса,
 - `this` указывает на текущий объект
 
     class User {
-        constructor(userName) {
-            this.userName = userName
-        }
+      constructor(userName) {
+        this.userName = userName
+      }
     }
 
     const client = new User('Alex')
@@ -40,12 +39,12 @@
 this в методах класса, указывает на сам объект:
 
     class User {
-        constructor(userName) {
-            this.userName = userName
-        }
-        showThis() {
-            console.log(this)
-        }
+      constructor(userName) {
+        this.userName = userName
+      }
+      showThis() {
+        console.log(this)
+      }
     }
 
     const client = new User('Alex')
