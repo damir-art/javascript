@@ -6,10 +6,10 @@
     document.documentElement.clientWidth  // ширина окна минус ширина скрола
     document.documentElement.clientHeight // высота окна минус высота скрола
 
-    window.innerWidth // ширина окна не зависит от скрола
+    window.innerWidth  // ширина окна не зависит от скрола
     window.innerHeight // высота окна не зависит от скрола
 
-    document.documentElement.scrollWidth // ширина окна минус ширина скрола
+    document.documentElement.scrollWidth  // ширина окна минус ширина скрола
     document.documentElement.scrollHeight // высота содержимого
 
 ## scrollLeft/scrollTop/pageXOffset/pageYOffset - прокрутка (чтение)
@@ -27,19 +27,19 @@
     document.documentElement.scrollTop  // прокрутка страницы
     document.documentElement.scrollLeft // прокрутка страницы
 
-    window.scrollBy(x, y) // прокрутка относительно текущей позиции (рекомендуется)
+    window.scrollBy(x, y)         // прокрутка относительно текущей позиции (рекомендуется)
     window.scrollTo(pageX, pageY) // прокручивает абсолютно
 
-    el.scrollIntoView() // верхняя граница элемента прокручивается до верхнего края окна (типа якорей для элементов)
+    el.scrollIntoView()      // верхняя граница элемента прокручивается до верхнего края окна (типа якорей для элементов)
     el.scrollIntoView(false) // нижняя граница элемента прокручивается до нижнего края окна
 
 ## Запрет прокрутки
 
     document.body.style.overflow = 'hidden' // запрет прокрутки страницы
-    el.style.overflow = 'hidden' // запрет прокрутки элемента
-    .overflow = '' // восстановить полосу прокрутки
+    el.style.overflow = 'hidden'            // запрет прокрутки элемента
+    .overflow = ''                          // восстановить полосу прокрутки
 
-Чтобы стараница не прыгала после исчезновения полосы прокрутки нужно сранить clientWidth до и после, а затем добавить padding для `document.body`.
+Чтобы стараница не прыгала после исчезновения полосы прокрутки нужно сравнить clientWidth до и после, а затем добавить padding для `document.body`.
 
 ## Примеры
 Получаем точную высоту документа:

@@ -27,7 +27,7 @@ JSON-форматирование, сериализация объекта. Пр
 Преобразуем объект в формат JSON:
 
     const obj = {
-        ...
+      ...
     }
 
     const objJson = JSON.stringify(obj)
@@ -43,14 +43,14 @@ JSON-форматирование, сериализация объекта. Пр
 Объект JSON - приводим объекты к строкам. Данные между web-приложениями, обычно перемещаются в виде строк.
 
     var person = {
-        name: 'John',
-        age: 18,
-        job: 'Front-end',
-        car: {
-            brand: 'Ford',
-            model: 'Mondeo'
-        },
-        friends: ['Katy', 'Peter', 'Tom']
+      name: 'John',
+      age: 18,
+      job: 'Front-end',
+      car: {
+        brand: 'Ford',
+        model: 'Mondeo'
+      },
+      friends: ['Katy', 'Peter', 'Tom']
     }
 
     console.log(person)

@@ -1,4 +1,7 @@
 # data атрибуты
+data атрибуты: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*  
+dataset: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
+
 Если вы задаёте пользовательские атрибуты HTML-тегам, то их имена должны начинаться с `data-`:
 
     <h1 data-window="100">Пластиковые окна 1</h1>

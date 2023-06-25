@@ -12,16 +12,24 @@
 <!-- head--main -->
 <div class="wrapper">
   <h1 class="btn">Заголовок</h1>
+  <a href="http://ya.ru" target="_blank" rel="noopener noreferrer">Links</a>
 </div>
 
 <!-- <script src="script.js"></script> -->
 <script>
 
-const btn = document.querySelector('.btn')
+let a = document.querySelector("a");
 
-    btn.addEventListener('click', () => {
-      console.log(this) // Window
-    })
+// for (let att of a.attributes) {
+//   console.log( `${att.name} = "${att.value}"` );
+// }
+
+let cursor = a // содержимое этой переменной должно меняться
+
+console.log( cursor );
+while (cursor = cursor.parentNode) {
+  console.log(cursor)
+}
 
 </script>
 

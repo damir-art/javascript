@@ -12,25 +12,25 @@
 - nodeValue/data
 
 Разное:
-- у разных DOM-узлов могут быть разные свойства (ссылки, инпуты и т.д.)
-- свойства текстовых узлов и элементов тоже отличаются
-- у узлов есть общие свойства и методы
-- DOM-узлы это обычные JavaScript-объекты
+- у разных DOM-элементов могут быть разные свойства (ссылки, инпуты и т.д.),
+- Свойства текстовых узлов и элементов тоже отличаются,
+- У узлов есть общие свойства и методы,
+- DOM-узлы это обычные JavaScript-объекты.
 
 Иерархия узлов:
 
     EventTarget
-        Node
-            Text
-            Element
-                HTMLElement
-                    HTMLInputElement
-                    HTMLBodyElement
-                    HTMLAnchorElement
-                    ...
-                SVGElement
-                XMLElement
-            Comment
+      Node
+        Text
+        Element
+          HTMLElement
+            HTMLInputElement
+            HTMLBodyElement
+            HTMLAnchorElement
+            ...
+          SVGElement
+          XMLElement
+        Comment
 
 ## textContent (рекомендуется)
 Получить весь текст между тегами, теги не показываются:
