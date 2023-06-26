@@ -19,3 +19,18 @@
     }
 
     pool_2.appendChild(fragment)
+
+## createElement
+Создаём элемент через метод `createElement()`:
+
+    const pool = document.querySelector('.pool')
+    const fragment = document.createDocumentFragment()
+
+    for (let i = 0; i < 6; i++) {
+      const el = document.createElement('div')
+      el.className = 'el'
+      el.innerHTML = '<span>' + i + '</span>'
+      fragment.appendChild(el)
+    }
+
+    pool.appendChild(fragment)

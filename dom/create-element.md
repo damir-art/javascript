@@ -1,5 +1,5 @@
-# Изменеие DOM
-Изменение структуры документа.
+# createElement()
+Создание элемента и изменение структуры документа.
 
 - `createElement('tagName')` - создание элемента
 - `append(el)` - вставка элемента
@@ -12,12 +12,12 @@
 ## createElement() - создание элемента
 
     createElement('tagName') - создание элемента по имени его тега
-    createTextNode('text') - создание текстового узла по его тексту
+    createTextNode('text')   - создание текстового узла по его тексту
 
 Схема создания элемента:
 
-    const myDiv = document.createElement('div') // создаём элемент
-    myDiv.className = 'myDiv // навешиваем CSS-класс
+    const myDiv       = document.createElement('div') // создаём элемент
+    myDiv.className   = 'myDiv // навешиваем CSS-класс
     myDiv.textContent = 'Создали элемент, добавили содержимое' // создали элемент, добавили содержимое
 
 ## append() - вставка элемента
@@ -32,8 +32,8 @@
 
     const descr = document.querySelector('.descr')
 
-    const myDiv = document.createElement('div') // создаём элемент
-    myDiv.className = 'myDiv' // навешиваем CSS-класс
+    const myDiv       = document.createElement('div') // создаём элемент
+    myDiv.className   = 'myDiv' // навешиваем CSS-класс
     myDiv.textContent = 'Создали элемент, добавили содержимое' // создали элемент, добавили содержимое
 
     descr.after(myDiv) // вставляем созданный элемент после элемента descr
@@ -44,9 +44,9 @@
     el.insertAdjacentHTML('куда вставляем', 'html-код')
 
     'beforebegin' - вставить html-код перед элементом
-    'afterbegin' - вставить в начало
-    'beforeend' - вставить в конец
-    'afterend' - вставить после
+    'afterbegin'  - вставить в начало
+    'beforeend'   - вставить в конец
+    'afterend'    - вставить после
 
 Вставляем текст `insertAdjacentText()` (используется редко):
 
@@ -56,20 +56,20 @@
 
     el.insertAdjacentElement('where', elem)
 
-Если `innerHTML` вставляет код обновляя его, то `insertAdjacentElement()` обновляет точечно, см. `create-element-1.md`
+Если `innerHTML` вставляет код обновляя его, то `insertAdjacentElement()` обновляет точечно.
 
 ## el.remove() - удаление элемента
 Удаляем элемент через 3 секунды после вставки:
 
     // удаляем элемент через 3 секунды
     setTimeout(function () {
-        myDiv.remove()
+      myDiv.remove()
     }, 3000)
 
 При перемещении элементов через методы вставок, элемент на прошлом месте удаляется автоматически:
 
     setTimeout(function () {
-        descr.before(myDiv)
+      descr.before(myDiv)
     }, 3000)
 
 ## cloneNode() - клонирование элементов
@@ -80,15 +80,21 @@
 Схема работы при клонировании элементов:
 
     const myDivClone = myDiv.cloneNode(true) // клонировали элемент
-    // myDivClone.querySelector('.class') // ищем внутри элемента другие если они есть и их нжно изменить
+    // myDivClone.querySelector('.class') // ищем внутри элемента другие если они есть и их нужно изменить
+    
     myDivClone.textContent = 'Склонированный элемент' // меняем текст у клонированного элемента
     myDiv.after(myDivClone) // вставляем клон после myDiv
 
 ## Разное
-
 Устаревшие методы:
 - `appendChild()`    - вставка элемента в конец родительского
 - `insertBefore()`   - вставка элемента
 - `replaceChild()`   - замена элемента
 - `removeChild()`    - удаление элемента
 - `document.write()` - добавление содержимого
+
+DOM элементы можно создавать двумя способами:
+- с помощью разметки
+- с помощью DOM-api
+  - template из WebComponents
+  - JSX, incremental DOM

@@ -21,14 +21,14 @@ dataset: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
     console.log(h1)
 
 ## Разное
-- используются для передачи пользовательских данных из HTML в JavaScript
-- помимо `data-` атрибутов, можно создавать пользовательские с любым именем и значением
-- `data-price-new` обращаемся как `el.dataset.priceNew`
-- `data-` атрибуты это валидный, безопасный способ передачи пользовательских данных
+- используются для передачи пользовательских данных из HTML в JavaScript,
+- помимо `data-` атрибутов, можно создавать пользовательские с любым именем и значением,
+- `data-price-new` обращаемся как `el.dataset.priceNew`,
+- `data-` атрибуты это валидный, безопасный способ передачи пользовательских данных.
 
 ## Старая запись
 
-    <div data-slider="left"> </div>
+    <div data-slider="left"></div>
 
 Дата-атрибуты позволяют сохранять данные в HTML. Рассмотрим пример вычисления стоимости бензина:
 
@@ -36,10 +36,10 @@ dataset: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
     let formBtn   = document.querySelectorAll('.form-btn')
 
     for(let i = 0; i < formBtn.length; i++) {
-        formBtn[i].addEventListener('click', function () {
-            let sum = this.getAttribute('data') * formInput.value;
-            console.log(sum)
-        })
+      formBtn[i].addEventListener('click', function () {
+        let sum = this.getAttribute('data') * formInput.value;
+        console.log(sum)
+      })
     }
 
 В интернет магазинах например вешают на кнопку, id товара, чтобы узнать какой товар выбран.
