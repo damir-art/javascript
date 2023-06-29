@@ -13,8 +13,8 @@
 - Функции, `function`
 - Объекы, `object`
 - ООП (prototype, class), `oop`
-- DOM
-- События
+- DOM, `dom`
+- События, `event`
 - BOM
 - Асинхронность
 - Сетевая работа

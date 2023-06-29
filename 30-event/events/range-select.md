@@ -11,5 +11,5 @@ Selection - само выделение.
 Делаем что-либо не выделяемым:
 
     .class {
-        user-select: none;
+      user-select: none;
     }

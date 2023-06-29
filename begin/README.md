@@ -8,3 +8,4 @@
   - use strict
   - модальные окна
   - комментарии
+  - async/defer
