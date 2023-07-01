@@ -12,8 +12,7 @@
 - stopPropagation(), `stop-propagation.md`
 - Пользовательские события, `custom-events.md`
 - MutationObserver, `mutationobserver.md`
-
-- Передача параметров, `peredayom-parametry-sobytiyu.md`
+- Передача параметров событию, `peredayom-parametry-sobytiyu.md` (интересно)
 
 Папки:
 - `/enents/` - события

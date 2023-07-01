@@ -1,40 +1,40 @@
 # Передаем параметры событию
 Как передать параметры обработчику события, например тут:
 
-    const btn = document.querySelector('.btn')
+    const btn = document.querySelector('.btn');
 
     const onButtonClick = () => {
-        console.log('Hello, ...')
+      console.log('Hello, ...');
     }
 
-    btn.addEventListener('click', onButtonClick)
+    btn.addEventListener('click', onButtonClick);
 
 ## Спрособ №1
 
-    const btn = document.querySelector('.btn')
+    const btn = document.querySelector('.btn');
 
     const onButtonClick = (username) => {
-        console.log(`Hello, ${username}`)
+      console.log(`Hello, ${username}`);
     }
 
     btn.addEventListener('click', () => {
-        onButtonClick('Ivan')
-    })
+      onButtonClick('Ivan');
+    });
 
 В этом случае мы не сможем снять обработчик события, отписаться от него.
 
 ## Способ №2 с замыканием
 onButtonClick возвращает новую функцию, которая станет обработчиком события. При загрузке скрипта, новая функция подставляется вместо onButtonClick('Ivan').
 
-    const btn = document.querySelector('.btn')
+    const btn = document.querySelector('.btn');
 
     const onButtonClick = (username) => {
-        return (evt) => {
-            console.log(`Hello, ${username}`)
-        }
+      return (evt) => {
+        console.log(`Hello, ${username}`);
+      }
     }
 
-    btn.addEventListener('click', onButtonClick('Ivan'))
+    btn.addEventListener('click', onButtonClick('Ivan'));
 
 В этом случае мы не сможем снять обработчик события, отписаться от него.
 
@@ -42,18 +42,18 @@ onButtonClick возвращает новую функцию, которая с�
 Функции в JavaScript являются объектами и у них имеются методы.
 
 Метод `bind('контекст', 'параметры')` позволяет:
-- установить значение для контекста (не работает для стрелочной функции)
+- установить значение для контекста (не работает для стрелочной функции),
 - передать параметры для функции
 
 Пример с методом `bind()`:
 
-    const btn = document.querySelector('.btn')
+    const btn = document.querySelector('.btn');
 
     const onButtonClick = (username) => {
-        console.log(`Hello, ${username}`)
+      console.log(`Hello, ${username}`);
     }
 
-    btn.addEventListener('click', onButtonClick.bind('null', 'Ivan'))
+    btn.addEventListener('click', onButtonClick.bind('null', 'Ivan'));
 
 Метод `bind()` возвращает новую функцию, этой новой функции он может передать контекст (содержимое `this`) и параметры.
 
