@@ -30,3 +30,11 @@
 
     let head = document.getElementById( "head" );
     console.dir( head );
+
+## Проверяем сколько времени выполняется код
+
+    console.time('q')
+    for (let i = 0; i < 1000000000; i++) {
+      let a = i / i
+    }
+    console.timeEnd('q')
