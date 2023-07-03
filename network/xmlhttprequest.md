@@ -4,15 +4,15 @@ XMLHttpRequest - объект для работы с HTTP-запросами. У
     var xhr = new XMLHttpRequest()
     console.log(xhr) // readyState (0)
 
-Объект XMLHttpRequest проходит через 5 фаз запроса, readyState:
+Объект XMLHttpRequest проходит через 5 фаз запроса, `readyState`:
 
-    unsent - объект не отправлен (0)
-    opened - объект открыт (1)
-    headers_received - получены заголовки (2)
-    loading - загрузка тела (3)
-    done - запрос закончен (4)
+    unsent           - объект не отправлен (0)
+    opened           - объект открыт       (1)
+    headers_received - получены заголовки  (2)
+    loading          - загрузка тела       (3)
+    done             - запрос закончен     (4)
 
-Указываем метод и адрес запроса, открываем объект, readyState (1):
+Указываем метод и адрес запроса, открываем объект, readyState `(1)`:
 
     var xhr = new XMLHttpRequest()
     xhr.open('GET', 'url/https://jsonplaceholder.typicode.com/users')
@@ -20,32 +20,30 @@ XMLHttpRequest - объект для работы с HTTP-запросами. У
 
 Отправляем запрос на сервер:
 
-    xhr.send() // начинается асинхронность, поэтому readyState (1)
+    xhr.send()                  // начинается асинхронность, поэтому readyState (1)
     console.log(xhr.readyState) // 1
 
 Результат доступен не сразу, поэтому работает через колбэки (обработчики событий):
 
     var xhr = new XMLHttpRequest()
-
     xhr.open('GET', 'https://jsonplaceholder.typicode.com/users')
-
     xhr.send() // начинается асинхронность, поэтому readyState (1)
 
     xhr.addEventListener('load', function () {
-        console.log(xhr.readyState) // 4, запрос окончен
-        console.log(xhr.status + ' ' + xhr.statusText) // 200 OK
+      console.log(xhr.readyState) // 4, запрос окончен
+      console.log(xhr.status + ' ' + xhr.statusText) // 200 OK
     })
 
 ## send и load
-Так как запрос асинхронный, то ответ от сервера может прийти быстрее чем сработает обработчик события `load`. Поэтому мы должны сделать так чтобы сначала отработал обработчик а уже потом пришел ответ от сервера.
+Так как запрос асинхронный, то ответ от сервера может прийти быстрее чем сработает обработчик события `load`. Поэтому мы должны сделать так чтобы сначала отработал обработчик, а уже потом пришел ответ от сервера.
 
 Обработчики должны быть написаны выше чем запросы `send`:
 
     var xhr = new XMLHttpRequest()
 
     xhr.addEventListener('load', function (evt) {
-        console.log(evt.target === xhr) // true
-        console.log(xhr.responseText)   // JSON-данные
+      console.log(evt.target === xhr) // true
+      console.log(xhr.responseText)   // JSON-данные
     })
 
     xhr.open('GET', 'https://jsonplaceholder.typicode.com/users')
@@ -57,8 +55,8 @@ XMLHttpRequest - объект для работы с HTTP-запросами. У
     var xhr = new XMLHttpRequest()
 
     xhr.addEventListener('load', function (evt) {
-        console.log(evt.target === xhr)           // true
-        console.log(JSON.parse(xhr.responseText)) // JavaScript-объект
+      console.log(evt.target === xhr)           // true
+      console.log(JSON.parse(xhr.responseText)) // JavaScript-объект
     })
 
     xhr.open('GET', 'https://jsonplaceholder.typicode.com/users')
@@ -72,11 +70,10 @@ XMLHttpRequest - объект для работы с HTTP-запросами. У
 Получаем сразу объект JavaScript из JSON-данных.
 
     var xhr = new XMLHttpRequest()
-
     xhr.responseType = 'json' // сразу указываем тип получаемых данных
 
     xhr.addEventListener('load', function (evt) {
-        console.log(xhr.response) // получаем JavaScript-объект без парсинга
+      console.log(xhr.response) // получаем JavaScript-объект без парсинга
     })
 
     xhr.open('GET', 'https://jsonplaceholder.typicode.com/users')

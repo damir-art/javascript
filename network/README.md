@@ -1,24 +1,14 @@
 # Работа с сетью
-- Асинхронные сетевые запросы (AJAX)
-- JSON
-- Fetch
-- WebSocket
-- Service Worker
 
-## Запросы на сервер
-
-### JSONP
-Запросы на сервер мы можем отправлять с помощью тегов: link, img, script.
-
-JSONP (протокол) - это способ динамического добавления на страницу тега `script`. Создание тега `script` это один из способов отправить HTTP-запрос.
-
-### AJAX
-Способ загрузки данных асинхронно - без полного обновления страницы.
-
-### JSON
-Текстовый формат обмена данными, основанный на JavaScript объектах.
-
-JSON - это формат данных, JSON**P** - это когда вы скачиваете тег `script`, внутри этого тега располагается вызов функции.
-
-### XMLHttpRequest
-XMLHttpRequest - объект для работы с HTTP-запросами. Умеет работать с любыми данными.
+Содержание:
+- AJAX, `ajax.md`
+- JSON, `json.md`
+- XMLHttpRequest, `xmlhttprequest.md`
+- Fetch:
+  - `fetch-user.md`
+  - `fetch-native.md`
+  - `fetch-api.md`
+- WebSocket, `websocket.md`
+- Service Worker, `service-worker.md`
+- HTTP запросы, `http.md`
+- Разное, `other.md`
