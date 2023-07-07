@@ -11,5 +11,4 @@
     ​pathname - "/test/index.html",
     ​port - "5500",
     ​protocol - "http:"
-
 ​
