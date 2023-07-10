@@ -9,4 +9,3 @@
 - Keydown/keyup, `keydown-keyup.md`
 - Указатель, `pointer-events.md`
 - Обновление данных, `data-update.md`
-- Drag and drop, `drag-and-drop.md`

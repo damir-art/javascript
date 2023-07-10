@@ -8,4 +8,7 @@
 - Сама игра запускается по кнопке старт.
 
 Создать игры: "Змейка", "Арканоид", "2048"  
-https://www.youtube.com/watch?v=TSdGHbI6veI
+https://www.youtube.com/watch?v=TSdGHbI6veI  
+
+https://www.youtube.com/playlist?list=PLumYWZ2t7CRtojYrBNKu-TSXY5VbTGzIY - Phaser 3 (официально)  
+https://docode.ru/p/sozdanie-html5-igr-s-phaser-3/ - phaser-3 (движок 2D игр основанный на pixi)

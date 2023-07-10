@@ -13,7 +13,7 @@
 <div class="wrapper">
   <h1>Заголовок</h1>
 
-  <form action="#">
+  <!-- <form action="#">
     <input id="name" type="text" placeholder="Введите имя" />
     <input id="email"type="email" placeholder="Введите E-mail" />
     <textarea id="textarea" cols="30" rows="10" placeholder="Введите сообщение"></textarea>
@@ -26,49 +26,81 @@
       <button id="save" type="button">Сохранить</button>
       <button id="load" type="button">Загрузить</button>
     </div>
-  </form>
+  </form> -->
+
+  <style>
+    .empties {
+      background-color: #ecf0f1;
+      height: 188px;
+      width: 800px;
+      display: flex;
+      gap: 16px;
+    }
+    .empty {
+      width: 188px;
+      height: 188px;
+      background-color: rgba(189, 195, 199, 0.5);
+    }
+    .fill {
+      width: 188px;
+      height: 188px;
+      background-color: #2ecc71;
+      cursor: pointer;
+    }
+  </style>
+  <!-- .empty>.fill^.empty*4 -->
+  <div class="empties">
+    <div class="empty">
+      <div class="fill" draggable="true"></div>
+    </div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+  </div>
+
 </div>
 
 <!-- <script src="script.js"></script> -->
 <script>
-// Определяем переменные
-const name             = document.getElementById("name");
-const email            = document.getElementById("email");
-const textarea         = document.getElementById("textarea");
-const isSessionStorage = document.getElementById("isSessionStorage");
-const save             = document.getElementById("save");
-const load             = document.getElementById("load");
+// Создаем переменные элементов
+const fill = document.querySelector(".fill");
+const empties = document.querySelectorAll(".empty");
 
-// В переменную storage сохраним ссылку на глобальный объект localStorage
-let storage = localStorage;
+function dragStart() {
+  this.style.backgroundColor = "rgba(39, 174, 96, 1.0)";
+  setTimeout( () => ( this.style.backgroundColor = "rgba(189, 195, 199, 0.0)" ), 0 ); // для того чтобы у помещаемого элемента, с которого ушел перетаскиваемый, не оставался цвет фона перетаскиваемого (если через CSS-классы то this.className = "invisible")
+}
 
-// Обработчик save, при клике сохраняет данные из формы в localStorage
-// Данные из формы помещаются в объект и обрабатываются JSON.stringify()
-save.addEventListener("click", function() {
-  storage.data = JSON.stringify({
-    name: name.value,
-    email: email.value,
-    textarea: textarea.value
-  });
-});
+function dragEnd() {
+  this.style.backgroundColor = "rgba(46, 204, 113, 1.0)";
+}
 
-// Обработчик load, при клике вытаскивает данные из localStorage и заполняет форму
-load.addEventListener("click", function() {
-  const data = JSON.parse( storage.data || {} );
-  name.value     = data.name || "";
-  email.value    = data.email || "";
-  textarea.value = data.textarea || "";
-});
+fill.addEventListener("dragstart", dragStart);
+fill.addEventListener("dragend", dragEnd);
 
-window.addEventListener( 'storage', function(event) {
-  console.log(event);
-  // load.click(); // синхронизируем вкладки, см кнопку load в example.md
-});
+function dragEnter(evt) {
+  // evt.preventDefault();
+  this.style.backgroundColor = "rgba(189, 195, 199, 1.0)";
+}
 
-// Переключаемся между хранилищами с помощью чекбокса
-isSessionStorage.addEventListener( 'change', function(e) {
-  storage = isSessionStorage ? sessionStorage : localStorage;
-});
+function dragLeave() {
+  this.style.backgroundColor = "rgba(189, 195, 199, 0.5)";
+}
+
+function drop() {
+  this.append(fill);
+}
+
+function dragOver(evt) {
+  evt.preventDefault();
+}
+
+for (const empty of empties) {
+  empty.addEventListener("dragenter", dragEnter);
+  empty.addEventListener("dragleave", dragLeave);
+  empty.addEventListener("drop", drop);
+  empty.addEventListener("dragover", dragOver);
+}
 
 </script>
 
