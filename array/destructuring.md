@@ -13,7 +13,7 @@ https://ru.hexlet.io/courses/js-functions/lessons/params-destructuring/theory_un
 
     console.log(person)    // ['Иван', 'Царевич', 'Москва']
 
-Присваиваем одной переменной:
+Присваиваем только тем переменным, которые нужны, запятые обязательны:
 
     const person = ['Иван', 'Царевич', 'Москва']
     const [ , , city] = person
@@ -22,3 +22,102 @@ https://ru.hexlet.io/courses/js-functions/lessons/params-destructuring/theory_un
     console.log(person) // ['Иван', 'Царевич', 'Москва']
 
 Деструктурировать можно массивы и объекты.
+
+## Пример №1
+- строку имя и фамилия, превращаем в массив через `split(" ")`,
+- массив деструктурируем помещая имя и фамилию в переменные `name` и `surname`.
+
+Пример без деструктуризации:
+
+    const str = "Иван Петров";
+    const arr = str.split(" "); // Array [ "Иван", "Петров" ]
+
+    const name = arr[0];
+    const surname = arr[1];
+
+    console.log(arr);           // Array [ "Иван", "Петров" ]
+    console.log(name, surname); // Иван Петров
+
+Пример с деструктуризацией:
+
+    const str = "Иван Петров";
+    const arr = str.split(" "); // Array [ "Иван", "Петров" ]
+
+    const [name, surname] = arr; // Деструктурирующее присваивание
+
+    console.log(arr);           // Array [ "Иван", "Петров" ]
+    console.log(name, surname); // Иван Петров
+
+Переменные можно обявить заранее:
+
+    let name;
+    let surname;
+    [name, surname] = arr;
+
+## Пример №2
+Передаём массив в функцию, деструктурируем его внутри функции:
+
+    const str = "Иван Петров Сидорович";
+
+    function getName(arr) {
+      const [name, surname, patronymic] = arr;
+      console.log(name, surname, patronymic);
+    }
+
+    getName( str.split(" ") );
+
+Деструктуризация в параметре функции:
+
+    function getName([name, surname, patronymic]) {
+      console.log(name, surname, patronymic);
+    }
+
+Без первого параметра:
+
+    function getName([ , surname, patronymic]) {
+      console.log(`${surname} ${patronymic}`); // Петров Сидорович
+    }
+
+    const str = "Иван Петров Сидорович";
+    getName( str.split(" ") );
+
+Убираем Сидорович:
+
+    function getName([ , surname, patronymic]) {
+      console.log(`${surname} ${patronymic}`); // Петров undefined
+    }
+
+    const str = "Иван Петров";
+    getName( str.split(" ") );
+
+Параметр по-умолчанию при деструктуризации:
+
+    function getName([ , surname, patronymic = "" ]) {
+      console.log(`${surname} ${patronymic}`); // Петров
+    }
+
+    const str = "Иван Петров";
+    getName( str.split(" ") );
+
+## Старая запись
+### Деструктуризация масива
+
+    let arr = [ 'banan', 'orange' ]
+    let [ a, b ] = arr
+
+    console.log(a) // banan
+    console.log(b) // orange
+
+Деструктуризация, не уничтожает массив, а копирует его элементы в переменные. Деструктуризация это короткий аналог записи:
+
+    let a = arr[0]
+    let b = arr[1]
+
+### Значения по-умолчанию
+
+    const cities = ['Москва']
+
+    let [ a = 'Питер', b = 'Казань'] = cities
+
+    console.log(a) // Москва
+    console.log(b) // Казань
