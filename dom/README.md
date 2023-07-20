@@ -3,7 +3,7 @@
 
 Содержание:
 - Что такое DOM, `dom.md`
-- Выборка элементов, `get-element.md`
+- Выборка элементов, `select.md`
 - Атрибуты, `attribute.md`
 - Дата-атрибуты, `attribute-data.md`
 - Размеры элемента, `size-scroll-element.md`

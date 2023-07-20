@@ -9,27 +9,32 @@
 </head>
 <body>
 
-<div class="wrapper">
-  <form action="#">
-    <input type="text" id="text" />
-    <input type="button" id="button" value="Отправить" />
-  </form>
-</div>
-
 <!-- <script src="script.js"></script> -->
+
 <script>
 
-  // function getName(arr) {
-  //   const [name, surname, patronymic] = arr;
-  //   console.log(name, surname, patronymic);
-  // }
+// Функция возвращает объект с итератором
+function range( from, to ) {
+  const objectWithIterator = {};
 
-  function getName([ , surname, patronymic = "" ]) {
-    console.log(`${surname} ${patronymic}`); // Петров
+  objectWithIterator[Symbol.iterator] = function () {
+    let i = from;
+    return {
+      next() {
+        return {
+          value: i,
+          done: i++ > to
+        }
+      }
+    }
   }
 
-  const str = "Иван Петров";
-  getName( str.split(" ") );
+  return objectWithIterator;
+}
+
+for ( const number of range( 3, 10 )) {
+  console.log(number);
+}
 
 </script>
 

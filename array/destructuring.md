@@ -21,7 +21,8 @@ https://ru.hexlet.io/courses/js-functions/lessons/params-destructuring/theory_un
     console.log(city)   // Москва
     console.log(person) // ['Иван', 'Царевич', 'Москва']
 
-Деструктурировать можно массивы и объекты.
+Деструктурировать можно массивы и объекты.  
+Деструктуризация упрощает процесс извлечения значений из объектов и массивов.
 
 ## Пример №1
 - строку имя и фамилия, превращаем в массив через `split(" ")`,
@@ -99,8 +100,8 @@ https://ru.hexlet.io/courses/js-functions/lessons/params-destructuring/theory_un
     const str = "Иван Петров";
     getName( str.split(" ") );
 
-## Старая запись
-### Деструктуризация масива
+# Старая запись
+## Деструктуризация масива
 
     let arr = [ 'banan', 'orange' ]
     let [ a, b ] = arr
@@ -113,7 +114,7 @@ https://ru.hexlet.io/courses/js-functions/lessons/params-destructuring/theory_un
     let a = arr[0]
     let b = arr[1]
 
-### Значения по-умолчанию
+## Значения по-умолчанию
 
     const cities = ['Москва']
 
@@ -121,3 +122,12 @@ https://ru.hexlet.io/courses/js-functions/lessons/params-destructuring/theory_un
 
     console.log(a) // Москва
     console.log(b) // Казань
+
+## Разное
+- let [ a, , b ] - второй элемент массива будет пропущен
+- let [ a, b ] = [] - значения a и b будут `undefined`
+- деструктуризация работает с любым перебираемым объектом: массив, строка, set и т.п
+- присваивать можно даже свойствам объекта [ obj.val, obj.val2 ]
+- можно деструктурировать вложенные объекты и массивы
+
+Операторы деструктурирующего присваивания по массивам и объектам позволяют писать более лаконичный и выразительный код, а также просто указывать значения переменных по умолчанию, не выполняя никаких дополнительных проверок.

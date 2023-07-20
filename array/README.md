@@ -7,7 +7,8 @@
     - pop()
     - ...
 - Деструктуризация, `destructuring.md`
-- ... spread, `rest-spread.md`
+- ...spread, `spread.md`
+- ...rest, `rest.md`
 - Многомерный массив, `multidimensional.md`
 - Ассоциативный массив, `associative.md`
 

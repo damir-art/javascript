@@ -1,5 +1,6 @@
 # createElement()
-Создание элемента и изменение структуры документа.
+Создание элемента и изменение структуры документа.  
+DOM позволяет не только модифицировать свойства существующих элементов, но и создавать новые узлы.
 
 - `createElement('tagName')` - создание элемента
 - `append(el)` - вставка элемента
@@ -16,9 +17,12 @@
 
 Схема создания элемента:
 
-    const myDiv       = document.createElement('div') // создаём элемент
-    myDiv.className   = 'myDiv // навешиваем CSS-класс
-    myDiv.textContent = 'Создали элемент, добавили содержимое' // создали элемент, добавили содержимое
+    const myDiv       = document.createElement('div')          // создаём элемент
+    myDiv.className   = 'myDiv                                 // добавляем стили
+    myDiv.textContent = 'Создали элемент, добавили содержимое' // добавляем содержимое
+    // вставляем элемент
+
+При этом порядок выполнения действий не важен, можно сначала вставить элемент, а потом добавить текст.
 
 ## append() - вставка элемента
 
@@ -30,13 +34,11 @@
 
 Схема создания и вставки элемента:
 
-    const descr = document.querySelector('.descr')
-
-    const myDiv       = document.createElement('div') // создаём элемент
-    myDiv.className   = 'myDiv' // навешиваем CSS-класс
+    const descr       = document.querySelector('.descr')
+    const myDiv       = document.createElement('div')          // создаём элемент
+    myDiv.className   = 'myDiv'                                // навешиваем CSS-класс
     myDiv.textContent = 'Создали элемент, добавили содержимое' // создали элемент, добавили содержимое
-
-    descr.after(myDiv) // вставляем созданный элемент после элемента descr
+    descr.after(myDiv)                                         // вставляем созданный элемент после элемента descr
 
 ## insertAdjacentHTML() - вставка HTML-кода
 Вставляем HTML-код `insertAdjacentHTML()`:
@@ -92,6 +94,10 @@
 - `replaceChild()`   - замена элемента
 - `removeChild()`    - удаление элемента
 - `document.write()` - добавление содержимого
+
+Добавляем элемент перед закрывающим тегом `</body>`:
+
+    document.body.appendChild(element);
 
 DOM элементы можно создавать двумя способами:
 - с помощью разметки
