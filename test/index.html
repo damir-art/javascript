@@ -9,33 +9,31 @@
 </head>
 <body>
 
-<!-- <script src="script.js"></script> -->
+<div class="wrapper">
+  <!-- Обработка ввода текста в поле input -->
+  <!-- Перехват нажатия клавиш внутри этого поля -->
+  <!-- Создаём возможность ввода только цифр и тире -->
+  <input type="text" id="phone" />
+</div>
 
 <script>
+  const phone = document.querySelector("#phone");
 
-// Функция возвращает объект с итератором
-function range( from, to ) {
-  const objectWithIterator = {};
-
-  objectWithIterator[Symbol.iterator] = function () {
-    let i = from;
-    return {
-      next() {
-        return {
-          value: i,
-          done: i++ > to
-        }
-      }
+  phone.addEventListener("keydown", function(evt) {
+    // evt.type; // имя события
+    let isDigit = false; // переменная флаг, имеющая значение true или false в зависимости от нажатия клавиши
+    if ( evt.key >=0 && evt.key <= 9 ) {
+      isDigit = true;
     }
-  }
 
-  return objectWithIterator;
-}
-
-for ( const number of range( 3, 10 )) {
-  console.log(number);
-}
-
+    if (isDigit == true) {
+      console.log("цифра");
+    } else {
+      console.log(evt.preventDefault);
+      evt.preventDefault(); // отменяем ввод не цифр
+      console.log("не цифра");
+    }
+});
 </script>
 
 </body>
