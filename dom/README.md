@@ -11,6 +11,7 @@
 - Координаты, `coords.md`
 - Навигация по DOM, `navigation-node.md`
   - `navigation-node-2.md`
+  - `navigation-node-examples.md`
 - Свойства DOM, `properties-node.md`
 - Изменения в DOM, `change.md`
 - Создание элемента, `create-element.md`

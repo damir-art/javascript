@@ -9,31 +9,51 @@
 </head>
 <body>
 
-<div class="wrapper">
-  <!-- Обработка ввода текста в поле input -->
-  <!-- Перехват нажатия клавиш внутри этого поля -->
-  <!-- Создаём возможность ввода только цифр и тире -->
-  <input type="text" id="phone" />
-</div>
+  <div class="class-1">
+    <a href="#" id="myLink">Link</a>
+  </div>
 
-<script>
-  const phone = document.querySelector("#phone");
+<div class="class-1">DIV 1</div>
+<div class="class-2">DIV 2</div>
+<div class="class-3">DIV 3</div>
 
-  phone.addEventListener("keydown", function(evt) {
-    // evt.type; // имя события
-    let isDigit = false; // переменная флаг, имеющая значение true или false в зависимости от нажатия клавиши
-    if ( evt.key >=0 && evt.key <= 9 ) {
-      isDigit = true;
-    }
+<script >
 
-    if (isDigit == true) {
-      console.log("цифра");
-    } else {
-      console.log(evt.preventDefault);
-      evt.preventDefault(); // отменяем ввод не цифр
-      console.log("не цифра");
-    }
-});
+  const body = document.body;
+  
+  // console.log( body.childNodes ); // список всех дочерних узлов, в том числе и текстовых
+  // console.log( body.children ); // список всех дочерних элементов
+  
+  // for ( let i = 0 ; i < body.childNodes.length; i++) {
+  //   console.log(body.childNodes[i]);
+  // }
+  
+  // Выводим только узлы элементы
+  // for ( const node of body.childNodes ) {
+  //   if ( node.nodeType === 1 ) {
+  //     console.log( node ); // вывод узлов элементов
+  //   }
+  // }
+  
+  // console.log( body.firstChild );        // первый дочерний узел
+  // console.log( body.firstElementChild ); // первый дочерний элемент
+  
+  // console.log( body.lastChild );         // последний дочерний узел
+  // console.log( body.firstElementChild ); // последний дочерний элемент
+
+  // console.log( body.firstElementChild );
+  // console.log( body.firstElementChild.nextSibling ); // следующий соседний узел
+  // console.log( body.firstElementChild.nextElementSibling ); // следующий соседний элемент
+
+  // console.log( body.parentNode ); // родительский узел
+  // console.log( body.parentElement ); // родительский элемент
+
+  const myLink = document.querySelector('#myLink');
+  let cursor = myLink;
+  while(cursor = cursor.parentNode) {
+    console.log(cursor);
+  }
+
 </script>
 
 </body>

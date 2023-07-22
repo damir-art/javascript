@@ -1,4 +1,6 @@
 # Навигация по DOM
+https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType - числовые обозначения узлов
+
 - навигация по узлам
 - псевдомассив childNodes
 - навигация по элементам

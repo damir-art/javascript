@@ -72,3 +72,50 @@
         console.log(form.elements[i].type);
       }
     });
+
+## Пример №2
+При нажатии на кнопку `Отправить`, получаем доступ к введённым значениям элементов формы, сформировываем из этих значений запрос и отправляем его на сервер, без перезагрузки страницы в браузере (подобным образом работают современные веб-приложения).
+
+При нажатии на тег `button`, по умолчанию страница перезагружается или происходит переход на другую страницу если у формы указан action.
+
+    <form id="myForm">
+      <div>
+        Имя:<br />
+      <input type="text" name="name" />
+      </div>
+      <div>
+        Фамилия:<br />
+        <input type="text" name="lastName" />
+      </div>
+      <div>
+        Пол:<br />
+      <select name="gender">
+        <option value="m">М</option>
+        <option value="f">Ж</option>
+      </select>
+      </div>
+      <div>
+        <input type="checkbox" name="auto"> есть автомобиль
+      </div>
+      <br />
+      <!-- По умолчанию, работает как submit -->
+      <button id="sendButton">Отправить</button>
+    </form>
+
+    const myForm     = document.querySelector("#myForm"); // Получаем доступ ко всей форме
+    const sendButton = document.querySelector('#sendButton');
+
+    sendButton.addEventListener('click', function(evt) {
+      // Отменяем действие по-умолчанию, перезагрузку старницы
+      evt.preventDefault();
+      // myForm.elements // Получаем доступ к данным из всех элементов формы
+      // console.log( myForm.elements ); // В консоли смотрим список имен "name" элементов снизу
+      console.log( myForm.elements.name.value ); // Получаем значение текстового поля
+      console.log( myForm.elements.lastName.value );
+      console.log( myForm.elements.gender.value ); // Получаем значение списка
+      console.log( myForm.elements.auto.checked ); // Получаем значение чекбокса
+    });
+
+## Разное
+- с помощью `elements` можно обратиться ко всем элементам формы, без использования querySelector для каждого элемента
+- для дступа к `form.elements` у элементов должен быть атрибут name
