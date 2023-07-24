@@ -1,4 +1,5 @@
 # Как на JavaScript делать игры?
+https://developer.mozilla.org/ru/docs/Games (там же в меню слева есть 5 интересных 2D игр)
 
     class - для CSS
     id - для Javascript

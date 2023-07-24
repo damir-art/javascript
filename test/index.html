@@ -9,50 +9,92 @@
 </head>
 <body>
 
-  <div class="class-1">
-    <a href="#" id="myLink">Link</a>
-  </div>
+<div class="wrapper">
 
-<div class="class-1">DIV 1</div>
-<div class="class-2">DIV 2</div>
-<div class="class-3">DIV 3</div>
+</div>
 
 <script >
 
-  const body = document.body;
-  
-  // console.log( body.childNodes ); // список всех дочерних узлов, в том числе и текстовых
-  // console.log( body.children ); // список всех дочерних элементов
-  
-  // for ( let i = 0 ; i < body.childNodes.length; i++) {
-  //   console.log(body.childNodes[i]);
-  // }
-  
-  // Выводим только узлы элементы
-  // for ( const node of body.childNodes ) {
-  //   if ( node.nodeType === 1 ) {
-  //     console.log( node ); // вывод узлов элементов
-  //   }
-  // }
-  
-  // console.log( body.firstChild );        // первый дочерний узел
-  // console.log( body.firstElementChild ); // первый дочерний элемент
-  
-  // console.log( body.lastChild );         // последний дочерний узел
-  // console.log( body.firstElementChild ); // последний дочерний элемент
+// const url1 = 'https://cdn.mos.cms.futurecdn.net/62rEvPnj75mtT2CUAnrRGA.jpg';
+// const url2 = 'https://cdn.mos.cms.futurecdn.net/aLNiC9EBLqJTNKg5yMoJHZ.jpg';
+// const url3 = 'https://cdn.mos.cms.futurecdn.net/CKZaALYg6JEKoLXjPEFzdL.jpg';
 
-  // console.log( body.firstElementChild );
-  // console.log( body.firstElementChild.nextSibling ); // следующий соседний узел
-  // console.log( body.firstElementChild.nextElementSibling ); // следующий соседний элемент
+// const img = new Image();
+// img.height = 200;
+// img.src = url1;
 
-  // console.log( body.parentNode ); // родительский узел
-  // console.log( body.parentElement ); // родительский элемент
+// img.addEventListener("load", function() {
+//   const img = new Image();
+//   img.height = 200;
+//   img.src = url2;
+//   document.body.append(img);
 
-  const myLink = document.querySelector('#myLink');
-  let cursor = myLink;
-  while(cursor = cursor.parentNode) {
-    console.log(cursor);
-  }
+//   img.addEventListener("load", function() {
+//     const img = new Image();
+//     img.height = 200;
+//     img.src = url3;
+//     document.body.append(img);
+
+//     img.addEventListener("load", function() {
+//       console.log(" Все изображения загружены! ");
+//     });
+//   });
+// });
+
+// document.body.append(img);
+
+// const url1 = 'https://cdn.mos.cms.futurecdn.net/62rEvPnj75mtT2CUAnrRGA.jpg';
+// const url2 = 'https://cdn.mos.cms.futurecdn.net/aLNiC9EBLqJTNKg5yMoJHZ.jpg';
+// const url3 = 'https://cdn.mos.cms.futurecdn.net/CKZaALYg6JEKoLXjPEFzdL.jpg';
+
+// function delay( ms ) {
+//   return new Promise( (resolve) => {
+//     setTimeout( () => {
+//       resolve();
+//       console.log( 'resolved' );
+//     }, ms);
+//   });
+// }
+
+// const promise = delay(2000);
+// promise
+//   .then(()=> {
+//       const img = new Image();
+//       img.height = 200;
+//       img.src = url1;
+//       document.body.append(img);
+//     }
+//   )
+//   .then(()=> {
+//       const img = new Image();
+//       img.height = 200;
+//       img.src = url2;
+//       document.body.append(img);
+//     }
+//   )
+//   .then(()=> {
+//       const img = new Image();
+//       img.height = 200;
+//       img.src = url3;
+//       document.body.append(img);
+//     }
+//   );
+
+function delay( ms ) {
+  return new Promise( (resolve) => {
+    setTimeout( () => {
+      resolve();
+      console.log( 'resolved' );
+    }, ms);
+  });
+}
+
+const promise = delay(2000); // возвращает promise
+
+promise
+  .then( () => console.log(1) )
+  .then( () => console.log(2) )
+  .then( () => console.log(3) );
 
 </script>
 
