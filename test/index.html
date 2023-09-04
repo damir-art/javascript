@@ -9,92 +9,39 @@
 </head>
 <body>
 
-<div class="wrapper">
+<div class="wrapper"></div>
 
-</div>
+<script>
 
-<script >
+class User {
+  constructor(name, age) {
+    // this = {}
+    this.name = name;
+    this.age = age;
 
-// const url1 = 'https://cdn.mos.cms.futurecdn.net/62rEvPnj75mtT2CUAnrRGA.jpg';
-// const url2 = 'https://cdn.mos.cms.futurecdn.net/aLNiC9EBLqJTNKg5yMoJHZ.jpg';
-// const url3 = 'https://cdn.mos.cms.futurecdn.net/CKZaALYg6JEKoLXjPEFzdL.jpg';
-
-// const img = new Image();
-// img.height = 200;
-// img.src = url1;
-
-// img.addEventListener("load", function() {
-//   const img = new Image();
-//   img.height = 200;
-//   img.src = url2;
-//   document.body.append(img);
-
-//   img.addEventListener("load", function() {
-//     const img = new Image();
-//     img.height = 200;
-//     img.src = url3;
-//     document.body.append(img);
-
-//     img.addEventListener("load", function() {
-//       console.log(" Все изображения загружены! ");
-//     });
-//   });
-// });
-
-// document.body.append(img);
-
-// const url1 = 'https://cdn.mos.cms.futurecdn.net/62rEvPnj75mtT2CUAnrRGA.jpg';
-// const url2 = 'https://cdn.mos.cms.futurecdn.net/aLNiC9EBLqJTNKg5yMoJHZ.jpg';
-// const url3 = 'https://cdn.mos.cms.futurecdn.net/CKZaALYg6JEKoLXjPEFzdL.jpg';
-
-// function delay( ms ) {
-//   return new Promise( (resolve) => {
-//     setTimeout( () => {
-//       resolve();
-//       console.log( 'resolved' );
-//     }, ms);
-//   });
-// }
-
-// const promise = delay(2000);
-// promise
-//   .then(()=> {
-//       const img = new Image();
-//       img.height = 200;
-//       img.src = url1;
-//       document.body.append(img);
-//     }
-//   )
-//   .then(()=> {
-//       const img = new Image();
-//       img.height = 200;
-//       img.src = url2;
-//       document.body.append(img);
-//     }
-//   )
-//   .then(()=> {
-//       const img = new Image();
-//       img.height = 200;
-//       img.src = url3;
-//       document.body.append(img);
-//     }
-//   );
-
-function delay( ms ) {
-  return new Promise( (resolve) => {
-    setTimeout( () => {
-      resolve();
-      console.log( 'resolved' );
-    }, ms);
-  });
+  }
+  isAdult() {
+    return this.age > 18;
+  }
 }
 
-const promise = delay(2000); // возвращает promise
+const user = new User("Ivan", 17);
+console.log( user.isAdult() );
 
-promise
-  .then( () => console.log(1) )
-  .then( () => console.log(2) )
-  .then( () => console.log(3) );
+class Point {
+  x = 0;
+  y = 0;
+
+  toVector() {
+    console.log( this.x + this.y );
+  }
+}
+
+const point = new Point();
+point.x = 10;
+point.y = 12;
+
+point.toVector(); // 22
 
 </script>
 
