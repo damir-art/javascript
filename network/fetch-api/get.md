@@ -1,8 +1,78 @@
 # Метод GET
 Обращаемся к URL получаем данные. По-умолчанию используется GET метод.
 
+Создаём 3 файла:
+- index.html
+- send.php
+- script.js
+
+Для выполнения GET запроса, мы можем использовать функцию `fetch()` и передать ей URL сервера, к которому мы хотим обратиться. Возвращаемое значение `fetch()` - это промис, который содержит объект `Response`, содержащий статус и данные ответа сервера.
+
+## Схема получения текста
+Получаем ответ от сервера.
+
+`index.html`:
+
+    <div class="message"></div>
+    <script src="script.js"></script>
+
+`script.js`:
+
+    fetch('send.php')
+      .then(res => {
+        return res.text();         // Получаем ответ и применяем к нему метод получения текстовой информации
+        //console.log(res);        // Response
+        //console.log(res.text()); // Promise
+      });                          // Promise (обещание)
+
+`send.php`:
+
+    echo 'Hello';
+
+- открываем Инспектор страницы,
+- переходим на вкладку Сеть,
+- жмём по файлу send.php,
+- во вкладке Заголовки > Заголовки ответа > `Content-Type: text/html; charset=UTF-8`,
+- во вкладке Ответ > `Hello`.
+
+Получаем ответ от сервера и вставляем ответ на страницу:
+
+    fetch('send.php')
+      .then(res => {
+        return res.text();
+      })
+      .then(function(text) {
+        console.log(text);          // Hello
+        message.textContent = text; // Вставляем текст в DOM элемент
+      }); // Работаем с текстовой информацией
+
+## Схема получения JSON
+В PHP, мы можем обработать GET запрос и отправить обратно данные в формате JSON:
+
+`send.php`:
+
+    // echo json_encode('Hello'); // Можно отправить текст
+
+    $data = [ 'name' => 'Ivan', 'age' => 21 ];
+    echo json_encode($data);
+
+`script.js`:
+
+    fetch('send.php')
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        console.log(data); // Object { name: "Ivan", age: 21 }
+        message.textContent = data.name;
+      }); // Работаем с json данными
+
+# Старая запись
+
 ## Получаем Promise
-Можно обратиться к любому файлу, если он есть: fetch('http://localhost:5500/test/test.html')
+Можно обратиться к любому файлу, если он есть:
+- fetch('http://localhost:5500/test/test.html')
+- fetch('send.php')
 
 Обращаемся к урлу:
 
