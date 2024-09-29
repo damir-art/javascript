@@ -1,5 +1,6 @@
 # Visual Studio Code
-Настраиваем текстовый редактор Visual Studio Code, для работы с JavaScript.
+Настраиваем текстовый редактор Visual Studio Code, для работы с JavaScript.  
+https://code.visualstudio.com/docs/introvideos/basics - официальное видео, базовая настройка
 
 Настройки:
 - font-size - 18

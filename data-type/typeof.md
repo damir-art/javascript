@@ -1,6 +1,19 @@
 # typeof
 typeof - оператор с помощью которого можно выяснить тип данных (хоть и не всегда).
 
+Что может возвратить typeof:
+
+    undefined
+    boolean
+    number
+    bigint
+    string
+    symbol
+    function
+    object
+
+null - возвращает объект, здесь есть function но это особый вид объекта.
+
 Создадим несколько переменных и выясним их тип данных.
 
     let a = 'apple'
